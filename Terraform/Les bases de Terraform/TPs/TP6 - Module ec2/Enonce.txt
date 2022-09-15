@@ -1,0 +1,7 @@
+1 - Créez un dossier tp-6 comme vous l’avez fait au tp-5 pour conserver votre code
+2 - Créez un module ec2module afin de déployer l’instancede la façon que vous l’avez fait aux tps précédents  (ec2 + security group + ip publique)
+3 - Créez ensuite deux dossiers, prod et dev, chacun avec un terraform (main.tf ) utilisant le module  ec2module créé pour déployer une instance avec respectivement pour taile t2.micro pour la prod et  t2.nano pour la dev
+4 - Veuillez également à surcharger le tag pour que ai cette forme :« Name: ec2-prod-<votre prenom> » pour  la prod et « Name: ec2-dev-<votre prenom> » pour la Dev
+5 - Lancez ensuite la création de votre ec2 de prod et de dev
+6 - Vérifiez que les ec2 portent bien le bon nom (Tag) et ont la bonne taile correspondant à l’environnement
+7 - Supprimez vos ressources avec terraform destroy

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Dans le Cloud, on dispose de services K8S suivants : ",
+      "answer-1": "IAM, EC2, EKS, Openshift",
+      "answer-2": "GCP, AKS, GKE",
+      "answer-3": "Kubeadm, Minikube, K3S",
+      "answer-4": "AKS, Mesos, Openstack",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Minikube est une solution de deploiement K8s adapté à :",
+      "answer-1": "L'apprentissage rapide de K8S",
+      "answer-2": "Un environnement Prod Ready",
+      "answer-3": "Du calcul distribué",
+      "answer-4": "La CICD",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "K3S c'est : ",
+      "answer-1": "Une distribution optimisée de K8S",
+      "answer-2": "Une alternative à kubectl",
+      "answer-3": "Une distribution légère de K8S",
+      "answer-4": "Un cluster openshift",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Kind est une solution pour",
+      "answer-1": "Déployer un K8S adapté au calcul distribué",
+      "answer-2": "Remplacer vagrant en Production",
+      "answer-3": "Déployer un cluster K8s avec vagrant",
+      "answer-4": "Déployer un cluster K8s dans des containers docker",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "En production, pour déployer K8S, il faudrait utiliser l'outil : ",
+      "answer-1": "Terraform",
+      "answer-2": "Kubeadm",
+      "answer-3": "Kubelet",
+      "answer-4": "Ansible",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Je souhaite déployer K8S en baremetal, quel outil est adapté ? ",
+      "answer-1": "kubeadm",
+      "answer-2": "kubebelet",
+      "answer-3": "Minikube",
+      "answer-4": "kubespay",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Tous les nodes d'un cluster K8S doivent avoir CentOs comme OS",
+      "answer-1": "VRAI, c'est le seul OS compatible avec K8S",
+      "answer-2": "Normal, c'est l'éditeur de la solution K8S",
+      "answer-3": "C'est vrai quand on travaille en producion avec kubeadm",
+      "answer-4": "FAUX, K8S est disponible pour plusieurs OS",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Minikube me déploie un cluster K8S hébergé chez Google ",
+      "answer-1": "FAUX, c'est ne solution de déploiement dans AWS de K8S",
+      "answer-2": "FAUX, c'est ne solution de déploiement dans GCP de K8S",
+      "answer-3": "FAUX, c'est ne solution de déploiement dans Azure de K8S",
+      "answer-4": "FAUX, c'est ne solution de déploiement local de K8S",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Un déploiement Baremetal désigne Un déploiement de  :",
+      "answer-1": "dans des conteneurs",
+      "answer-2": "avec vagrant",
+      "answer-3": "dans minikube",
+      "answer-4": "directement sur les serveurs",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Pour vérifier la version de mon cluser K8S, je peux taper la commande :",
+      "answer-1": "kubectl get deploy",
+      "answer-2": "kubectl get pods",
+      "answer-3": "kubectl get nodes",
+      "answer-4": "kubectl get cluster",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

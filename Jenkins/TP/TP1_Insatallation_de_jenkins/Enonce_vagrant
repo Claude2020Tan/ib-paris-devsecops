@@ -1,0 +1,24 @@
+
+Installation d'une VM Jenkins via vagrant
+
+1 - Sur vos postes de travail, vous devez installer les outils "git", "vagrant" et "virtualbox".
+2 - Une fois installés, Ouvrez un terminel et faites un clone du repository suivant : https://github.com/diranetafen/cursus-devops.git 
+        git clone  https://github.com/diranetafen/cursus-devops.git 
+    Vous pouvez aussi télécharger le zip avec ce lien direct : 
+    zip : https://github.com/diranetafen/cursus-devops/archive/refs/heads/master.zip
+3 - Etant dans le repos git, déplacez vous dans le dossier "vagrant/jenkins"
+    => Vous y trouverrez 2 fichiers :  "Vagrantfile" et "install_jenkins.sh"
+4 - Vous allez déployer la VM  jenkins dans virtualbox en tapant la commande suivante : 
+    vagrant up jenkins --provision
+5 - Une fois le processus terminé et la VM up, connectez vous avec la commande "vagrant ssh jenkins"
+    => Vous pouvez aussi faire : ssh vagrant@<IP>
+        user = vagrant, 
+        password = vagrant
+6 - Vous êtes connectés à la VM ? Alors vous pouvez récupérer le token initial : 
+    docker exec -it jenkins-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
+7 - Une fois le token obtenu, continuer l'installation depuis l'IHM dans votre navigateur favori sur 
+  le port 8080
+8 - Si vous avez des erreurs vagrant, pensez à la commande suivante : 
+    vagrant global-status --prune
+9 - Si l'installation des plugins est KO, regardez la page de statut de jenkins pour savoir si les serveurs 
+  de jenkins ne sont pas en erreur : https://status.jenkins.io/    

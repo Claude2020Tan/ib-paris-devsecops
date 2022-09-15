@@ -1,0 +1,172 @@
+{
+    "questions": [
+        {
+            "question": "Qu'est-ce qui détermine le prix d'EC2 ?",
+            "answer-1": "Stockage - Temps de récupération des données",
+            "answer-2": "Quand vous payez d'avance. C'est un coût fixe",
+            "answer-3": "Type d'instance, Tarification,Nombre d'instances,etc",
+            "answer-4": "Commerce ou entreprise",
+            "duration": "20",
+            "good-answer": "3"
+        },
+           {
+            "question": "Quel outil pouvez-vous utiliser pour prévoir vos dépenses AWS ?",
+            "answer-1": "AWS Organizations",
+            "answer-2": "Amazon Dev Pay",
+            "answer-3": "AWS Trusted Advisor",
+            "answer-4": "AWS Cost Explorer",
+            "duration": "20",
+            "good-answer": "4"
+        },
+         {
+            "question": "Laquelle  ci-dessous est FAUX concernant les plans d'épargne ",
+            "answer-1": "permettent de faire de l'économie sur certains services",
+            "answer-2": "s'appliquent aux « réservations de capacité à la demande »",
+            "answer-3": "sont disponibles pour toutes les régions",
+            "answer-4": "Ne change pas en fonction du montant de l'engagement horaire",
+            "duration": "20",
+            "good-answer": "3"
+        },
+    
+         {
+            "question": "Quel est le principal avantage de la facturation consolidée ?",
+            "answer-1": "Réponse plus rapide du support technique AWS.",
+            "answer-2": "avoir une remise pour utilisation sur les comptes AWS",
+            "answer-3": "Accès à un niveau de plan de support supérieur.",
+            "answer-4": "toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "2"
+        },
+      
+         {
+            "question": "La facturation consolidée est gérée via quel service AWS ?",
+            "answer-1": "AWS TCO",
+            "answer-2": "AWS Billing Manager",
+            "answer-3": "AWS Consolidated Management",
+            "answer-4": "AWS Organizations",
+            "duration": "20",
+            "good-answer": "2"
+        },
+      
+         {
+            "question": "Quel terme décrit le mieux le modèle de tarification AWS ?",
+            "answer-1": "Pay-all-up-front",
+            "answer-2": "Pay-as-you-go",
+            "answer-3": "Pay-all-at-end",
+            "answer-4": "Aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "2"
+        },
+      
+         {
+            "question": "Quel service AWS vous aide à estimer le coût d'utilisation d'AWS contre le coût Onprem ?",
+            "answer-1": "Cost Explorer",
+            "answer-2": "Consolidated Billing",
+            "answer-3": "TCO Calculator",
+            "answer-4": "Aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "3"
+        },
+      
+         {
+            "question": "Quel option d'achat ec2 permet d'utiliser les ressources free d'aws à coûts réduits?",
+            "answer-1": "Spot",
+            "answer-2": "On-demand",
+            "answer-3": "Reserved",
+            "answer-4": "aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "1"
+        },
+
+         {
+            "question": "Service AWS à utiliser si vous souhaitez configurer une alarme de facturation AWS ? ",
+            "answer-1": "CloudWatch",
+            "answer-2": "CloudMonitor",
+            "answer-3": "Facturation consolidée AWS",
+            "answer-4": "CloudTrail",
+            "duration": "20",
+            "good-answer": "1"
+        },
+   {
+            "question": "Quels sont les principaux avantages des instances EC2 à la demande ?",
+            "answer-1": "Ils sont l'option d'achat la moins chère.",
+            "answer-2": "Il s'agit de l'option d'achat la moins flexible.",
+            "answer-3": "Créer, démarrer, arrêter et terminer à tout moment ",
+            "answer-4": "Il faut 2 jours pour leur installation et la configuration",
+            "duration": "20",
+            "good-answer": "4"
+        },
+      
+         {
+            "question": "Quel est le critère de tarification s3 standard qui est faux ?",
+            "answer-1": "requête PUT, COPY, POST, LIST",
+            "answer-2": "Stockage standard S3",
+            "answer-3": "GET, SELECT et toutes les autres requêtes de S3 Standard",
+            "answer-4": "Toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        }
+        ,
+      
+         {
+            "question": "Lequel des éléments suivants est un facteur lors du calcul (TCO) ?",
+            "answer-1": "Le nombre de serveurs migrés vers AWS",
+            "answer-2": "Le nombre de mots de passe migrés vers AWS",
+            "answer-3": "Le nombre d'utilisateurs migrés vers AWS",
+            "answer-4": "Le nombre de clés migrées vers AWS",
+            "duration": "20",
+            "good-answer": "1"
+        }
+       ,
+      
+         {
+            "question": "Pour heberger une application sur un instance ec2 pendant 1 an , quel option choisir ?",
+            "answer-1": "Instances à la demande",
+            "answer-2": "Instances réservées",
+            "answer-3": "Instances ponctuelles",
+            "answer-4": "Hôte dédié",
+            "duration": "20",
+            "good-answer": "2"
+        }
+       ,
+         {
+            "question": "la meilleure façon de gérer les factures mensuel d'AWS quand on a plusieurs comptes est",
+            "answer-1": "CloudWatch",
+            "answer-2": "CloudMonitor",
+            "answer-3": "Facturation consolidée AWS",
+            "answer-4": "CloudTrail",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+         {
+            "question": "Laquelle n'es pas pas une option de tarification ec2?",
+            "answer-1": "À la demande",
+            "answer-2": "Hôtes dédiés",
+            "answer-3": "Savings Plans",
+            "answer-4": "Hôtes réservés",
+            "duration": "20",
+            "good-answer": "4"
+        }
+         ,
+         {
+            "question": "Quel élément ne figure pas dans la tarification RDS mariadb?",
+            "answer-1": "Utilisation par mois , jour , semaine (pourcentage)",
+            "answer-2": "Modèle de pricing",
+            "answer-3": "Mode de déploiement",
+            "answer-4": "Durée de chaque requête (en ms)",
+            "duration": "20",
+            "good-answer": "4"
+        }
+        ,
+         {
+            "question": "Quel élément  figure  dans la tarification de AWS LAMBDA?",
+            "answer-1": "Utilisation par mois , jour , semaine (pourcentage)",
+            "answer-2": "Durée de chaque requête (en ms)",
+            "answer-3": "Mode de déploiement",
+            "answer-4": "Modèle de pricing",
+            "duration": "20",
+            "good-answer": "2"
+        }
+    ]
+}

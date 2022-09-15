@@ -1,0 +1,10 @@
+Partie 1 : Création de compte heroku
+- Créer un compte  sur https://www.heroku.com
+- Aller dans account setting de mon compte
+    Chercher API key et copier la clé
+
+Partie 2 : Configuration de la clé heroku dans Jenkins comme secret
+- Aller dans jenkins pour créer un nouveau secret comme vous l'avez fait pour Docker
+    - type : Secret text
+    - valeur : coller la clé que vous avez copié dans heroku
+    - Id : heroku_api_key

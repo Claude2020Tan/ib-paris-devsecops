@@ -1,0 +1,37 @@
+Le but de ce TP est de prendre un main le déploiement des applications dans Openshift.
+1 - Tous les déploiements doivent être fait dans votre compte et via le projet eazytraining
+2 - Créez votre premier déploiement  à partir de l’application python tel que :     
+    - som nom : django
+    - url git :  https://github.com/sclorg/django-ex.git
+
+3 - Vérifiez que le déploiement (nommé django) est bien accéssible via l’url fourni.
+    Pour retrouver l'URL aller dans :
+         "Application" > Routes > simple-webapp > Hostname
+     => Pensez à ajuster votre DNS si besoin    
+
+4 - Créez un second déploiement tel que : 
+    - som nom : simple-webapp
+    - url git :  https://github.com/<votre compte>/simple-webapp.git
+    - build strategy : S2i
+    
+5 - Vérifiez que le déploiement est bien accessible via l’url fourni.
+
+6 - Mettez en place un webhook afin de builder et de déployer automatiquement après toute 
+    modification sur votre application simple-webap via github.
+    - PS 1 : L'url du webhook se trouve dans  : 
+        La section Build > simple-webapp > Configuration > "Github Webhook URL"
+    - PS 2 : A lire uniquement si votre serveur openshift n'est pas accessible depuis une ip publique
+        a - Vous pouvez monter un tunnel à l'aide de l'outil ngrok : 
+            https://dashboard.ngrok.com/get-started/setup
+                => Un compte gratuit devra être créé sur leur site
+                => L'installation consiste simplement à télécharger le binaire
+        b - Une fois installé, récupérer votre token sur ici : 
+            https://dashboard.ngrok.com/get-started/your-authtoken 
+        c - Configurer le token sur la machine : 
+            ./ngrok config add-authtoken <VOTRE TOKEN>
+        d - Lancer le tunnel sur le flux https: 
+            ./ngrok http https://192.168.99.11:8443
+        e - Une URL publique vous est fournie, Openshift sera disponible à cette url        
+
+7 - Testez et valider le fonctionnement du webhook
+    => Il suffit simplement de créer une nouveau commit sur le repos Git

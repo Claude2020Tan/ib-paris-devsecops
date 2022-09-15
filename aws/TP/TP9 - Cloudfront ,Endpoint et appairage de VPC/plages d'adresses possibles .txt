@@ -1,0 +1,28 @@
+Virginie du Nord
+    Abdoulaye   10.10.0.0/16
+    Arnaud      10.11.0.0/16
+    
+Ohio
+    Cedric      10.12.0.0/16
+    Florent     10.13.0.0/16
+
+Californie du Nord
+    Gatien      10.14.0.0/16
+    Evan        10.15.0.0/16
+
+Sydney    
+    Karim       10.16.0.0/16
+    Kelvin      10.17.0.0/16
+
+Oregon    
+    Nicolas     10.18.0.0/16
+    Olfa        10.19.0.0/16
+    Ulrich      10.20.0.0/16
+
+Paris
+    Romain      10.21.0.0/16
+    Thomas :    10.22.0.0/16
+
+Sao Polo    
+    Jean Michel 10.23.0.0/16
+    Moyan       10.24.0.0/16

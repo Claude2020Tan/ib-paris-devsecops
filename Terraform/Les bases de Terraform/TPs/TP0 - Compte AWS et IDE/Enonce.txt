@@ -1,0 +1,7 @@
+Créez un compte AWS gratuit
+Protégez votre compte root avec un mot de passe fort
+Créez un compte nominatif avec les droits full admin et qui vous permettra  de déployez les
+ressources
+Installez un IDE, par exemple Visual Studio Code et installer un plugin terraform pour vous
+faciliter la correction syntaxique
+Vous êtes prêt à installer terraform !

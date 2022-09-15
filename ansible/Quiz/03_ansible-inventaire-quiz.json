@@ -1,0 +1,103 @@
+{
+    "questions": [
+      {
+        "question": "Que représente l'inventaire ansible ?",
+        "answer-1": "La liste des actions à faire par ansible",
+        "answer-2": "La liste des machines gérées par ansible et leurs variables",
+        "answer-3": "C'est le fichier de configuration par defaut de ansible",
+        "answer-4": "C'est un fichier qui doit absolument s'appeler hosts",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Dans l'inventaire ansible, on doit obligatoirement spécifier",
+        "answer-1": "Le nom dns (ou l'IP) du serveur ou un alias géré par ansible",
+        "answer-2": "un group_vars et un host_vars",
+        "answer-3": "Un groupe  pour la machine controlée, en plus du groupe all",
+        "answer-4": "La variable ansible_password contenant le mot de passe",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "L'inventaire ansible peut être définit dans un ensemble de fichiers y compris",
+        "answer-1": "Le fichier /etc/ansible/ansible.cfg",
+        "answer-2": "Le fichier ~/ansible.cfg",
+        "answer-3": "Les fichiers contenu dans le dossier group_vars",
+        "answer-4": "Le fichier ~/.ansible.cfg",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Dans le répertoire host_vars d'un projet ansible, on retrouve",
+        "answer-1": "Des fichiers avec les noms des groupes définis",
+        "answer-2": "Des fichiers avec les noms des serveurs définis",
+        "answer-3": "Des fichiers avec les noms des groupes non définis",
+        "answer-4": "Des fichiers avec les noms des serveurs non définis",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Avec les host_vars et group_vars, on n'a plus besoin du fichier d'inventaire principal",
+        "answer-1": "C'est vrai si  fichier ansible.cfg existe",
+        "answer-2": "C'est vrai si l'option inventory = $PWD/hosts est active",
+        "answer-3": "Faux, on a toujours besoin d'un inventaire principal",
+        "answer-4": "Faux, le ~/.inventory sera toujours disponible par defaut",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Pour piloter mon inventaire ansible je peux utiliser la commande",
+        "answer-1": "ansible avec le module adéquat",
+        "answer-2": "ansible-inventory",
+        "answer-3": "ansible-galaxy avec le nom du fichier d'inventaire en option",
+        "answer-4": "ansible-vault avec le nom du fichier d'inventaire chifré",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Dans ansible, le mot all est un mot clé qui désigne",
+        "answer-1": "Le groupe qui contient directement les machines",
+        "answer-2": "Le groupe ungrouped",
+        "answer-3": "L'ancêtre de tous les groupes dans ansible",
+        "answer-4": "Le groupe des machines jouagnables",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "L'inventaire ansible peut être écris en plusieurs formats déclaratifs, à savoir",
+        "answer-1": "Le format XML ",
+        "answer-2": "Le format TOML",
+        "answer-3": "Le format INI",
+        "answer-4": "Le format CSV",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Dans un inventaire en YAML, pour énummérer les sous groupes d'un groupe, on utilise le mot clés",
+        "answer-1": "children, indenté directement en dessous du groupe parent",
+        "answer-2": "child, indenté directement en dessous du groupe parent",
+        "answer-3": "children, avec la notation suivante :[group_parent:children]",
+        "answer-4": "child, avec la notation suivante :[groupe_parent:chil]",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Pour grapher mon inventaire ansible, j'utilise la commande suivante",
+        "answer-1": "ansible --graph",
+        "answer-2": "ansible-inventory --graph",
+        "answer-3": "ansible_inventory all --graph",
+        "answer-4": "ansible --graph -i host",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Le mot clés vars_prompt permets de :",
+        "answer-1": "Saisir valeur de la variable lors du lancement du playbook",
+        "answer-2": "Donner la valeur de la variable avec l'option -e de ansible",
+        "answer-3": "Donner la valeur de la variable dans un fichier de valeurs",
+        "answer-4": "Chiffer la valeur d'une variable depuis l'invite de commande",
+        "duration": "20",
+        "good-answer": "1"
+      }
+    ]
+  }

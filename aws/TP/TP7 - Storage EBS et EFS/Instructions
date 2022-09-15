@@ -1,0 +1,71 @@
+Faire uniquement les parties 1 et 3 
+
+Partie 1 : 
+L'objectif est de voir comment rajouter un disque EBS sur une EC2
+
+1 - Créer une EC2
+2 - Créer un EBS de 1 Go dans la même AZ que l'EC2
+  	=> Le menu EBS se trouve dans le portail EC2
+3 - Attacher l'EBS à l'EC2
+4 - Formatter et monter l'EBS à l'EC2 dans /mnt/data-store
+	Tout se passe en ligne de commande shell, donc vous devez vous connecter en ssh avant de continuer
+		- commande pour voir le  disque reconnu par la machine : "lsblk -o +UUID" ou "ls /dev/sd*" ou "fdisk -l"
+		- commande permettant de formater le disque: "sudo mkfs -t xfs /dev/xvdf"
+		- commande permettant de monter le disque : "sudo mkdir -p /mnt/data-store && sudo mount /dev/xvdf  /mnt/data-store"
+		- vérifier : "mount" ou "df -h"
+5 - Passer en root et créer un fichier dans /mnt/data-store (sudo su -)
+		sudo su -
+		cd /mnt/data-store
+		echo "Bonjour, nous sommes en cours de AWS chez AJC" > index.html
+
+6 - Faire un snapshot (Instantannée) du volume (ça ce fait fans la console AWS)
+		Sélectionner votre volume > Action > Create Snapshot
+7 - Simuler la perte  du disque en supprimant l'EBS initial
+	=> Démonter la partition montée puis supprimer l'EBS dans la console AWS
+		cd ~ && sudo umount /dev/sdf
+
+8 - Restaurer le snapshot dans un autre volume et le monter dans /mnt/data-store-restored
+	=> Le dossier /mnt/data-store-restored sera créé par vos soins en avance
+    - Plus besoin de formatter, l'EBS contient déja le nouveau FS et le fichier sauvegardé
+    - /!\ si vous rencontrez des problèmes de montage, rajouter les options suivantes 
+        * -t xfs 
+		* -o nouuid 
+	sudo mkdir -p /mnt/data-store-restored && sudo mount -t xfs -o nouuid /dev/xvdg /mnt/data-store-restored		
+9 - Valider que le contenu de /mnt/data-store initialement et /mnt/data-store-restored sont identiques
+
+
+Partie 2 : EBS avec stockage des data de Wordpress
+
+1 - Déployer l'EC2 wordpress depuis l'ami que vous avez créé précédement au TP4 sur wordpress
+2 - Stopper les conteneurs : docker-compose down -v
+3 - Modifier le montage db_data pour faire un montage bindé sur /data
+4 - Créer un volume de 1Go et l'attacher à l'EC2 au point de montage /data
+5 - Relancer le wordpress : docker-compose up -d
+
+
+Partie 3 : EFS
+1 - Dans le portail EFS, créer un nouveau partage EFS dans 2 AZ
+	- Celà sous entend la création d'un Sécurity Groupe pour l'EFS
+		=> vous pourrez le nommer <premiere_lettre_nom>_<prenom>_SG_EFS 
+	- Laissez les caractéristiques par défaut de partage EFS
+    - Rassurer vous de mettre deux cibles de montages dans 2 AZs différents utilisant le SG_EFS nouvellement créé
+      => Cette configuration des cibles de montages se fait dans la partie réseau de l'EFS
+2 - Créer 2 EC2 Amazone Linux 2, chacune étant dans  1 AZ où se trouve le partage EFS
+	- Mettre les 2 VMs dans un même SG nouvellement créé nommé Sg_client_EFS
+3 - Se connecter en ssh sur les EC2 et taper la commande suivante : 
+  		sudo yum install -y amazon-efs-utils
+			=> Cette commande vous permettra d'installer le client efs
+4 - Créer un point de montage nommé efs sur les 2 EC2
+		sudo mkdir -p /mnt/efs
+5 - Tenter de monter le partage EFS avec la commande : 	
+		sudo mount -t efs -o tls fs-5abcdfrgc.efs.us-east-1.amazonaws.com:/ efs
+			=> ça ne devrait pas marcher car le SG de l'EFS n'autorise pas ce type de traffic
+6 - Ajouter en inbound rule le port NFS 2049 sur le SG_EFS en provenance du SG_client_EFS
+7 - Retester le montage EFS et valider le montage
+8 - Tester le montage en créant un fichier dans le repertoire /mnt/efs
+9 - (Bonus) Pour faire un montage automatique, suivre la documentation suivante : 
+	https://docs.aws.amazon.com/fr_fr/efs/latest/ug/efs-mount-helper.html?tag=iphoneafr-20
+	3 méthodes existent : 
+	 - Soit avec un rêle IAM
+	 - soit avec un profil AWS
+	 - soit avec un access point a créer dans l'EFS

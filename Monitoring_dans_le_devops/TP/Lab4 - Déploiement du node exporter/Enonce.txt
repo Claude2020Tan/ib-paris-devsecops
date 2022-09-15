@@ -1,0 +1,12 @@
+1- Installez le node exporter Prometheus à l’aide du chart helm disponible sur le repo Prometheus-community
+2 - Modifier la fichier config-map.yaml afin d’intégrer le node-exporter (un job si vous voulez)
+3 - Vous devez supprimer et recréer le configmap ainsi que le deployment de Prometheus pour appliquer les modifications
+4 - Vérifiez sur l’interface de Prometheus que la target node-exporter est bien présente et up
+5 - Toujours sur l’interface de Prometheus vous pouvez vous assurez que les métriques node_load15, node_cpu_seconds_total renvoient des resultats
+6 - Pour terminer, importer le dashboard Grafana par excellence pour le node-exporter
+7 - Vérifiez que le dashboard nouvellement importé affiche des données
+
+Liens Anexes : 
+    - liste exporters : https://github.com/prometheus/prometheus/wiki/Default-port-allocations
+    - doc node exporter : https://github.com/prometheus/node_exporter
+    - binaire : https://prometheus.io/download/#node_exporter

@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "question": "Quels sont les types de réseaux existants dans Docker (Choisissez la réponse incorrect)",
+      "answer-1": "Bridge",
+      "answer-2": "NAT",
+      "answer-3": "Host",
+      "answer-4": "Overlay",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Parmi les types de réseaux Docker suivants, lequel supporte le mode Swarm",
+      "answer-1": "Bridge",
+      "answer-2": "Host",
+      "answer-3": "Overlay",
+      "answer-4": "MacVlan",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quels sont les réseaux docker crées par défaut après installation de Docker ?",
+      "answer-1": "bridge",
+      "answer-2": "host",
+      "answer-3": "none",
+      "answer-4": "Tous ceux cités précédement",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quelle est l'adresse IP par défaut de l'interface docker dans le réseau bridge par défaut",
+      "answer-1": "192.168.0.1",
+      "answer-2": "127.0.0.1",
+      "answer-3": "172.17.0.1",
+      "answer-4": "172.10.0.1",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quelle est la commande permettant de créer un réseau 'lan' de type Bridge",
+      "answer-1": "docker network create --driver=host lan",
+      "answer-2": "docker network create lan",
+      "answer-3": "docker network create --driver=none  lan",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Les principaux types de stockage dans Docker (Choisissez la réponse incorrecte)",
+      "answer-1": "bind mount",
+      "answer-2": "tmp mount",
+      "answer-3": "tmpfs",
+      "answer-4": "volume",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Type de stockage à utiliser pour fournir un fichier de config au lancement d'un container ?",
+      "answer-1": "Volume",
+      "answer-2": "tmpfs",
+      "answer-3": "Bind mount",
+      "answer-4": "SATA",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Si nous montons un volume vide sur le /opt d'un container ayant un contenu",
+      "answer-1": "Le /opt du container deviens vide car volume vide",
+      "answer-2": "Le volume vide sauvegarde le contenu du /opt",
+      "answer-3": "le contenu du /opt s'ajoute au contenu du volume; vice versa",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Si nous montons un volume non vide sur le /opt d'un container avec contenu",
+      "answer-1": "Le contenu du /opt est remplacé par celui du volume",
+      "answer-2": "Le contenu du volume est remplacé par celui du /opt",
+      "answer-3": "le contenu du /opt s'ajoute au contenu du volume; vice versa",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Si nous montons un rep /data vide sur le /opt d'un container avec contenu",
+      "answer-1": "Le contenu du /opt deviens vide également",
+      "answer-2": "Le contenu du rep /data est remplacé par celui du /opt",
+      "answer-3": "le contenu du /opt s'ajoute au contenu du /data; vice versa",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Dans quel repertoire par défaut Docker stocke t-il ses différents volumes",
+      "answer-1": "/bin/bash",
+      "answer-2": "/var/lib/docker",
+      "answer-3": "/usr/lib/docker/volumes",
+      "answer-4": "/var/lib/docker/volumes",
+      "duration": "20",
+      "good-answer": "4"
+    }
+  ]
+}

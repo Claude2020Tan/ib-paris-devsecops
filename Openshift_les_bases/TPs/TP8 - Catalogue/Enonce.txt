@@ -1,0 +1,29 @@
+Partie 1 :  Catalogue de Redis
+1 - Rajoutez le template Redis sans stockage persistant : 
+    url : https://github.com/openshift/origin/tree/master/examples/db-templates
+2 - Déployez Redis à partir de ce template
+3 - Consulter le fichier json/YAML afin de mieux le comprendre
+
+Partie 2 :  Catalogue du site web statique
+Il est question de proposer un catalogue de notre site web statique.
+Pour celà, il nous faudra un repos git qui contiendra toutes les sources de notre image.
+
+1 - Sur votre github, créer un repos git "public" avec le nom "my-static-website"
+    l'url de ce repos devrait ressembler à ceci : 
+        => https://github.com/<votre_id_github>/my-static-website.git
+
+2 - Dans ce repos git, rajoutez les fichiers suivants (Les fichiers sont fournis avec l'énoncé): 
+    - Dockerfile
+    - nginx.conf
+
+3 - Déployez le catalogue du site web statique présent avec l'énoncé
+    => C'est le fichier 'static-website-catalog.yml' fournit
+
+4 - Vérifiez que toutes les ressources sont bien créé dans Openshift.
+
+5 - Rajoutez une route appelée my-static-website et vérifier qui pointe sur le service
+    créé par le catalogue. Vérifier que la route fonctionne en consommant l'application.
+
+
+PS :  Le fichier catalog-list-icons.txt fourni avec l'énonce donne la liste des icones
+    de catalogue disponibles.

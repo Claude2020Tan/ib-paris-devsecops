@@ -1,0 +1,37 @@
+Partie 1 : Partage album familial
+
+1 - Créer un bucket S3
+    - nom : nomenclature connue, on elevera juste les "_"
+    - On le rend public
+    - On selectionne "Listes ACL activées"
+
+2 - Rajouter vos fichiers dans le bucket
+
+3 - Rendre vos fichiers publics
+    - On sélectionne notre fichier et on clic sur : 
+      actions > rendre public via ACl 
+      (Si c'est grisé, vérifier bien que vous avez activé les listes d'ACL sur votre bucket S3)
+
+4 - Sur notre EC2 contenant un serveur web, editer le fichier index.html
+    - Rajouter une balise qui pointe sur l'url de l'image dans le S3
+      - exemple : <img src="Url de l'image dans le S3" alt="TITRE"/>
+    => Confer TP1 pour savoir comment installer un serveur web
+
+5 - Retourner dans le navigateur et rafraîchir l'url du site internet
+
+
+Partie 2 : site internet hebergé sur un S3
+
+1 - On crée notre bucket (compartiment) et on rend  le rend public (On pourrait ré-utiliser celui de la partie I)
+    - nom : nomenclature connue, on elevera juste les "_"
+    - On le rend public
+    - On selectionne "Listes ACL activées"
+
+2 - Télecharger le code du suivant :  
+    code : https://github.com/diranetafen/static-website-example/archive/refs/heads/master.zip
+3 - On décompresse l'archive
+3 - Copier tout "son contenu" dans le S3 à la racine du bucket
+4 - Rendre tout le contenu public
+    - On clic sur actions > Make public
+5 - On va dans properties (propriétés) du bucket et en bas on édite static website hosting (Hébergement de site web statique)
+6 - On copie l'url du site web dans le bucket S3

@@ -1,0 +1,11 @@
+1 - Récupérez le secret et access key de votre compte 
+    (dans les paramètres sécurité de votre compte dans IAM)
+2 - Créez un paire de clé dans EC2 et nommer cette clé devops-<votre prenom>, un fichier devops-<votre prenom>.pem sera  téléchargé (conservez la jalousement)
+3 - Créez une fichier ec2.tf dans un répertoire nommé tp-2
+4 - Renseignez les informations permettant de créer une VM avec l’image centos suivante : 
+    centos7-minimal-v20190919.0.0 (ami-0057d8e6fb0692b80)
+    ATTENTION nous travaillerons uniquement dans la region US East (N.Virginia)us-east-1 dans toute cette formation
+5 - Vérifiez que votre instance est bien créée et observez le contenu de fichier tfstate
+6 - Modifiez le fichier ec2.tf afin d’y inclure le tag de votre instance : “Name: ec2-<votre prenom>”
+7 - Appliquez la modification et constatez les changement apportées ainsi quedans le fichier tfstate
+8 - Supprimez votre ec2

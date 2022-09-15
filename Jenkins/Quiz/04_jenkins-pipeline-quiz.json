@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Quel est le nom par défaut du fichier corrspondant au pipeline jenkins",
+      "answer-1": "jenkinsfile",
+      "answer-2": "Jenkinsfile",
+      "answer-3": "JenkinsFile",
+      "answer-4": "FileJenkins",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Choisissez la meilleure réponse : Ou doit-on placer le fichier du pipeline ?",
+      "answer-1": "à la racine du repertoire projet (repo) ",
+      "answer-2": "N'importe où dans le repertoire projet",
+      "answer-3": "En dehors du repertoire projet",
+      "answer-4": "Aucune réponse correcte",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quel est le langage utilisé pour creer un fichier pipeline Jenkins",
+      "answer-1": "Pipeline as code",
+      "answer-2": "JAVA",
+      "answer-3": "YAML",
+      "answer-4": "Groovy",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Le Groovy est un langage de type bloc où les blocs sont identifiés par des ...",
+      "answer-1": "Paranthèses",
+      "answer-2": "Crochets",
+      "answer-3": "Indentation",
+      "answer-4": "Accolades",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Sélectionnez les assertions vraies : différences entre variables d'env globales ou locales",
+      "answer-1": "1: Les locales sont visibles/utilisables juste dans 1 tache",
+      "answer-2": "2: Les globales sont visibles dans tous le fichier Jenkins",
+      "answer-3": "3: Les locales sont visibles juste dans le bloc de leur déf",
+      "answer-4": "4: Réponse 2 et 3",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Laquelle des réponses ci-dessous est incorrecte : Les types d'agent jenkins ?",
+      "answer-1": "any",
+      "answer-2": "node",
+      "answer-3": "docker",
+      "answer-4": "ssh",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que signifie le mot clé 'agent any' dans un pipeline jenkins ?",
+      "answer-1": "1: Aucun agent sélectionné",
+      "answer-2": "2: N'importe quel agent de tous les agents de jenkins",
+      "answer-3": "3: N'importe quel agent des agents disponibles",
+      "answer-4": "4: Réponse 2 et 3",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Que signifie le mot clé 'agent docker...' dans un pipeline jenkins ?",
+      "answer-1": "Le serveur Jenkins est crée à base de docker",
+      "answer-2": "Crée un agent ou environnement isolé à l'aide de docker",
+      "answer-3": "Sélectionne le conteneur docker du serveur Jenkins",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Que signifie le mot clé 'agent label...' dans un pipeline jenkins ?",
+      "answer-1": "Sélectionne un agent jenkins n'ayant pas le label spécifié",
+      "answer-2": "Crée un agent ou environnement isolé à l'aide de docker",
+      "answer-3": "Sélectionne l'agent jenkins ayant le label spécifié",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Dans le fichier du pipeline, quel bloc permet d'identifier le pipeline",
+      "answer-1": "Stage",
+      "answer-2": "Pipelines",
+      "answer-3": "pipeline",
+      "answer-4": "stage",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

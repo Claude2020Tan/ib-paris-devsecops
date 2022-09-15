@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "En quoi consiste le templating ?",
+        "answer-1": "Créer des fichiers statiques qu'on transformer en templates",
+        "answer-2": "Créer un fichier modèle, qui sera transformé en statique",
+        "answer-3": "Utiliser le module templating",
+        "answer-4": "Créer un inventaire dynamiquer",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel est le moteur de templating utilisé par  ansible ?",
+        "answer-1": "Go templating",
+        "answer-2": "YAML",
+        "answer-3": "jinja",
+        "answer-4": "cloud formation",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quel module ansible permet d'interpréter les fichiers templates ?",
+        "answer-1": "templates",
+        "answer-2": "template",
+        "answer-3": "template_file",
+        "answer-4": "template_files",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel est l'itérateur utilisé par ansible pour faire des boucles ?",
+        "answer-1": "la variable $item",
+        "answer-2": "la variable $iterator",
+        "answer-3": "la variable item",
+        "answer-4": "la variable iterator",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quel est le mot clés utilisé quand  la variable item est dans un playbook ?",
+        "answer-1": "boucle",
+        "answer-2": "with_loop",
+        "answer-3": "loops",
+        "answer-4": "loop",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel mot clés est utilisé pour itérer sur un dictionnaire ?",
+        "answer-1": "with_item",
+        "answer-2": "with_dict",
+        "answer-3": "with_map",
+        "answer-4": "loop_dict",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Par quel mot clés peut-on replacer le mot clé loop ?",
+        "answer-1": "with_item",
+        "answer-2": "with_list",
+        "answer-3": "with_ditc",
+        "answer-4": "with_sequence",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quelle syntaxe permet de conditionner l'exécution d'une task ?",
+        "answer-1": "if .. is defined",
+        "answer-2": "if ... else ...fi",
+        "answer-3": "when ...",
+        "answer-4": "if ... elif ... else ...if",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Dans un playbook, Où se positionnent les clauses when ?",
+        "answer-1": "Au niveau du play ",
+        "answer-2": "Au niveau d'une task",
+        "answer-3": "Dans la section hosts",
+        "answer-4": "Dans la section vars",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel opérateur logique utilise -t-on pour soumettre plusieurs tests dans une clause when ?",
+        "answer-1": "&",
+        "answer-2": "&&",
+        "answer-3": "||",
+        "answer-4": "and",
+        "duration": "20",
+        "good-answer": "4"
+      }
+    ]
+  }

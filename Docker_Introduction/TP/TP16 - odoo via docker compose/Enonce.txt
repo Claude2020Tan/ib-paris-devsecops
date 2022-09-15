@@ -1,0 +1,31 @@
+Allez sur le dockerhub et rechercher l’image officielle de Odoo
+    https://hub.docker.com/_/odoo
+    
+Prendre la peine de lire attentivement le Readme montrant comment déployer Odoo à 
+l’aide des containers et les différentes variables d’environnement à utiliser
+Faites de l’IAC (docker-compose) et déployez odoo à l’aide de docker compose
+NB: Les données de la base de données doivent être persistantes
+
+Quelques commandes utiles : 
+    1 - Installer docker-compose (2 méthodes)
+  
+        - Ancienne Installation  (On tapera 'docker-compose' "avec le tiret au milieu"): 
+            sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            sudo chmod +x /usr/local/bin/docker-compose
+
+        - Nouvelle installation (On tapera 'docker compose' sans le tiret au milieu") : 
+            - https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually
+                
+            DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+            mkdir -p $DOCKER_CONFIG/cli-plugins 
+            sudo mkdir -p /usr/local/lib/docker/cli-plugins
+            curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+            sudo curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+            sudo chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose /usr/local/lib/docker/cli-plugins/docker-compose
+
+    2 - Déploiement de l'infrastructure 
+        docker-compose up -d
+    3 - Vérification des container créé par docker-compose 
+        docker-compose ps
+    4 - Aide sur la commande docker-compsoe : 
+        docker-compose -h

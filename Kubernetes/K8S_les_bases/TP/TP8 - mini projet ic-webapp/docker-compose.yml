@@ -1,0 +1,58 @@
+version: '3.3'
+services:
+    pgadmin:
+        image: dpage/pgadmin4
+        networks:
+            - ic_network
+        environment:
+            - 'PGADMIN_DEFAULT_EMAIL=pgadmin@pgadmin.com'
+            - 'PGADMIN_DEFAULT_PASSWORD=pgadmin'
+        ports:
+            - "5050:80"
+        volumes:
+            - ./servers.json:/pgadmin4/servers.json
+    ic-webapp:
+        container_name: ic-webapp
+        ports:
+            - "8080:8080"
+        environment:
+            - 'ODOO_URL=http://172.28.128.18:8069/'
+            - 'PGADMIN_URL=http://172.28.128.18:5050'
+        image: 'choco92/ic-webapp:1.0'
+        networks:
+            - ic_network
+    postgres:
+        environment:
+            - POSTGRES_USER=toto
+            - POSTGRES_PASSWORD=toto
+            - POSTGRES_DB=postgres
+        networks:
+            - ic_network
+        volumes:
+            - 'pgdata:/var/lib/postgresql/data'
+        container_name: db_odoo
+        image: 'postgres:10'
+        ports:
+            - '5432:5432'
+    odoo:
+        depends_on:
+            - postgres
+        ports:
+            - '8069:8069'
+        container_name: odoo
+        networks:
+            - ic_network
+        volumes:
+            - '${PWD}/config:/etc/odoo'
+            - '${PWD}/addons:/mnt/extra-addons'
+            - 'odoo-web-data:/var/lib/odoo'
+        environment:
+            - USER=toto
+            - PASSWORD=toto
+            - HOST=postgres
+        image: odoo
+volumes:
+    odoo-web-data:
+    pgdata:
+networks:
+    ic_network:

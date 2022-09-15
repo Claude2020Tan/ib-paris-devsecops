@@ -1,0 +1,65 @@
+Partie 1 :  Notification dans slack
+--- A faire sur votre serveur Slack ---
+1 - Créer un channel privé slack
+    Si vous n'avez pas de slack, vous pouvez utiliser celui d'EAZYtraining
+        URL : https://join.slack.com/t/pozosworkspace/shared_invite/zt-cjpeau00-n6c2_YcE1AXLIJm1C2DLBA
+2 - dans les applications slack, installer l'app jenkins-ci
+    a - ensuite aller dans setting de cette application
+    b - rajouter le channel nouvellement créé
+    c - dans la section Paramètres d'intégration, copier le jeton (Token)
+
+
+--- A faire sur Le serveur Jenkins ---        
+1 - Rajouter un crédential pour slack
+    a - type :  secret text
+    b - valeur : HnK6i1vd9ZzNqI95MLf6HXE5
+2 - Dans jenkins, installer le plugin "slack notification"    
+3 - Configuration de jenkins pour publier dans slack
+    Aller dans Manage jenkins => configure system => slack 
+        a - on renseigne le workspace slack : pozosworkspace
+        b - credential : 7xclPsnxbkrdyExKfamRhne4
+        c - channel : #test_notif_jenkins
+        d - on test la connexion
+
+4 - On modifie le Pipeline dans Git pour rajouter la section liée aux notifications post, 
+    => confer fichier post_initial.groovy fournit avec l'enonce
+5 - On commit et le build se lance autmatiquement
+6 - Vérifier le message dans slack
+
+
+Partie 2 : badge de statut
+ --- A faire sur Le serveur Jenkins ---        
+1 - Installer le plugin badge (Embeddable Build Status)
+2 - Dans Administrer Jenkins > Configurer la sécurité globale
+        Dans la section "Autorisations" cocher "Allow anonymous read access"
+3 - On retourne dans le job, tout a gauche on vera "Embeddable Build Status" apparaitre
+    a - on copie la balise souhaité (Readme unprotected)
+    b - on la rajoute dans le Readme du projet
+    /!\ Si github a du mal à lire le badge, vérifier les autorisations d'accès dans les paramètre du serveur jenkins 
+        Tableau de bord > Configurer la sécurité globale > Autorisation
+            => Vérifier que "Allow anonymous read access" est activé
+
+Hors-Sujet : Un lien cool pour les badges => https://shields.io/#your-badge            
+
+Partie 3 : Shared library
+--- A faire sur Github ---
+1 - Créer un nouveau repos github
+    a - Sous pourrez le nommer shared-library par exemple
+    b - Dans ce repos, créer un répertoire vars qui contiendra un un fichier nommé slackNotifier.groovy 
+        et mettre le contenu du fichier sharable.groovy donné avec l'énoncé
+        Votre nouveau repository devrait ressembler à celui ci : 
+            => https://github.com/ulrichmonji/sharedLibrary        
+
+--- A faire sur Le serveur Jenkins ---        
+2 - Aller  dans configure system 
+    - Chercher sharable dans la section "Global Pipeline Libraries" (en Anglais) et cliquer sur add
+        a - name : shared-library
+        b - version :  main
+        c - cocher github source Code management et renseigner l'URL github de la shared Library
+        d - on sauvegarde
+3 - A présent, il faut adapter le Jenkinsfile pour utiliser la shared library 
+    Aller dans le Jenkinsfile et rajouter l'import de la shared library 
+        => fichier import.groovy donné avec l'enonce
+        Cette ligne devra être la toute première  dans le Jenkinsfile, juste avant le bloc pipeline
+    Ensuite, remplacer la primitive post en fin de pipeline par  le contenu du fichier post.groovy 
+    fourni avec l'enonce

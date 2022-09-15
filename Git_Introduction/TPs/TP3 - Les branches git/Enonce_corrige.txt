@@ -1,0 +1,62 @@
+Partie 1 
+
+1 - Rendez-vous dans votre dossier deploy-user
+    Créez un branche update_default_value dans laquelle vous allez modifiez 
+    index.html pour mettre toto comme firstname et titi comme lastname, 
+    puis commit(ez) le changement
+    ---------------------------------------
+        git branch
+        git checkout -b update_default_value
+        vi index.html
+        git add . 
+        git commit -m "update  default value"
+        git checkout master
+    ---------------------------------------
+
+2 - Mergez la branche "update_default_value" (supprimez la après le merge) avec 
+    votre branche "master". Il faut se positionner sur la master pour le faire
+    ---------------------------------------      
+        git checkout master
+        git merge update_default_value
+        git log        
+    ---------------------------------------
+
+3 - Créez une branche "password_linux" dans laquelle vous allez modifier le message 
+    de demande de mot de passe (dans linux_users.sh), commit(ez) le changement
+    ---------------------------------------
+        git checkout -b password_linux
+        vi linux_users.sh
+        git st
+        git add . 
+        git commit -m "update password on script"
+        git checkout master
+    --------------------------------------- 
+
+4 - Déplacez-vous sur la branche master et modifier le message de demande de mot 
+    de passe (dans linux_users.sh), commit(ez) le changement
+    Tentez de merger la branche master avec password_linux, que remarquez-vous ? 
+    Il y a un conflit. Réglez le conflit et commit(ez) la modification finale
+    --------------------------------------- 
+        git checkout master
+        git br
+        vi linux_users.sh
+        git add . 
+        git commit -m "update password on script"
+        git merge password_linux
+        vi linux_users.sh
+        git add linux_users.sh
+        git commit -m "fix merge request"
+        git log
+    --------------------------------------- 
+
+
+    TIPS : 
+    Parfois des "^M" sortent à la fin du fichier, pour les enlever, faire ceci : 
+            - sed -i 's/\r//g' linux_users.sh 
+            
+
+5 - Supprimez toutes les branches sauf la master 
+    --------------------------------------- 
+        git branch -d password_linux
+        git branch -D update_default_value   
+    --------------------------------------- 

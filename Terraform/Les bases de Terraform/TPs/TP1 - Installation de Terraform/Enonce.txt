@@ -1,0 +1,4 @@
+Installez Terraform en recupérant le binaire via le lien suivant: https://www.terraform.io/downloads.html
+Si vous êtes sous windows, copiez le binaire dans un dossier de votre disque dur system par exemple  C:\terraform\ , ensuite il vous faudra rajouter le repertoire precedent dans le PATH de votre système  d’exploitation
+Si vous êtes sous linux, vous pouvez le déplacer dans /usr/bin/après l’avoir rendu executable
+Pour verifies l’instal ation, veuillez juste entrez la commande terraform et l’aide apparaitra !

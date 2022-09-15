@@ -1,0 +1,8 @@
+Pour ce cours, nous allons utliser minikube.
+Pour  vous simplifier le déploiement, un Vagrantfile et un Script d'installation 
+de minikube et k8s sont fournis avec l'enoncé.
+ => il faudrait utiliser le cluster 1.20.0 de Kubernetes dans ce cours
+
+Les sources ds TPs sont ici :  https://github.com/eazytrainingfr/prometheus-training
+
+Les corrigés sont ici : https://github.com/ulrichmonji/monitoring/tree/master/TP

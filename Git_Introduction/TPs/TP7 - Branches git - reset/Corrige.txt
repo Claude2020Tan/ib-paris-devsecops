@@ -1,0 +1,25 @@
+Parti 1 :  hard
+338  git checkout master
+  339  git merge f1
+  340  git branch  -d  f1
+  341  ll
+  342  vi README.md
+  343  git log
+  344  vi README.md
+  345  git add .
+  346  git commit -m "le point ajouté"
+  347  git log
+  348  ll
+  349  git ls-files -s
+  350  vi README.md
+  351  ll
+  352  git add .
+  353  git log
+  354  git st
+  355  git reset --hard HEAD~
+  356  git log
+  357  git st
+
+
+Partie 2 : mixed
+

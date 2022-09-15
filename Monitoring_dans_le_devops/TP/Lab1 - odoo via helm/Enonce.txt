@@ -1,0 +1,8 @@
+1 - Installez helm 3 sur votre cluster
+2 - Utilisez le chart helm de l’application odoo pour le deployer
+3 - Désactivez toutes les options de persistence de données (odoo et postgres)
+4 - Exposez l’application via un service de type nodeport (30069)
+5 - Créez un fichier values.yaml contenant toutes les variables que vous avez surchargées
+    et poussez le sur un git dans un dossier que vous appelerez lab-1
+6 - Vérifiez que l’application est bien accessible via le service créé
+

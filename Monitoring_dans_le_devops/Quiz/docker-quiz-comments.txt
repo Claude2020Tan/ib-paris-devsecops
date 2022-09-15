@@ -1,0 +1,24 @@
+Inconvénients d'une architecture monolithique
+Comme dans le cas de Netflix, les apps monolithiques peuvent être très efficaces jusqu'à ce qu'elles soient trop volumineuses et que la mise à l'échelle se complique. 
+Apporter un petit changement à une seule fonction nécessite de compiler et de tester l'ensemble de la plateforme, ce qui va à l'encontre de l'approche Agile privilégiée par les développeurs d'aujourd'hui.
+
+Citons quelques inconvénients d'une architecture monolithique :
+
+Vitesse de développement plus lente : une app monolithique volumineuse complexifie et ralentit le développement.
+
+Évolutivité : vous ne pouvez pas mettre à l'échelle des composants individuels.
+
+Fiabilité : si une erreur survient dans un module, elle peut affecter la disponibilité de l'ensemble de l'app.
+
+Obstacle à l'adoption de la technologie : les changements apportés au framework ou au langage affectent l'ensemble de l'app, ce qui les rend souvent coûteux et chronophages.
+
+Manque de flexibilité : un monolithe est limité par les technologies déjà utilisées en son sein.
+
+Déploiement : un changement mineur apporté à une app monolithique nécessite le redéploiement de l'ensemble du monolithe.
+
+
+
+MD est l'argument par défaut du conteneur. 
+Sans point d'entrée, l'argument par défaut est la commande qui est exécutée. 
+Avec entrypoint, cmd est passé à entrypoint comme argument. 
+Vous pouvez émuler une commande avec entrypoint.

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Quelle est La plus petite unité d'exécution gérée par Kubernetes ? ",
+      "answer-1": "le node",
+      "answer-2": "Le Pod",
+      "answer-3": "le conteneur",
+      "answer-4": "le replicaset",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Que contient un pod ? ",
+      "answer-1": "Un node du cluster ",
+      "answer-2": "Un unique conteneur, pas plus",
+      "answer-3": "Des conteneurs contenus dans des replicaset",
+      "answer-4": "Un ou plusieurs conteneurs partageants les mêmes ressources",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "A quoi sert un objet de type Replicaset",
+      "answer-1": "La scalabilité et la résilience des Deployements",
+      "answer-2": "La scalabilité et la résilience des Containers",
+      "answer-3": "La scalabilité et la résilience des Pods",
+      "answer-4": "La scalabilité et la résilience des Nodes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Tous les Pods d'un Replicaset ont le même nom",
+      "answer-1": "Faux, ils ont uniquement la même structure",
+      "answer-2": "Faux, ils ont simplement le même id",
+      "answer-3": "Faux, ils se partagent juste les même conteneurs",
+      "answer-4": "C'est vrai",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "A quoi sert un objet de type Deployment ?",
+      "answer-1": "Il permet de piloter différents Pods",
+      "answer-2": "Il permet de piloter différents Replicaset",
+      "answer-3": "Il permet de piloter différents Containers",
+      "answer-4": "Il permet de piloter différents services",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans les Deployments, on a 2 grandes stratégies de mise à jour, lesquelles ? ",
+      "answer-1": "UpdateImage et Recreate",
+      "answer-2": "UpdateImage et RollingUpdate",
+      "answer-3": "RollingUpdate et RecreateImage",
+      "answer-4": "RollingUpdate et Recreate",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Pour piloter mon cluster Kubernetes, deux méthodes existent :",
+      "answer-1": "Commmandes impératives et commandes déclaratives",
+      "answer-2": "Commmandes impératives et commandes affirmatives",
+      "answer-3": "Commmandes impératives et scripts",
+      "answer-4": "Commmandes affirmatives et scripts",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Que signifie l'option  en surbrillance ?",
+      "answer-1": "Le Pod contient 3 conteneur",
+      "answer-2": "Le Deployment contient des Replicasets de 3 Pods",
+      "answer-3": "Le Deployment contient 3 Replicaset",
+      "answer-4": "Les Replicasets sont en version 3",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Les secrets dans K8S sont encodés en :",
+      "answer-1": "SHA256",
+      "answer-2": "Base64",
+      "answer-3": "Base16",
+      "answer-4": "RSA",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quelle est l'utilité des configMaps ?",
+      "answer-1": "Stocker des infos secrètes",
+      "answer-2": "Stocker la base etcd de K8S",
+      "answer-3": "Stocker des infos sous forme clé/Valeur",
+      "answer-4": "Stocker plusieurs secrets",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

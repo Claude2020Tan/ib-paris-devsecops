@@ -1,0 +1,30 @@
+pipeline {
+
+    agent none
+    stages {
+       stage('Run nginx image') {
+           agent {label 'docker'}
+           steps {
+              script {
+                sh '''
+                    echo Bonjour depuis le serveur $HOSTNAME
+                    docker run -d --name nginx -p 80:80 nginx:latest
+                '''
+              }
+           }
+       }
+       
+       stage('Test ansible version') {
+           agent {label 'ansible'}
+           steps {
+              script {
+                sh '''
+                    echo Bonjour depuis le serveur $HOSTNAME
+                    ansible --version
+                '''
+              }
+           }
+       }
+       
+    }
+}

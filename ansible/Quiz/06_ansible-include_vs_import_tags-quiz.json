@@ -1,0 +1,103 @@
+{
+    "questions": [
+      {
+        "question": "Comment appeler une partie de code dans une autre ?",
+        "answer-1": "Les primitives import <fichier_à_importer>",
+        "answer-2": "Les modules import_* sachant qu'il y en plusieurs",
+        "answer-3": "Les primitives include <fichier_à_importer>",
+        "answer-4": "Les primitives #include",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment appeler une partie de code dans une autre ?",
+        "answer-1": "Les primitives import <fichier_à_importer>",
+        "answer-2": "Les primitives #import_*",
+        "answer-3": "Les primitives include <fichier_à_importer>",
+        "answer-4": "Les modules include_* sachant qu'il y en plusieurs",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle différence existe entre les import_* et les include_* ?",
+        "answer-1": "Les import sont cohérents, les includes incohérents",
+        "answer-2": "Les import sont dynamique, les includes incohérents",
+        "answer-3": "Les import sont incohérents,les includes dynamique",
+        "answer-4": "Les import sont statiques, les includes dynamiques",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que désigne le mot clé import_playbook ?",
+        "answer-1": "Le module permettant d'appeler un playbook dans un autre",
+        "answer-2": "Le nom du module permettant d'appeler un play dans un autre",
+        "answer-3": "Le module permettant d'appeler une task  dans un host",
+        "answer-4": "Le module permettant d'appeler un playbook dans un shell",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quelle notion utiliser pour marquer au fer rouge une partie du code ?",
+        "answer-1": "Label et selector",
+        "answer-2": "Label",
+        "answer-3": "Tags",
+        "answer-4": "Shebang",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Où peut - on  positionner un tag ansible ?",
+        "answer-1": "Au niveau des paramètres d'un module",
+        "answer-2": "Au niveau d'un play pour indexer la premiere task",
+        "answer-3": "Au niveau d'une task pour désigner uniquement cette task",
+        "answer-4": "Au niveau d'une task pour désigner la task suivante",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quels sont les deux tags spéciaux de ansible ?",
+        "answer-1": "always et never",
+        "answer-2": "jamais et toujours",
+        "answer-3": "interne et externe",
+        "answer-4": "skip  et no-skip",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Que fait le tag always ?",
+        "answer-1": "ne  jamais exécuter la task en question",
+        "answer-2": "toujours exécuter la task en question",
+        "answer-3": "toujours exécuter la task suivante",
+        "answer-4": "toujours exécuter la derniere task",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que fait le tag never ?",
+        "answer-1": "ne amais exécuter la task en question",
+        "answer-2": "toujours exécuter la task en question",
+        "answer-3": "toujours exécuter la task précédente",
+        "answer-4": "toujours exécuter la task en dernier",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Que faire pour ne pas exécuter le tag always ?",
+        "answer-1": "l'option --tags never lors du lancement du playbook",
+        "answer-2": "l'option -t always lors du lancement du playbook",
+        "answer-3": "l'option --skip-tags always au lancement du playbook",
+        "answer-4": "l'option -sk au lancement du playbook",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Que faire pour exécuter le tag never ?",
+        "answer-1": "l'option --tags never lors du lancement du playbook",
+        "answer-2": "l'option -t always lors du lancement du playbook",
+        "answer-3": "l'option --skip-tags always au lancement du playbook",
+        "answer-4": "l'option **-sk** au lancement du playbook",
+        "duration": "20",
+        "good-answer": "1"
+      }
+    ]
+  }

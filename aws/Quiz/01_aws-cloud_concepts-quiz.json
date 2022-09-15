@@ -1,0 +1,176 @@
+{
+    "questions": [
+        {
+            "question": "Qu’est ce que le Cloud Computing",
+            "answer-1": "Un progiciel",
+            "answer-2": "Un tableur",
+            "answer-3": "moyen d'heberger des données à distance  ",
+            "answer-4": "un ordinateur de bureau distant",
+            "duration": "20",
+            "good-answer": "3"
+        },
+           {
+            "question": "Laquelle de ces traductions françaises désignent le Cloud Computing?",
+            "answer-1": "Informatique dans le nuage",
+            "answer-2": "Technologie de vitalisation",
+            "answer-3": "La virtualisation",
+            "answer-4": "Le nuage de l’informatique",
+            "duration": "20",
+            "good-answer": "1"
+        },
+         {
+            "question": "on parle de Cloud Computing, les ressources se situent en principe",
+            "answer-1": "Sur le poste de l'utilisateur",
+            "answer-2": "Sur des serveurs distant",
+            "answer-3": "sur un serveur dédié aux bureaux",
+            "answer-4": "aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "2"
+        },
+    
+         {
+            "question": "Le service IaaS(Infrastructure as a Service) permet de :",
+            "answer-1": "mettre à disposition des applications à la demande",
+            "answer-2": "d’exécuter, de déployer et de développer des applications",
+            "answer-3": "externaliser une Infrastructure complète dans le cloud",
+            "answer-4": "toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "3"
+        },
+      
+         {
+            "question": "Le service PaaS(Plartform as a Service ) est permet de -",
+            "answer-1":  "mettre à disposition des applications à la demande",
+            "answer-2": "d’exécuter, de déployer et de développer des applications",
+            "answer-3": "externaliser une Infrastructure complète dans e cloud",
+            "answer-4": "toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "2"
+        },
+      
+         {
+            "question": "Le service SaaS(Software as a Service ) est permet de ?",
+            "answer-1": "déployer des services dans le cloud",
+            "answer-2": "configurer des réseaux et stockages virtuels",
+            "answer-3": "lancer des machines virtuelles dans le cloud",
+            "answer-4": "Accéder à des services et à des fonctionnalités à la demande",
+            "duration": "20",
+            "good-answer": "4"
+        },
+      
+         {
+            "question": "Lequel n'est pas un modèle de cloud ?",
+            "answer-1": "Cloud public",
+            "answer-2": "Cloud privé",
+            "answer-3": "Cloud Virtuel",
+            "answer-4": "Cloud hybride",
+            "duration": "20",
+            "good-answer": "3"
+        },
+      
+         {
+            "question": "Quel est le mode de dépense dans le cloud?",
+            "answer-1": "CAPEX",
+            "answer-2": "OPEX",
+            "answer-3": "KAPEX",
+            "answer-4": "HOPEX",
+            "duration": "20",
+            "good-answer": "2"
+        },
+
+         {
+            "question": " Quel est le principe de paiement dans le cloud ? ",
+            "answer-1": " paiement avant utilisation",
+            "answer-2": " forfait mensuel",
+            "answer-3": " paiement à l'utilisation ",
+            "answer-4": " aucune réponse n'est vraie ",
+            "duration": "20",
+            "good-answer": "3"
+        },
+        {
+            "question": " Quelle fonctionnalité n'appartient pas à un cloud privé ?",
+            "answer-1": " Facturation au compteur",
+            "answer-2": " Portail libre-service",
+            "answer-3": " Assistance téléphonique à domicile ",
+            "answer-4": " Élasticité ,rapidité ",
+            "duration": "20",
+            "good-answer": "4"
+        },
+      
+         {
+            "question": "Quel modèle de cloud est office 365 ?",
+            "answer-1": "IAAS",
+            "answer-2": "PAAS",
+            "answer-3": "SAAS",
+            "answer-4": "CAAS",
+            "duration": "20",
+            "good-answer": "3"
+        }
+        ,
+      
+         {
+            "question": "Qu'est-ce qu'un cloud privé ?",
+            "answer-1": "Un service cloud standard proposé via Internet",
+            "answer-2": "Une service cloud maintenue au sein d'un datacenter local",
+            "answer-3": "Un service cloud inaccessible à quiconque sauf à l'élite",
+            "answer-4": "Serveurs infonuagiques",
+            "duration": "20",
+            "good-answer": "2"
+        }
+       ,
+      
+         {
+            "question": "GCP et Microsoft Azure sont services qui sont des exemples de:",
+            "answer-1": "Infrastructure en tant que Service",
+            "answer-2": "Plateformes en tant que service",
+            "answer-3": "Logiciel en tant que service",
+            "answer-4": "Toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        }
+       ,
+      
+         {
+            "question": "Les trois principaux modèles de cloud sont les suivants:",
+            "answer-1": "Clouds privés, publics et hybrides",
+            "answer-2": "Clouds publics, hybrides et exclusifs",
+            "answer-3": "Clouds internes, externes et hybrides",
+            "answer-4": "Hybride, interne et public",
+            "duration": "20",
+            "good-answer": "1"
+        }
+         ,
+      
+         {
+            "question": "Lequel n'es pas un service core d'aws?",
+            "answer-1": "EC2",
+            "answer-2": "VPC",
+            "answer-3": "Lambda",
+            "answer-4": "Route 53",
+            "duration": "20",
+            "good-answer": "4"
+        }
+
+         ,
+      
+         {
+            "question": "Qu'est ce que s3?",
+            "answer-1": "un stockage en mode bloc géré par aws",
+            "answer-2": "un stockage en mode  file system géré par aws",
+            "answer-3": "un stockage objet géré par aws",
+            "answer-4": "Aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "3"
+        }
+        ,
+         {
+            "question": "Que signifie ec2 ?",
+            "answer-1": "elastic cloud compute",
+            "answer-2": "elastic compute cloud ",
+            "answer-3": "exact compute cloud ",
+            "answer-4": "exact cloud compute",
+            "duration": "20",
+            "good-answer": "2"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+Créer un container à l’aide de l’image kodekloud/webapp-color en surchargeant APP_COLOR=red, ce container doit être crée dans le réseau host
+    docker run -d --name color_cont -e APP_COLOR=red --network host kodekloud/webapp-color
+
+Une fois le container creé comment faire pour consommer notre application?
+    curl http://127.0.0.1:8080
+
+Consommer l’application à travers le port qui va bien au niveau de l’hote
+    
+Commentez le comportement
+    Installer le package net-tools
+        sudo yum install net-tools -yum
+    taper la commande suivante et regarder le résultat
+        netstat -nltp
+
+Supprimer votre environnement
+    docker rm -f   $(docker ps -aq)
+    docker rmi -f $(docker images -aq)

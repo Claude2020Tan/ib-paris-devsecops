@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Ansible est un outil ",
+      "answer-1": "de test de performance",
+      "answer-2": "d'Automatisation",
+      "answer-3": "de scripting",
+      "answer-4": "de developpent d'application web",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Pour fonctionner, ansible a besoin de :",
+      "answer-1": "Un agent ansible installé sur les machines cibles",
+      "answer-2": "La librairie pip installée sur les machines cibles",
+      "answer-3": "Une Connexion ssh sur les machines distantes uniquement",
+      "answer-4": "Une Connexion ssh + d'autres éléments aussi",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans le même ordre d'idées que ansible, on a l'outil",
+      "answer-1": "Jenkins",
+      "answer-2": "Gitlab-CI",
+      "answer-3": "Terraform",
+      "answer-4": "github_action",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Comparé aux outils comme Puppet, ansible a besoin de :",
+      "answer-1": "Un interpreteur python et les librairies python prérequises",
+      "answer-2": "Un agent  python installé sur les machines distantes",
+      "answer-3": "Un agent dévellopé en python sur le serveur ansible",
+      "answer-4": "Un interpreteur python tout court",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Vous pouvez installer ansible de deux manières",
+      "answer-1": "Via le kernel Unix de votre conteneur Docker",
+      "answer-2": "En utilisant pip ou le gestionnaire de package système",
+      "answer-3": "En utilisant la commande unzip",
+      "answer-4": "En utilisant la commande ansible-galaxy",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Le fichier de configuration par défaut de ansible se nomme",
+      "answer-1": "/etc/ansible/ansible.config",
+      "answer-2": "/etc/ansible/ansible.conf",
+      "answer-3": "~/.ANSIBLE_CONFIG",
+      "answer-4": "/etc/ansible/ansible.cfg",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Soit les fichiers ~/.ansible.cfg et ~centos/ansible.cfg, le fichier pris en compte est",
+      "answer-1": "~/.ansible.cfg par défaut",
+      "answer-2": "~centos/ansible.cfg  si ~/.ansible.cfg est vide",
+      "answer-3": "~centos/ansible.cfg si le user centos est à la racine / ",
+      "answer-4": "~/ansible.cfg si  ANSIBLE_CONFIG n'existe pas",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Pour faire du ansible, les éléments suivant sont suffisants pour commencer à travailler",
+      "answer-1": "Les modules, les handlers et les roles",
+      "answer-2": "l'éxécutable ansible, les modules et l'inventaire",
+      "answer-3": "les roles et les modules",
+      "answer-4": "le fichier de configuration et le fichier d'inventaire",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Pour Ansible, les modules représentent : ",
+      "answer-1": "Le code Shell utilisé par ansible se connecter",
+      "answer-2": "L'application qui permets d'acceder à l'IHM de ansible",
+      "answer-3": "Le code qui permets de télécharger des plugins ansible",
+      "answer-4": "Le code python exécuté sur les machines distantes",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans une usine logicielle, ansible se positionne de préférence sur la partie",
+      "answer-1": "Provisionning de l'infrastructure ",
+      "answer-2": "Orchestration des container docker",
+      "answer-3": "Configuration Management de l'infrastructre",
+      "answer-4": "Build des images docker",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

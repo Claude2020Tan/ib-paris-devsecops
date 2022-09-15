@@ -1,0 +1,39 @@
+git branch
+git checkout -b update_default_value
+vi index.html
+git add . 
+git commit -m "update  default value"
+git checkout master
+
+# Merge des deux branches
+git merge update_default_value
+git log
+
+# suppression de la branche update_default_value
+git branch -d update_default_value
+git branch
+
+
+
+# creation d'une nouvelle branche et gestion de conflits
+git checkout -b password_linux
+vi linux_users.sh
+git st
+git add . 
+git commit -m "update password on script"
+git checkout master
+git br
+vi linux_users.sh
+git add . 
+git commit -m "update password on script"
+git merge password_linux
+vi linux_users.sh
+git add linux_users.sh
+git commit -m "fix merge request"
+git log
+git branch -d password_linux
+git branch -D update_default_value
+
+
+  
+

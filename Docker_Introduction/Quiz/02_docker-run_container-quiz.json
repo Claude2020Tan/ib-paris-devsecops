@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Comment lancer un container nginx par exemple ? ",
+        "answer-1": "docker load nginx",
+        "answer-2": "docker run nginx",
+        "answer-3": "docker exec -it nginx ",
+        "answer-4": "docker run nginx -d 80:08",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment lister tous les containers présents ?",
+        "answer-1": "docker ls",
+        "answer-2": "docker --list",
+        "answer-3": "dokcer inspect ",
+        "answer-4": "docker ps -a",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Comment supprimer le container nommé test-container ?",
+        "answer-1": "docker rmi test-container",
+        "answer-2": "docker rmi -f test-container",
+        "answer-3": "docker rm test-container",
+        "answer-4": "docker stop test-container",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Soit la commande suivante : 'docker run --name toto nginx'",
+        "answer-1": "Le container se lance et prend possession du terminal",
+        "answer-2": "Le container se lance en mode détaché",
+        "answer-3": "Le container ne se lancera",
+        "answer-4": "Le nom du conteneur sera  nginx,",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "A quoi sert la commande docker attach ? ",
+        "answer-1": "Attacher un conteneur à un autre",
+        "answer-2": "Attacher un conteneur à un terminal",
+        "answer-3": "Attacher un conteneur à une Base de donnée",
+        "answer-4": "Attacher un conteneur à une image",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que fait la commande 'docker logs' ? ",
+        "answer-1": "Avoir les logs d'une image docker",
+        "answer-2": "Avoir les caractéristiques d'un conteneur",
+        "answer-3": "Avoir les logs du service docker",
+        "answer-4": "Avoir les logs applicatives du conteneur",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que fait la commande 'docker inspect' ? ",
+        "answer-1": "Avoir les logs du service docker",
+        "answer-2": "Avoir les caractéristiques d'un conteneur",
+        "answer-3": "Avoir les logs applicatives du conteneur",
+        "answer-4": "Avoir les logs du service docker",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que fait l'option '-e' de la commande docker ?",
+        "answer-1": "Créer des événements dans le conteneur",
+        "answer-2": "Passer des variables d'environnements",
+        "answer-3": "Afficher l'aide de la commande",
+        "answer-4": "Passer un fichier d'inventaire à Docker",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment lancer une commande dans un container ? ",
+        "answer-1": "docker apply --command ...",
+        "answer-2": "docker start ...",
+        "answer-3": "docker loggin ...",
+        "answer-4": "docker exec ...",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que font les options 'i' et 't' de docker run ?",
+        "answer-1": "i = indépendant, t = pseudo-terminal alloué",
+        "answer-2": "i = independant, t = tache de fond",
+        "answer-3": "i = Interractif, t = pseudo-terminal alloué",
+        "answer-4": "i = Interractif, t = terminal principal alloué",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

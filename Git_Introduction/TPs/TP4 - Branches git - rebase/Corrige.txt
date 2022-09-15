@@ -1,0 +1,23 @@
+Partie 2 : Rebase
+    git checkout -b f1
+    vi index.html
+    git checkout master
+    git checkout -b f2
+    vi linux_users.sh
+    git add linux_users.sh
+    git commit -m "add Group"
+    git checkout  f1
+    git add index.html
+    git commit -m "add adress"
+    git branch
+    git checkout master
+    git graph
+    git checkout  f2
+    git log
+    git rebase f1
+    git log
+    git branch
+    git checkout master
+    git merge f2
+    git log
+    git branch

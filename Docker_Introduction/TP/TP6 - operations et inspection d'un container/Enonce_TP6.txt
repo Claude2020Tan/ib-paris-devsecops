@@ -1,0 +1,17 @@
+Créez un fichier « index.html » en local sur votre machine contenant les mêmes informations que celui du TP 5
+    echo "Bonjour Ulrich, fichier présent sur le serveur Hôte des conteneurs" > index.html
+
+Lancez le container nginx en l’exposant sur le port 8080 et en ajoutant l’option (-v fichier_index.html:/usr/share/nginx/html//index.html)
+    docker run -d -v ${PWD}/index.html:/usr/share/nginx/html/index.html  --name cont_nginx_avec_volume  -p 8080:80 nginx
+
+Vérifier que le container soit bien lancé
+    docker ps -a 
+
+Vérifiez que l’application de notre container nginx est bien consommable à partir du port 8080 de notre hote
+        curl  127.0.0.1:8080
+
+Que constatez vous? Quel est le contenu de la page web afficheé?
+    On consome le fichier local de la VM
+
+Supprimer les containers, images et votre environnement. 
+    docker rm -f   $(docker ps -aq)

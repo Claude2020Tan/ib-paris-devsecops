@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Dans Openshift, comment fait-on pour isoler le travail d'une équipe ?",
+        "answer-1": "Création d'un user anonyme",
+        "answer-2": "Création des projets",
+        "answer-3": "Création d'un utilisateur par projet",
+        "answer-4": "Création de groupes de sécurité",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quels sont les types d'utilisateurs dans Openshift ?",
+        "answer-1": "Regular, déveloper et system",
+        "answer-2": "root et vagrant",
+        "answer-3": "Root et Iam",
+        "answer-4": "Regular, system, service et admin",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel type de compte utiliser pour faire de l'automatisation ?",
+        "answer-1": "root",
+        "answer-2": "regular",
+        "answer-3": "service",
+        "answer-4": "system",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quel objet Kubernetes est utilisé par openshift pour matérialiser le cloisonement de projet ?",
+        "answer-1": "namespace",
+        "answer-2": "service",
+        "answer-3": "deployment",
+        "answer-4": "pod",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quelle est la limitation du compte system:admin ?",
+        "answer-1": "Il ne peut pas créer de projets",
+        "answer-2": "Il ne peut pas se connecter à la console",
+        "answer-3": "Il ne peut pas créer de user",
+        "answer-4": "Il ne peut pas créer de service",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quelle est l'utilité du compte system:admin ?",
+        "answer-1": "Installer Kubernetes",
+        "answer-2": "Sauvegarder la base etcd",
+        "answer-3": "Créer des projet et isoler le travail",
+        "answer-4": "Créer des utilisateurs et leur donner des privilèges",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel mécanisme d'authentification est utilisé sur le user system:admin ?",
+        "answer-1": "Les certificats, vie le fichier kubeconfig",
+        "answer-2": "Login et password, vie le fichier kubeconfig",
+        "answer-3": "Le token",
+        "answer-4": "La keypair ssh",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quelle différence entre un regular user et un system user ?",
+        "answer-1": "A - system user pour des actions d'administation",
+        "answer-2": "B - regular user pour une utilisation standard",
+        "answer-3": "Le regular user n'a pas de password, c'est tout",
+        "answer-4": "Réponses A et B",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Où se situe le fichier kubeconfig par défaut ?",
+        "answer-1": "/etc/kubernetes/config",
+        "answer-2": "/home/kube/config",
+        "answer-3": "/etc/.kube/config",
+        "answer-4": "~/.kube/config",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle commande permet de lister les projets dans openshift ?",
+        "answer-1": "oc get namespaces",
+        "answer-2": "oc get user",
+        "answer-3": "oc get project",
+        "answer-4": "oc get all -o projetc",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

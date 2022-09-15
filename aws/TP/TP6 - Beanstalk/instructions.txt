@@ -1,0 +1,3 @@
+Aller dans Beanstalk, et créer un déploiement python ou nodejs.
+Une fois l'application déployée, aller vérifier les ressources AWS qui ont été 
+créés pour vous afin de faire tourner votre application (EX2, ALb, EBS, EIP, SG, ASG etc ...)

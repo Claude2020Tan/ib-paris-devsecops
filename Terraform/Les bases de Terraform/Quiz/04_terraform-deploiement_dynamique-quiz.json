@@ -1,0 +1,99 @@
+{
+    "questions": [
+          {
+            "question": "Quel élément n'est pas utilisé pour définir une variable d'entrée  ?",
+            "answer-1": "un nom",
+            "answer-2": "un type",
+            "answer-3": "une valeur par défaut",
+            "answer-4": "toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        },
+                 {
+            "question": "Comment s'appele le fichier de création des variables  ?",
+            "answer-1": "terraform-variables.tf",
+            "answer-2": "variables.tf",
+            "answer-3": "variable.tf",
+            "answer-4": "terraform.tfvars",
+            "duration": "20",
+            "good-answer": "2"
+        },
+             {
+            "question": "comment acceder à une variable d'entrée AWS_REGION ?",
+            "answer-1": "region = $AWS_REGION ",
+            "answer-2": "region = {{ AWS_REGION }} ",
+            "answer-3": "region = vars.AWS_REGION",
+            "answer-4": "region = var.AWS_REGION",
+            "duration": "20",
+            "good-answer": "4"
+        },
+        {
+            "question": "A quoi servent les output (variables de sortie)",
+            "answer-1": "affichent toutes les infos sur l'infrastructure ",
+            "answer-2": "permettent de voir les configurations terraform",
+            "answer-3": "d'obtenir dynamiquement des informations",
+            "answer-4": "aucune réponse vraie",
+            "duration": "20",
+            "good-answer": "3"
+        },
+         {
+            "question": "A quoi sert le fichier terraform.tfvars ?",
+            "answer-1": "Ajouter de nouvelles variables non définies",
+            "answer-2": "surcharger des valeurs des variables",
+            "answer-3": "il ne sert a rien dans les fichiers terraform",
+            "answer-4": "c'est un fichier qui sert à la création des variables",
+            "duration": "20",
+            "good-answer": "2"
+        }
+        ,
+        {
+            "question": "A quoi servent les attributs terraform",
+            "answer-1": "attribuer des valeurs a des variables (id,name,etc..)",
+            "answer-2": "retourner des éléments d'une ressource (id,name,etc..)",
+            "answer-3": "appliquer les configurations terraform (id,name,etc..)",
+            "answer-4": "modifier les éléments d'une ressource (id,name,etc..)",
+            "duration": "20",
+            "good-answer": "2"
+        },
+         {
+            "question": "A quoi servent les dépendances explicites ?",
+            "answer-1": " comprendre les relations entre vos ressources.",
+            "answer-2": " comprendre les relations entre vos variables.",
+            "answer-3": " comprendre les relations entre vos ouputs.",
+            "answer-4": " comprendre les relations entre vos attributs. ",
+            "duration": "20",
+            "good-answer": "1"
+        }
+          ,
+           {
+            "question": " Comment peut on déclarer une dépendance implicite ?",
+            "answer-1": " ${type_ressource.nom_ressource.attribut} ",
+            "answer-2": " ${type_ressource.attribut.nom_ressource} ",
+            "answer-3": " $(type_ressource.nom_ressource.attribut)",
+            "answer-4": " $(type_ressource.attribut.nom_ressource) ",
+            "duration": "20",
+            "good-answer": "1"
+        }  
+        ,
+           {
+            "question": " A quoi servent les data source ?",
+            "answer-1": " définir une source d'information au sein de terraform ",
+            "answer-2": " modifier des valeurs de configurations terraform",
+            "answer-3": " utiliser des informations définies en dehors de Terraform",
+            "answer-4": " ajouter un comportement spécifique à terraform",
+            "duration": "20",
+            "good-answer": "3"
+        } 
+            ,
+           {
+            "question": " comment déclare t'on une data source ?",
+            "answer-1": " source 'aws_ami' 'example' {} ",
+            "answer-2": " data_source 'aws_ami' 'example' {}",
+            "answer-3": " data 'aws_ami' 'example' {}",
+            "answer-4": " data 'aws_ami'  {}",
+            "duration": "20",
+            "good-answer": "3"
+        }
+       
+    ]
+}

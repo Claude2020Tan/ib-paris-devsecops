@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Quels éléments retrouve-t-on dans le modèle objet adopté par git ? ",
+        "answer-1": "Les inodes, les blob et les file system",
+        "answer-2": "Les blob, les tree et les commit",
+        "answer-3": "Les commit, les file system et les tree",
+        "answer-4": "Le disque dur, et la Ram",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Les éléments suivants représentent les environnement de travail de git",
+        "answer-1": "Le disque dur, la cache et la RAM",
+        "answer-2": "La RAM et le disque dur",
+        "answer-3": "le répertoire  de travail et la zone tampon",
+        "answer-4": "le répertoire  de travail,  la zone tampon et le repos git",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Comment faire pour passer le fichier 'monfichier' du workdir à la zone tampon ?",
+        "answer-1": "git run monfichier",
+        "answer-2": "git edit monfichier",
+        "answer-3": "git add monfichier",
+        "answer-4": "git add monfichier index",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Comment faire pour envoyer un commit dans le dépot git en donnant le message de commit?",
+        "answer-1": "git commit -m 'message de commit' ",
+        "answer-2": "git add  -m 'message de commit' ",
+        "answer-3": "git add repos -m 'message de commit' ",
+        "answer-4": "git checkout -b 'message de commit' ",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Je souhaites écraser le commit précédent, que faire ?",
+        "answer-1": "git commit --delete",
+        "answer-2": "git commit --amend",
+        "answer-3": "git commit -del",
+        "answer-4": "git commit -a",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Je souhaites annuler les modifications du fichier monfichier",
+        "answer-1": "git undo monfichier",
+        "answer-2": "git -f monfichier",
+        "answer-3": "git --restore -f monfichier",
+        "answer-4": "git restore monfichier",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Je souhaites transformer mon répertoire local en repos git, que faire ?",
+        "answer-1": "git init",
+        "answer-2": "git clone <url_remote>",
+        "answer-3": "git --init",
+        "answer-4": "git commit",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Je souhaites télécharger en local un repos git distant, que faire ?",
+        "answer-1": "git init",
+        "answer-2": "git clone <url_remote>",
+        "answer-3": "git init clone",
+        "answer-4": "git init <url_remote>",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Je veux updater mon repo git local à partir des nouveauté du serveur distant, que faire ?",
+        "answer-1": "git download",
+        "answer-2": "git update",
+        "answer-3": "git push",
+        "answer-4": "git pull",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Je créé 1 fichier dans un depot local, dans quel env de travail se trouve-t-il ?",
+        "answer-1": "le dépot git",
+        "answer-2": "l'index",
+        "answer-3": "Le workdir",
+        "answer-4": "la ram",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

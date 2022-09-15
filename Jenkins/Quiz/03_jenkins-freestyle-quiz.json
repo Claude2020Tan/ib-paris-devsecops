@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Qu'est ce qu'un job paramétrable dans Jenkins ?",
+      "answer-1": "Job pouvant etre dynamique",
+      "answer-2": "Un job ayant des paramètres",
+      "answer-3": "Un job ayant des variables d'environnement",
+      "answer-4": "Toutes les réponses citées précédemment",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "A quoi correspond l'évènement de Build Trigger lors de la configuration d'un Job ?",
+      "answer-1": "L'action qui déclenchera l'exécution du Job",
+      "answer-2": "a la programmation evènementielle",
+      "answer-3": "A rien, juste pour faire joli",
+      "answer-4": "Aucune réponse correcte",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Laquelle des réponses ci-dessous est incorrecte : Les types d'agent jenkins ?",
+      "answer-1": "any",
+      "answer-2": "node",
+      "answer-3": "docker",
+      "answer-4": "ssh",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que signifie configurer l'environnement de Build jenkins",
+      "answer-1": "Editer les variables d'environnement liées au Job",
+      "answer-2": "Configurer le contexte dans lequel le pipeline se lancera",
+      "answer-3": "réinitialiser le workspace à chaque build",
+      "answer-4": "Aucune des réponses ci-dessus",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Choisir les assertions vraies : Freestyle vs Pipeline",
+      "answer-1": "1: Le job de type pipeline fait du pipeline as code",
+      "answer-2": "2: la configuration d'un job freestryle se fait manuellement",
+      "answer-3": "3: Aucune différence entre le freestyle et le pipeline",
+      "answer-4": "4: Réponse 1 et 2",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Parmi les taches suivantes; laquelle ou lesquelles peuvent etre des taches post build ?",
+      "answer-1": "1: Exécuter une tache du job",
+      "answer-2": "2: Envoyer une notification par mail ou slack",
+      "answer-3": "3: Supprimer le job",
+      "answer-4": "4: Réponse 2 et 3",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Que faire pour utiliser une fonctionnalité jenkins pas installée sur notre serveur ?",
+      "answer-1": "On met à jour Jenkins",
+      "answer-2": "On met à jour l'hote Jenkins 'apt update' ",
+      "answer-3": "On cherche le plugin correspondant et on l'installe",
+      "answer-4": "Aucun de ceux listés plus haut",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel menu permet de configurer un plugin dans Jenkins",
+      "answer-1": "Manage Jenkins > configure system",
+      "answer-2": "Manage Plugins",
+      "answer-3": "Manage Jenkins > Manage Plugins",
+      "answer-4": "Manage Jenkins > Manage credentials",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Choisissez la meilleure réponse : Qu'est ce qu'un artefact",
+      "answer-1": "espace permettant de sauvegarder tout ce que l'on souhaite",
+      "answer-2": "peut etre assimilé à tout résultat d'un traitement numérique",
+      "answer-3": "Données sauvegardées lors d'un pipeline",
+      "answer-4": "Aucune des réponses listées plus haut",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Choisissez la meilleure réponse : Qu'est ce qu'un credential dans jenkins",
+      "answer-1": "Une variable d'environnement",
+      "answer-2": "variable d'env critique dont on souhaite masquer la valeur",
+      "answer-3": "Toutes les réponses citées plus haut",
+      "answer-4": "Aucune de ces réponses",
+      "duration": "20",
+      "good-answer": "2"
+    }
+  ]
+}

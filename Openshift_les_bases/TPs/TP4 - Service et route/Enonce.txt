@@ -1,0 +1,46 @@
+Dans ce TP, nous allons tester la statégie de build docker, ainsi que la notion de services.
+On profitera aussi pour tester le principe d'import et d'export de manifestes.
+
+    PS : Quelques informations pour vous orienter
+        * Si besoin, vous avez les sources dans le dossier src qui accompagne l'énoncé de 
+            l'exercice. N'hésitez pas à vous en servir si besoin, faudra les adapter ...
+        * Pour voir le fichier Yaml d'un build déja existant, faire : 
+            - Builds > simple-webapp > Actions > Edit YAML
+        * Pour importer un manifeste de build afin de créer un nouveau build, faire
+            - Builds > Builds > Add to Project > Import YAML/JSON
+        * Pour voir le fichier Yaml du deployment simple-webapp déja existant, faire :             
+            - Application > Deployments > simple-webapp > Actions > Edit YAML
+
+1 - Créez un build à partir de celui de simple-webapp. Contrairement à celui de simple-webapp,
+    ce dernier sera de type Docker Build. Ainsi nous vous conseillons de partir du fichier yaml 
+    du build de simple-webpp afin de l’adapter à simple-webapp-docker.
+    Vous devrez re-importer le fichier après modification. 
+        => Le fichier Build-config.yml vous sera utile à cette question
+    Infos du build : 
+        - Nom : simple-webapp-docker
+        - URL : https://github.com/<votre compte>/simple-webapp-docker.git
+        - Build strategy : docker
+
+2 - Le build ne lance certainement pas. C'est normal, car l'Image Stream es absent. Il faut 
+    le créer. Pour ce faire, il faudra importer le fichier image_stream.yml dans le portail des 
+    images.
+        - Builds > Images > Add to Project > Import YAML/JSON
+    Pour info: Attention, l'image Stream n'est pas l'image, c'est juste une référence vers l'image 
+    qui sera créé après le build.
+
+3 - Créez un déploiement toujours à partir de celui de simple-webapp
+        => Le manifeste DeploymentConfig.yml vous sera utile.
+        
+4 - Créez un service de type cluster IP pour exposer votre application dans le cluster. Vous 
+    pouvez vous inspirer de celui de simple-webapp ou à partir des exemples disponibles sur internet
+        => Le manifeste ClusterIP-simple-webapp-docker.yml vous sera utile
+
+5 - Créez également une route afin d’atteindre l’application depuis l’extérieur comme c’est le cas 
+    pour simple-webpp. Vous le ferrez depus l'interface openshift, pas besoin d'importer un fichier.
+    Caractéristiques du service : 
+        - nom : simple-webapp-docker
+        - service : simple-webapp-docker
+        - Label 
+            app : simple-webapp-docker
+
+6 - Vérifiez que tout fonctionne bien et vos votre application est disponible

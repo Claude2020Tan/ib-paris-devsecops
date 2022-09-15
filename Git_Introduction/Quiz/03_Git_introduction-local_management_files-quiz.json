@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Je veux savoir l'état de mes fichiers dans git, que faire ?",
+        "answer-1": "git status",
+        "answer-2": "git state",
+        "answer-3": "git st",
+        "answer-4": "systemctl status git",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Que signifie l'état 'Untracked' d'un fichier ?",
+        "answer-1": "fichier supprimé du file system",
+        "answer-2": "fichier non suivi par le file system",
+        "answer-3": "fichier vide jamais modifié",
+        "answer-4": "FIchier dans le workdir non suivi par git",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quels sont les états d'un fichier dans un repos git ?",
+        "answer-1": "Untracked, Modified et Staged",
+        "answer-2": "Modified et Staged",
+        "answer-3": "Untracked, Unmodified, Modified et Staged",
+        "answer-4": "Unmodified, Modified et Staged",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quelle est l'utilité du fichier .gitignore ?",
+        "answer-1": "Ignorer des fichiers afin que git ne les suive pas",
+        "answer-2": "Marquer des fichiers pour suppression",
+        "answer-3": "Marquer des fichiers pour comme Untracked",
+        "answer-4": "Marquer des fichier comme Unmodified",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Que signifie la ligne 3 de ce fichier ?",
+        "answer-1": "Ignore tous les fichiers commençant par .app",
+        "answer-2": "Ignore tous les fichiers se terminant par .app",
+        "answer-3": "Ignore tous les fichiers du répertoire .app",
+        "answer-4": "Supprime tous les fichiers .app",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quelle commande me permet d'avoir l'historique git",
+        "answer-1": "git tail",
+        "answer-2": "git --log",
+        "answer-3": "gitlog",
+        "answer-4": "git log",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Comment grapher l'historique git ?",
+        "answer-1": "git log --graph",
+        "answer-2": "git graph",
+        "answer-3": "git --graph",
+        "answer-4": "git config --log --graph",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Comment marquer un commit  avec git ?",
+        "answer-1": "git --label",
+        "answer-2": "git tag",
+        "answer-3": "git --tag",
+        "answer-4": "git -t",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que fait la commande suivante : 'git config --global alias.st status' ?",
+        "answer-1": "Elle crée l'alias 'git br'",
+        "answer-2": "Elle crée l'alias 'git alias status'",
+        "answer-3": "Elle crée l'alias 'git status'",
+        "answer-4": "Elle crée l'alias 'git st'",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que fait la commande suivante 'git show 1.0.0'",
+        "answer-1": "Elle liste les détails du dépot git 1.0.0",
+        "answer-2": "Elle liste les détails du fichier 1.0.0",
+        "answer-3": "Elle liste les détails du tag 1.0.0",
+        "answer-4": "Elle liste les détails du dossier 1.0.0",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

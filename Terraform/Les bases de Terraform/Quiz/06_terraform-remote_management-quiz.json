@@ -1,0 +1,94 @@
+{
+    "questions": [
+        {
+            "question": "Combien de type de backend existent ?",
+            "answer-1": "0",
+            "answer-2": "1",
+            "answer-3": "2 ",
+            "answer-4": "3",
+            "duration": "20",
+            "good-answer": "3"
+        },
+         {
+            "question": "un remote backend  est :",
+            "answer-1": "stockage distant pour l'etat de l'infrastructure",
+            "answer-2": "stockage distant pour les manifests terraform",
+            "answer-3": "stockage distant pour les variables de terraform",
+            "answer-4": "stockage distant permettant de versionner les manifests",
+            "duration": "20",
+            "good-answer": "1"
+        },
+              {
+            "question": "lequel peut être utilisé pour stocker l'etat de terraform?",
+            "answer-1": "google drive",
+            "answer-2": "microsoft one drive",
+            "answer-3": "amazone s3",
+            "answer-4": "mega",
+            "duration": "20",
+            "good-answer": "3"
+        },
+           {
+            "question": "Quand utiliser les backends distants ?",
+            "answer-1": "travail en équipe",
+            "answer-2": "versionning de l'etat",
+            "answer-3": "modification de l'etat",
+            "answer-4": "toutes les réponses sont exactes",
+            "duration": "20",
+            "good-answer": "1"
+        },
+              {
+            "question": "Ou est stoqué par défaut le fichier d'état terraform?",
+            "answer-1": "sur aws",
+            "answer-2": "sur la machine locale",
+            "answer-3": "sur google",
+            "answer-4": "sur terraform cloud",
+            "duration": "20",
+            "good-answer": "2"
+        },
+              {
+            "question": "Quelle est la syntaxte pour déclarer un backend local ?",
+            "answer-1": "backend 'local' {path ='/home/terraform.tfstate'}",
+            "answer-2": "backend 'local' {}",
+            "answer-3": "backend 'local' [path ='/home/terraform.tfstate']",
+            "answer-4": "backend 'local' []",
+            "duration": "20",
+            "good-answer": "1"
+        },
+           {
+            "question": "quel est la syntaxe minimale pour déclarer un remote provisioner?",
+            "answer-1": "  provisioner 'remote' { inline = [] } ",
+            "answer-2": "  provisioner 'remote-exec' { inline = [] }",
+            "answer-3": "  provisioner 'remote-exec' {  [] }",
+            "answer-4": "  provisioner 'remote-exec' {}",
+            "duration": "20",
+            "good-answer": "2"
+        },
+              {
+            "question": "pour passer  du backend distant au backend local , il faut :",
+            "answer-1": "modifier remote par local , ensuite 'terraform init'",
+            "answer-2": "modifier remote par local , ensuite 'terraform apply'",
+            "answer-3": "modifier remote par local , ensuite 'terraform destroy' ",
+            "answer-4": "modifier remote par local , ensuite 'terraform plan'",
+            "duration": "20",
+            "good-answer": "1"
+        },
+              {
+            "question": "Quel est l'avantage d'utiliser un backend distant ?",
+            "answer-1": "versionning , travail collaboratif",
+            "answer-2": "sécurité , performance ",
+            "answer-3": "sécurité , travail peronnel",
+            "answer-4": "sécurité , travail collaboratif",
+            "duration": "20",
+            "good-answer": "4"
+        },
+        {
+            "question": "La commande refresh modifie-t-elle l'infrastructure ?",
+            "answer-1": "Oui",
+            "answer-2": "Non elle modifie le type backend",
+            "answer-3": "Non , mais modifie le fichier d'état",
+            "answer-4": "Aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "3"
+        }
+    ]
+}

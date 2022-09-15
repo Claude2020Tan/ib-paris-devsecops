@@ -1,0 +1,15 @@
+  Partie 3 : cherry-pick
+    git checkout -b f1
+    vi index.html
+    git commit -m "Mickey"
+    git add .
+    git commit -m "Mickey"
+    vi linux_users.sh
+    git add .
+    git commit -m "usernamE"
+    git log
+    git checkout master
+    git cherry-pick 8e4d167a6d65d3d2598a333a51e3a051370b6820
+    git log
+    git branch
+    git branch -f f1

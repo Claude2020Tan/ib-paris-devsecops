@@ -1,0 +1,5 @@
+L'énoncé est dans le Readme de ce projet git,  
+https://github.com/ulrichmonji/ib-cicd-static-website
+
+Il est question de faire la partie I qui concerne la CICD, 
+Les outils utilisés sont Jenkins et Ansible

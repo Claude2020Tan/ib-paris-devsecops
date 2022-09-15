@@ -1,0 +1,35 @@
+Partie 1 :  stash
+Rendez-vous dans votre dossier deploy-user
+
+1 - Créez un branche feature1 dans laquelle vous allez modifier « index.html » .
+    Modifier la valeur initiale du numero de téléphone, 
+    <input type=« text » name=« telephone » value=« 8888888 »> 
+    Ne commitez pas car vous êtes loins d’avoir fini quand,
+
+2 - Un bug en production fait paniquer tout le monde et on nous demande de tout 
+    laisser pour passer dessus,   "mettez votre travail de côté » avec un stash
+        git stash
+
+3 - Modifiez le fichier linux et ajoutez « please » dans la phrase du mot de 
+    passe et commitez car vous avez resolu le bug de production
+
+4 - Récupérez votre stash pour pouvoir reprendre où vous êtes arrêté
+        git stash list
+        git stash apply ${ID_du_stash}
+        git stash drop ${ID_du_stash}
+        git stash pop ${ID_du_stash}  (apply et supprimer)
+
+5 - Après l’avoir appliqué, n’oubliez pas de supprimer le stash, et de commiter 
+    les modifications sur index.html.
+
+Partie 2 : squash
+
+1 - la branche feature1 a 2 commits que l’on souhaite réecrire en un seul
+    Utilisez la commande git rebase –i HEAD~2
+    
+2 - Remplacer « pick » par « squash » devant le dernier commit
+    sauvegardez la modification
+    mettre à jour le message de combinaison et fermer vi
+
+3 - selectionnez la branche master
+    mergez feature1 sur master

@@ -1,0 +1,4 @@
+Utiliser le build multistage avec 3 stages afin de conteneuriser l’application précédente dans le but de réduire la taille finale de notre image.
+Nous devons avoir 03 stages, le premier nous permettant de récupérer les fichiers source avec comme base ubuntu:18.04, le second stage nous permettant d’héberger notre app web à l’aide de apache et le troisième à l’aide de nginx.
+Creez à l’aide de ce dockerfile 02 images docker ayant pour tag « name:httpd »  et « name:nginx » que vous pousserez ensuite vers votre dockerhub,
+Sauvegarder votre fichier (dockerfile) sur votre repo github

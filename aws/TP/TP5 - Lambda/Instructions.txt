@@ -1,0 +1,9 @@
+Aller dans le service AWS Lambda à l'adresse https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/begin
+Créer une nouvelle fonction lambda dont les caractéristiques sont : 
+    - Type Blueprint , selectionner "hello-world-python"
+    - Nom : il respectera notre nomenclature
+    - Execution role : Creer un nouveau role (coché par defaut)
+    - Code python : On laissera le code par défaut
+Testez la fonction : 
+    Il sera question de configurer un évènement qui déclenchera le lancement de la fonction, ensuite de tester et visualiser l'output
+    Amusez à parcourir l'interface de lambda, pour voir les logs, les possibilité offertes par le service

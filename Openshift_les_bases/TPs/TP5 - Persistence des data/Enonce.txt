@@ -1,0 +1,14 @@
+Le but est de tester l'ajout de stockage sur un déploiement Openshift. Pour celà,
+vous allez repérer le point de montage sur votre application, ensuite, créer un 
+un disque qu'il faudra monter dans le deployment.
+
+1 - Créez un storage nommé data-storage
+    * Access Mode : Single User (RWO)
+    * Size : 1 GiB
+
+2 - Attachez ce storage à votre deployment simple-webapp-docker dans /data
+        Application > Deployments > simple-webapp-docker > Add Storage
+
+3 - Vérifiez à l’aide de la console terminal que le montage a bien été effectué.
+    En principe, un nouveau POD a été relancé, il faudrait le repérer et faire un 
+    "df -h" dans son terminal, afin de valider le montage de la nouvelle  partition

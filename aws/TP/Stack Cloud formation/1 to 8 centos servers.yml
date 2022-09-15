@@ -1,0 +1,363 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Metadata:
+  License: Apache-2.0
+
+Description: Create a variable number of EC2 instance resources.
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
+    Type: AWS::EC2::KeyPair::KeyName
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+    Default: devops
+
+  SSHLocation:
+    Description: The IP address range that can be used to SSH to the EC2 instances
+    Type: String
+    MinLength: 9
+    MaxLength: 18
+    Default: 0.0.0.0/0
+    AllowedPattern: (\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})
+    ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+
+  InstanceCount:
+    Description: Number of EC2 instances (must be between 1 and 8).
+    Type: String
+    Default: 1
+    AllowedValues:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+  InstanceTypeInstance:
+    Description: Instance type to launch EC2 Remote instances.
+    Type: String
+    Default: t2.medium
+    AllowedValues: [t2.micro, t2.medium, t2.large, t2.xlarge, t2.2xlarge,
+      t3.nano, t3.micro, t3.small, t3.medium, t3.large, t3.xlarge, t3.2xlarge,
+      m4.large, m4.xlarge, m4.2xlarge, m4.4xlarge, m4.10xlarge,
+      m5.large, m5.xlarge, m5.2xlarge, m5.4xlarge,
+      c5.large, c5.xlarge, c5.2xlarge, c5.4xlarge, c5.9xlarge,
+      g3.8xlarge,
+      r5.large, r5.xlarge, r5.2xlarge, r5.4xlarge, r3.12xlarge,
+      i3.xlarge, i3.2xlarge, i3.4xlarge, i3.8xlarge,
+      d2.xlarge, d2.2xlarge, d2.4xlarge, d2.8xlarge]
+    ConstraintDescription: must be a valid EC2 instance type.
+
+  ImageTypeInstance:
+    Description: image type for instance server
+    Default: "CentOS Linux 7 (Core) - ami-0057d8e6fb0692b80"
+    Type: String
+    AllowedValues:
+      - "Debian GNU/Linux 9 (stretch) - ami-003f19e0e687de1cd"
+      - "CentOS Linux 7 (Core) - ami-0057d8e6fb0692b80"
+    ConstraintDescription: must specify debian or centos
+
+  StorageInstance:
+    Description: Storage size (Go) for Remote server
+    Default: "10"
+    Type: String
+    AllowedValues:
+      - "10"
+      - "20"
+      - "30"
+      - "50"
+    ConstraintDescription: must specify 10, 20, 30 or 50 Go.
+
+Conditions:
+  Launch1: !Equals [1, 1]
+  Launch2: !Or
+  - !Equals [2, !Ref InstanceCount]
+  - !Equals [3, !Ref InstanceCount]
+  - !Equals [4, !Ref InstanceCount]
+  - !Equals [5, !Ref InstanceCount]
+  - !Equals [6, !Ref InstanceCount]
+  - !Equals [7, !Ref InstanceCount]
+  - !Equals [8, !Ref InstanceCount]
+
+  Launch3: !Or
+  - !Equals [3, !Ref InstanceCount]
+  - !Equals [4, !Ref InstanceCount]
+  - !Equals [5, !Ref InstanceCount]
+  - !Equals [6, !Ref InstanceCount]
+  - !Equals [7, !Ref InstanceCount]
+  - !Equals [8, !Ref InstanceCount]
+
+  Launch4: !Or
+  - !Equals [4, !Ref InstanceCount]
+  - !Equals [5, !Ref InstanceCount]
+  - !Equals [6, !Ref InstanceCount]
+  - !Equals [7, !Ref InstanceCount]
+  - !Equals [8, !Ref InstanceCount]
+
+  Launch5: !Or
+  - !Equals [5, !Ref InstanceCount]
+  - !Equals [6, !Ref InstanceCount]
+  - !Equals [7, !Ref InstanceCount]
+  - !Equals [8, !Ref InstanceCount]
+
+  Launch6: !Or
+  - !Equals [6, !Ref InstanceCount]
+  - !Equals [7, !Ref InstanceCount]
+  - !Equals [8, !Ref InstanceCount]
+
+  Launch7: !Or
+  - !Equals [7, !Ref InstanceCount]
+  - !Equals [8, !Ref InstanceCount]
+
+  Launch8: !Equals [8, !Ref InstanceCount]
+
+  DebianImageInstance: !Equals [!Ref ImageTypeInstance, "Debian GNU/Linux 9 (stretch) - ami-003f19e0e687de1cd"]
+  CentosImageInstance: !Equals [!Ref ImageTypeInstance, "CentOS Linux 7 (Core) - ami-0057d8e6fb0692b80"]
+
+Resources:
+  Instance1:
+    Condition: Launch1
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+       - Key: Name
+         Value: 'ec2 - 1'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance2:
+    Condition: Launch2
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 2'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance3:
+    Condition: Launch3
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 3'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance4:
+    Condition: Launch4
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 4'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance5:
+    Condition: Launch5
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 5'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance6:
+    Condition: Launch6
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 6'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance7:
+    Condition: Launch7
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 7'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  Instance8:
+    Condition: Launch8
+    Type: AWS::EC2::Instance
+    Properties:
+      Tags:
+        - Key: Name
+          Value: 'ec2 - 8'
+      ImageId:
+        !If [DebianImageInstance, 'ami-003f19e0e687de1cd', !If [CentosImageInstance, 'ami-0057d8e6fb0692b80', ' ']]
+      InstanceType: !Ref InstanceTypeInstance
+      SecurityGroups: [!Ref 'SecurityGroup']
+      KeyName: !Ref 'KeyName'
+      UserData:
+        'Fn::Base64':
+          !Sub |
+            #!/bin/bash
+            sudo yum update -y
+            sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+            sudo service sshd restart
+            sudo chpasswd <<<"centos:a231e83092beedf5c757691a1e26462a"
+
+      BlockDeviceMappings:
+        - DeviceName:
+            !If [DebianImageInstance, xvda, !If [CentosImageInstance, /dev/sda1, ' ']]
+          Ebs:
+            VolumeSize: !Ref StorageInstance
+            DeleteOnTermination: true
+
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      Tags:
+       - Key: Name
+         Value: 'Allow access 22, 80, 8080 and 8090'
+      GroupDescription: Enable SSH and HTTP access via port 22 and 80
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: !Ref 'SSHLocation'
+      - IpProtocol: tcp
+        FromPort: 80
+        ToPort: 80
+        CidrIp: !Ref 'SSHLocation'
+      - IpProtocol: tcp
+        FromPort: 8080
+        ToPort: 8080
+        CidrIp: !Ref 'SSHLocation'
+      - IpProtocol: tcp
+        FromPort: 8090
+        ToPort: 8090
+        CidrIp: !Ref 'SSHLocation'

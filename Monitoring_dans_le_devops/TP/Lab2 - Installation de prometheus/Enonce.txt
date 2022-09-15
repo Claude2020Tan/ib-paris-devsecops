@@ -1,0 +1,9 @@
+1 - Créez un namespace monitoring
+2 - Déployez Prometheus à l’aide des sources fournies :
+    => https://github.com/eazytrainingfr/prometheus-training/tree/main/sources/prometheus
+    Ps : pas besoin de déployer l'alert manager pour l'instant
+3 - Etudiez les fichiers et déduisez comment accéder à l’application via le nodeport
+4 - Découvrez l’interface
+5 - Allez dans les targets et verifiez que le target Prometheus est bien présente et up
+
+Félicitations ! Vous pouvez passer au lab-3

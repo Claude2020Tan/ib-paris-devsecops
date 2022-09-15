@@ -1,0 +1,14 @@
+Lancez un container à partir de l’image kodekloud/webapp-color en exposant son port 8080 sur le port 5000 de votre hote
+    docker run -d --name webapp_color_1 -p 5000:8080 kodekloud/webapp-color
+
+Connectez vous sur le port 5000 de votre hote afin de consommer l’application
+    via le navigateur, http://127.0.0.1:5000
+
+Lancez à nouveau un autre container à base de la même image mais cette fois ci en définissant la variable d’environnement APP_COLOR=red. (exposez sur le port 8000 )
+    docker run -d --name webapp_color_red -e APP_COLOR=red -p 5001:8080 kodekloud/webapp-color
+
+Consommez l’application. Que constatez vous?
+    via le navigateur, http://127.0.0.1:5001
+
+Supprimer votre environnement
+    docker rm -f   $(docker ps -aq)

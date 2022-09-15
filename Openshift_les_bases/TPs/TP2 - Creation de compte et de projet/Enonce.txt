@@ -1,0 +1,25 @@
+1 - Créez à l’aide de la console votre compte nominatif de type Regular user
+    => Sur minishift (OPenshift origin), il suffit de se logguer, peu importe ce qu'on saisie
+
+2 - Créez un projet nommé eazytraining-<votre_prenom> dans votre compte 
+    Tout se passe dans l'IHM, c'est plutôt intuitif
+3 - Connectez-vous via la cli à openshift et recupérez la liste des utilisateurs et des projets
+    A faire depuis la machine minishift : 
+        - Connexion avec un user normal
+            oc login https://192.168.99.11:8443
+        - Listing des projets
+            oc get project
+        - déconnexion
+            oc logout
+        - Connexion en user admin, il faut d'abord être root
+            sudo su - 
+            oc login -u system:admin https://192.168.99.11:8443
+        - Listing des utilisateurs
+            oc get users
+
+4 - Recupérez ces mêmes infos via l’API (utilisation de curl avec token)
+    - Récupérer son token
+
+        oc whoami -t
+    - Intérroger l'api openshift
+        curl -k  https://192.168.99.11:8443/oapi/v1/projects -H "Authorization: Bearer veBkMU7nKG1ORA3204BcTj9fCN2aG3KfcfBcmh-2chA"

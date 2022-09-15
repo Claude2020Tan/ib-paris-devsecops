@@ -1,0 +1,15 @@
+Partie 2 : Rebase
+1 - Créer une branche "feature1" à partir de la master et modifier l'index.html en ajoutant
+    une balise pour le numero de téléphone, puis commiter le changement
+    Faire un git log pour visualer les logs
+
+2 - Revenir sur la branche master et créer une branche "feature2" à partir de la master et 
+    qui édite le fichier linux_users.sh  en rajoutant une lecture du groupe de l'utilisateur,
+    puis commiter les changements
+    Faire un git log pour visualer les logs
+
+3 - Récupérez tous les commits de la branche feature1 avec un Rebase et regarder les logs de git
+    git rebase feature1
+
+4 - Merger feature2 sur la master et regarder les logs de git
+

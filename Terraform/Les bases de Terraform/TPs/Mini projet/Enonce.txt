@@ -1,0 +1,8 @@
+Ecrivez un module pour créer une instance ec2 utilisant la dernière version de ubuntu bionic (qui
+s’atachera l’ebs et l’ip publique) dont la taile et le tag seront variabilisés
+Ecrivez un module pour créer un volume ebs dont la taile sera variabilisée
+Ecrivez un module pour une ip publique (qui s’at achera la security group)
+Ecrivez un module pour créer une security qui ouvrira le 80 et 443
+Créez un dossier app qui va utiliser les 4 modules pour déployer une ec2, bien-sûr vous al ez surcharger  les variables afin de rendre votre application plus dynamique
+A la fin du déploiement, installez nginx et enregistrez l’ip publique dans un fichier nommé ip_ec2.txt (ces  éléments sont àintégrer dans le module ec2)
+A la fin de votre travail, poussez votre rôle sur github, rédigez un rapport détailé de vos travaux  et envoyez nous ce rapport à eazytrainingfr@gmail.com et nous vous dirons si votre solution  respecte les bonnes pratiques

@@ -1,0 +1,23 @@
+
+##############################   Install du controller ingress   ##############################
+minikube addons enable ingress
+kubectl get pods -n ingress-nginx
+
+##############################   Creation d'une premiere regle ingress   ##############################
+kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0
+kubectl expose deployment web --type=NodePort --port=8080
+
+Sur le navigateur : http://http://172.28.128.6:30882/
+Pour avoir l'url du service : minikube service web --url
+
+echo "172.28.128.6 hello-world.info" /etc/hosts
+kubectl apply -f example-ingress.yaml
+curl hello-world.info/
+
+##############################   Creation d'un nouvelle regle ingress   ##############################
+kubectl create deployment web2 --image=gcr.io/google-samples/hello-app:2.0
+kubectl expose deployment web2 --port=8080 --type=NodePort
+kubectl apply -f example-ingress.yaml
+curl hello-world.info/v2
+
+

@@ -1,0 +1,76 @@
+Exo 1 : Appairage de VPC
+Pour ce TP, on va travailler en binôme.
+Chaque membre du binome créé un  VPC portant son nom.
+    - Les VPC peuvent être dans deux régions ou pas, aucun problème. 
+    - Rassurez vous juste que les plages d'adresse IP des VPC ne chevauchent pas
+    - Les VPCs doivent avoir 2 subnets,  un public et un privé
+    - Ne pas oublier d'activer l'atreibution automatique des adresses IPs sur tous vos sous réseaux 
+            > Subnet -> Selectionner le subnet -> Action -> Modifier les paramètre de sous réseau -> cocher les cases adéquates et enregistrer
+Dans chacun de ces VPCs, chaque membre du binomme créé une instance EC2 
+    - Chacun devra installer un serveur web sur son instance et customiser le index.html
+        sudo yum install httpd -y && sudo systemctl enable --now httpd  && sudo su - -c "echo \"Bonjour depuis le serveur de Ulrich\" > /var/www/html/index.html "
+    - Rassurez vous que le sécurity group de votre Instance autorise le traffic ssh et http
+
+Depuis l'une des instances, tentez de joindre le serveur web de l'autre instance via l'IP privée.
+ -> Normalement, ça ne devrait pas fonctionner
+
+Pour résoudre ce problème, vous devez mettre en place l'appairage des deux VPCs.
+La demande se fait par l'un des binôme et la validation se fait par l'autre binôme
+    1er binôme : 
+        - Dans le service VPC, aller dans "Peering Connection" et initiez la demande de peering 
+    2eme binôme : 
+        - Dans le service VPC, aller dans "Peering Connection" et validez la demande de peering     
+
+Pour chacun des binomes, il faudra maintenant configurer la table de routage du réseau de votre EC2.
+    Pour chaque EC2, il faudrait mettre une route à destination du réseau de l'autre EC2 dont la passerelle
+    sera le peering de VPC
+
+Une fois les tables de routages configurées, testez à nouveau de joindre le serveur via l'IP privée.
+Cela devrait fonctionner normalement
+
+
+Exo 2 : Endpoints.
+Prérequis : 
+- Vous devez avoir un VPC contenant au moins 1 subnet public et un subnet privé
+- Les deux subnets sont dans le même AZ et sont routés
+- Dans ce VPC, vous travaillez dans une meme AZ
+
+1 - Créez deux instance EC2 telle que : 
+    * AMI : Amazone linux 2 
+    * Taille :  t2.micro
+    * Une instance dans le subnet public jouant le role de bastion
+    * Une instance dans le subnet privé passant par la NAT Gateway pour aller sur Internet
+2 - Créez un bucket S3 portant votre nom              
+3 - Connectez vous à l'instance bastion et depuis cette machine, connectez en ssh sur l'ec2 privée
+    Cela ,sous entend que votre clés privées est déposée sur le serveur bastion ...
+4 - Vérifiez que  la ligne de commande aws est présente dans cette vm privée
+    * aws help
+5 - Tapez la commande suivante pour configurer votre profil aws
+    *  commande :  aws configure
+        * Vous entrerez vos tokens, votre région (us-east-1) par défaut et le format
+        de sortie par défaut (json)    
+6 - Donner un role à l'instace EC2 afin qu'elle puisse lister le contenu du S3
+    => Normalement, les credentials configuré plus haut font l'affaire s'ils ont les droits admin sur aws
+        ie que vous pouvez probablement sauter cette étape
+
+7 - En ligne de commande, listez les bucket s3 contenu dans votre région
+    * aws s3 ls
+8 - A présent, rassurez vous que la VM ne puisse pas communiquer sur Internet.
+    Il faudrait enlevez la route par défaut vers la nat Gateway de facon temporaire
+    le "ping 8.8.8.8"  et le "aws s3 ls" doivent etre KO
+
+9 - Dans le service VPC, Configurer un endpoint permettant a l'EC2 de pouvoir acceder au S3
+    * Il faudra chercher s3 dans la bare de recherche et selectionner la Gateway
+    * relier le endpoind a la table de routage de votre subnet privé
+    * Une fois configuré, Une nouvelle entrée pointant vers le endpoint 
+        devrait apparaitre dans votre table de routage du subnet privé. cette
+        entré se configure uniquement depuis le endpoint créé
+10 - A présent sur l'ec2, vérifier bien que internet ne fonctionne toujours pas, 
+    mais que vous pouvez tout de meme joindre le service S3.
+    * ping 8.8.8.8
+    * aws s3 ls --region us-east-1
+
+
+Exo 3 : Cloudfront + S3
+Créer un bucket S3, puis créer un  Cloudfront ayant comme origine le S3.
+Accedez aux fichier stockés dans le S3 depuis le CDN Cloudfront

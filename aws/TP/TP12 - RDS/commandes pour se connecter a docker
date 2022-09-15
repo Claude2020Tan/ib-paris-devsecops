@@ -1,0 +1,26 @@
+/!\ A tester
+- Créer un VPC dans le service VPC avec réseau public et provée via le launch wizard.
+  - Choisir le AZ a pour les 2 subnets
+  - NAT : créer une instance NAT
+
+- Créer une instance EC2 (frontend) dans le VPC : 
+  - image : amazon linux, taille par défaut
+  - mettre dans le subnet public
+  - rajouter les user data qui vont installer l'appli qui va consommer la BDD
+  - autoriser le port 80 sur le SG
+
+- Déploiement de la BDD (backend) dans le VPC, subnet privé
+  - créer un deuxieme subnet privé dans le VPC, dans une autre AZ (b)
+  - forcer le nouveau subnet utiliser la table de routage des réseau privé
+  - Créer le subnet group de la BDD
+    - il s'étend sur les deux réseaux privés créé.
+  - aller dans database et créer la BDD
+    - choisir mysql
+    - credential : master/MasterPassword
+    - size :  
+      - burstable classes
+      - t3.small
+    - stockage : 200 Go
+    - AZ et durabilité : Create a standby instance
+
+

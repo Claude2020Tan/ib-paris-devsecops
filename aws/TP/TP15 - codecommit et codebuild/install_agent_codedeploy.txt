@@ -1,0 +1,15 @@
+#!/bin/bash
+#installer l'agent codedeploy
+#https://docs.aws.amazon.com/fr_fr/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html
+sudo apt-get update -y	
+sudo apt install ruby-full -y
+sudo apt-get install wget -y
+cd /home/ubuntu
+#wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo ./install auto > /tmp/logfile
+sudo service codedeploy-agent status
+sudo service codedeploy-agent start
+sudo service codedeploy-agent status

@@ -1,0 +1,7 @@
+Il s’agit ici de créer une image docker afin de conteneuriser une application web statique.
+Avant de démarrer, créez vous un compte sur https://hub.docker.com/.
+
+Une fois créé, téléchargez les fichiers de l’application à l’aide de git 
+    git clone https://github.com/diranetafen/static-website-example.git
+Conteneuriser cette application à l’aide de l’image de base nginx.
+

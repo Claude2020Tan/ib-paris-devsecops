@@ -1,0 +1,14 @@
+L'objectif de ce TP et de prendre en main docker sur une Amazon Linux
+  1 - Déployer une EC2  
+    - Ami : Amazon Linux 2
+    - SG : créer un nouveau qui respecte la nomenclature définie
+    - Tags : 
+      - Name : <premiere_lettre_nom>_<prenom>_<type-ressource>_<OS>
+
+  2 - Installer docker en utilisant la Doc AWS
+    - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
+    - /!\ Se deco reco pour que le changement de groupe soit effectif
+
+  3 - Deployer le conteneur mario
+      docker run -d -p 80:8080 pengbai/docker-supermario
+

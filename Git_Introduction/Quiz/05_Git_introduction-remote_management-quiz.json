@@ -1,0 +1,112 @@
+{
+    "questions": [
+      {
+        "question": "En local, comment se nomme la branche distante 'main' sur le dépôt baptisé 'origin'?",
+        "answer-1": "main/origin",
+        "answer-2": "master/origin",
+        "answer-3": "origin/master",
+        "answer-4": "origin/main",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment visualiser les serveurs git distants et leurs URLs",
+        "answer-1": "git remote show",
+        "answer-2": "git clone ls",
+        "answer-3": "git remote",
+        "answer-4": "git remote -v",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Je veux supprimer les branches de suivi distantes qui n’existent pas dans le dépot distant",
+        "answer-1": "git remote delete-all origin",
+        "answer-2": "git remote -D unused origin",
+        "answer-3": "git remote prune origin",
+        "answer-4": "git remote -D unused",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Que fait la commande suivante :  'git remote prune --dry-run origin' ?",
+        "answer-1": "Elle simule la suppression des branches inexistantes",
+        "answer-2": "Elle supprime des branches inexistantes",
+        "answer-3": "Elle simule la suppression du dépôt distant",
+        "answer-4": "Elle supprime le dépôt distant",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Comment envoyer la branche fix/issue1 sur le remote eazytraining ?",
+        "answer-1": "git push eazytraining master ",
+        "answer-2": "git push eazytraining fix/issue1",
+        "answer-3": "git push eazytraining issue1",
+        "answer-4": "git pull eazytraining fix/issue1",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment se nomme le serveur distant dans cette commande ?  'git push main origin'",
+        "answer-1": "main/origin",
+        "answer-2": "origin",
+        "answer-3": "master",
+        "answer-4": "main",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que représente la commande 'git pull' ?",
+        "answer-1": "git fetch + git merge",
+        "answer-2": "git add + git merge",
+        "answer-3": "git fetch + git add",
+        "answer-4": "git add + git commit",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Les serveurs suivants sont des serveurs git : ",
+        "answer-1": "Git, GItalb-CI, bitbucket",
+        "answer-2": "Gitalb, Github, Codecommit, bitbucket",
+        "answer-3": "Jenkins, Git, Github",
+        "answer-4": "BItbucket, COdecommit, Rundeck, SVN",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que représente la capture suivante ?",
+        "answer-1": "Un Workdlow Integration Manager",
+        "answer-2": "Un Workdlow Centralisé",
+        "answer-3": "Le workflow de contribution à un projet open git",
+        "answer-4": "Un Workdlow Dictateur",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que représente la capture suivante ?",
+        "answer-1": "Un Workdlow Integration Manager",
+        "answer-2": "Un Workdlow Centralisé",
+        "answer-3": "Le workflow de contribution à un projet open source sur git",
+        "answer-4": "Un Workdlow Dictateur",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Je ne souhaite pas saisir mon mot de passe à chaque push sur le remote, que faire ?",
+        "answer-1": "Je renseigne ma clés public ssh dans le serveur git",
+        "answer-2": "Je renseigne ma clés privée ssh dans le serveur git",
+        "answer-3": "Je crée un utilisateur sans mots de passe",
+        "answer-4": "Je configure une branche non protégée.",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Dans le serveur github, peut-t-on s'authentifier en CLI avec son login/password ?",
+        "answer-1": "Oui, c'est tout à fait possible",
+        "answer-2": "Non, je dois utiliser ma clé ssh + l'access token",
+        "answer-3": "Impossible, je dois utiliser ma clés ssh ou l'access token",
+        "answer-4": "Oui, Je crée un utilisateur avec un mot de pass",
+        "duration": "20",
+        "good-answer": "3"
+      }      
+    ]
+  }

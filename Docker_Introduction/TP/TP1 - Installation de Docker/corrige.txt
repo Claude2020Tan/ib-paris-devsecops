@@ -1,0 +1,25 @@
+
+https://get.docker.com/
+
+## Installation ## 
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker vagrant
+systemctl start docker
+systemctl enable docker
+
+
+## Test de validation ## 
+docker run hello-world:latest
+docker run --name nginx -d -p 80:80 nginx
+dans le navigateur, ton tape http://IP_machine
+
+
+## Utilisation des var d'env,  déploiement de https://github.com/kodekloudhub/webapp-color
+
+docker run --name web-color -e APP_COLOR="red" -d -p 8080:8080 kodekloud/webapp-color
+docker run --name web-color2 -e APP_COLOR="blue" -d -p 8081:8080 kodekloud/webapp-color
+
+
+

@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Comment faire pour ne pas renseigner en clair le password de login ssh ?",
+        "answer-1": "Utiliser le mecanisme de keypair ssh",
+        "answer-2": "Utiliser un certificat autosigné par ansible",
+        "answer-3": "Se logger manuellement la première fois uniquement",
+        "answer-4": "Uploader la clé privée ssh sur les serveurs cibles",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Comment générer une keypair ssh ?",
+        "answer-1": "ssh --create keypair -t rsa ",
+        "answer-2": "ssh keygen",
+        "answer-3": "ssh-key-gen",
+        "answer-4": "ssh-keygen -t rsa",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Le user centos n'a pas de compte ssh sur les machines cibles alors : ",
+        "answer-1": "Créer une keypair pour centos résolve ce probleme",
+        "answer-2": "Je configure ansible pour centos et j'active become",
+        "answer-3": "Ansible ne pourra jamais s'exécuter avec le user centos",
+        "answer-4": "En laçant ansible, je tape sudo devant le bianire ansible",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quelle commande utiliser pour chiffrer un fichier ?",
+        "answer-1": "ansible --encrypt",
+        "answer-2": "ansible-vault encrypt <nom_du_fichier>",
+        "answer-3": "ansible --encrypt <nom_du_fichier>",
+        "answer-4": "ansible-encrypt",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que peut - on chiffrer avec la commande ansible-vault ?",
+        "answer-1": "Uniquement les fichiers contenus dans le projet ansible",
+        "answer-2": "Le fichier d'inventaire principal uniquement",
+        "answer-3": "Tout fichier d'inventaire ou de variable uniquement",
+        "answer-4": "N'importe quel fichier sur mon système de fichier",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel est le mécanisme de sécurité appliqué par ansible-vault ?",
+        "answer-1": "Un chiffrement asymétrique",
+        "answer-2": "De l'encodage en base64",
+        "answer-3": "Du chiffrement symétrique",
+        "answer-4": "De l'encodage en SHA256",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quelle commande permet de déchiffrer un fichier ?",
+        "answer-1": "ansible --decrypt <nom_du_fichier>",
+        "answer-2": "ansible-vault decrypt <nom_du_fichier>",
+        "answer-3": "ansible-decrypt --decrypt <nom_du_fichier>",
+        "answer-4": "ansible-vault -d <nom_du_fichier>",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment faire pour éditer un fichier chiffré par ansible-vault ?",
+        "answer-1": "utiliser l'option edit de ansible-vault",
+        "answer-2": "déchiffrer avec ansible decrypt",
+        "answer-3": "ouvrir le fichier avec vi car vi sait lire ces fichiers",
+        "answer-4": "déchiffer le fichier avec votre clés privée ssh",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Comment lancer un playbook utilisant des fichiers chiffrés ?",
+        "answer-1": "utiliser ansible au lieu de ansible-playbook",
+        "answer-2": "utiliser ask-vault-pass au lieu de ansible-plaubook",
+        "answer-3": "utiliser ask-sudo-pass pour saisir le password vault",
+        "answer-4": "utiliser ask-vault-pass pour saisir le password vault",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle option utiliser au lancement d'un playbook utilisant l'option become ?",
+        "answer-1": "ask-vault-pass pour saisir le password sudo",
+        "answer-2": "ask-sudo-pass pour saisir le password vault",
+        "answer-3": "ask-sudo-pass pour saisir le password sudo",
+        "answer-4": "ask-vault-pass pour saisir le password vault",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

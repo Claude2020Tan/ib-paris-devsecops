@@ -1,0 +1,10 @@
+1 - Installez  virtualbox et vagrant
+2 - Créez un compte github
+3 - Forkez les deux projets utilisés pour la formation
+    - https://github.com/eazytrainingfr/simple-webapp.git
+    - https://github.com/eazytrainingfr/simple-webapp-docker.git
+4 - Cloner le repos git https://github.com/diranetafen/cursus-devops.git
+    git clone https://github.com/diranetafen/cursus-devops.git
+5 - Déployez la stack minishift
+    cd cursus-devops/vagrant/minishift
+    vagrant up --provision

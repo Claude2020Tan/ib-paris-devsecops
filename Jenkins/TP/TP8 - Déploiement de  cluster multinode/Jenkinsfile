@@ -1,0 +1,18 @@
+pipeline {
+
+    agent none
+    stages {
+       stage('Run image') {
+           agent {label 'worker2'}
+           steps {
+              script {
+                sh '''
+                    echo $HOSTNAME
+                    docker run -d nginx
+                    docker ps -a
+                '''
+              }
+           }
+       }
+    }
+}

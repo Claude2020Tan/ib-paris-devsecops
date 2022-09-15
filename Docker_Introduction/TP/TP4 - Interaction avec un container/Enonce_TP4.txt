@@ -1,0 +1,34 @@
+Lancer le container Ubuntu en mode détaché et interactive avec un tag différent de latest 
+    docker run -di  ubuntu:devel
+
+Que constatez vous?
+    La nouvelle version est téléchargée puis lancée
+
+Lancez à nouveau le container ubuntu en mode interactive + nouveau terminal, Que constatez vous?
+    docker run -it ubuntu:devel
+    On se connecte directement au container
+
+Supprimez les différents containers présent dans votre machine
+    docker rm -f   $(docker ps -aq)
+
+Lancez le container ubuntu:18.04 en mode détaché avec la commande « sleep 4500 »
+    docker run -d --name container_ubuntu1 ubuntu:18.04 sleep 4500
+    
+Utiliser la commande « docker exec » afin d’exécuter une commande à l’intérieur du container (commande de création d’un dossier portant votre prénom »)
+    docker exec container_ubuntu1 mkdir -p ULRICH
+
+Utiliser docker exec afin d’afficher l’ensemble des fichier et répertoire à l’aide de la commande « ls »
+    docker exec container_ubuntu1 ls ULRICH
+
+Utiliser docker exec et passez la commande « /bin/bash ». Que constatez vous?
+    docker exec  container_ubuntu1 /bin/bash
+    Aucune connexion au terminal
+
+Utiliser docker exec en mode interactive + nouveau terminal et passez la commande « /bin/bash », Que constatez vous? 
+    docker exec -it container_ubuntu1 /bin/bash
+    On se connecte au terminal du conteneur
+
+Lancez le container ubuntu:18.04 en mode détaché + mode interactive + nouveau terminal
+        docker run -dit --name container_ubuntux ubuntu:18.04 
+
+Observez et expliquez le comportement de ces différentes commandes puis supprimez vos environnements

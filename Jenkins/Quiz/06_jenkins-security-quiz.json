@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Par défaut, quel est le niveau d'accè d'un utilisateur Jenkins ?",
+      "answer-1": "Limité",
+      "answer-2": "Configurable",
+      "answer-3": "Total (Full Access)",
+      "answer-4": "Bloqué",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel est le prerequis nécessaire dans jenkins afin de configurer les niveaux d'accès des users",
+      "answer-1": "Installer le plugins de sécurité qui va bien",
+      "answer-2": "Mettre à jour Jenkins vers sa dernière version ",
+      "answer-3": "Mettre à jour l'hote jenkins",
+      "answer-4": "restreindre les droits de l'utilisateur Jenkins sur l'hote",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quel est le nom du plugin à installer pour pouvoir gérer la sécurité",
+      "answer-1": "Jenkins Security",
+      "answer-2": "Role Strategy",
+      "answer-3": "Role-based Authorization Strategy",
+      "answer-4": "Built-in-security",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel changement visuel peut-on observer après l'install du plugin de sécurité",
+      "answer-1": "Aucun changement",
+      "answer-2": "Ajout d'un menu permettant de gerer et assigner les roles",
+      "answer-3": "Ajout du paramètre authentification basée sur les roles",
+      "answer-4": "Aucune des réponses précedentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Que faire après l'install du plugin sécurité pour avoir le menu de gestion des roles",
+      "answer-1": "Rien c'est disponible direct après l'install",
+      "answer-2": "l'activer en validant le paramètre auth basé sur les roles",
+      "answer-3": "redemarrer le serveur Jenkins",
+      "answer-4": "Patienter quelques minutes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quels sont les principaux types de roles existants dans Jenkins ",
+      "answer-1": "roles globaux et roles liés aux taches",
+      "answer-2": "roles liés aux jobs et roles liés aux noeuds",
+      "answer-3": "roles liés aux users et roles globaux",
+      "answer-4": "roles globaux et roles liés aux projets ou jobs",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quel(s) types de roles devraient t-on utiliser pour donner accès à juste un job particulier",
+      "answer-1": "roles globaux et projets",
+      "answer-2": "roles projets",
+      "answer-3": "roles globaux",
+      "answer-4": "toutes les réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "A quoi correspond la propriété pattern lors de la creation d'un role project ?",
+      "answer-1": "Juste à étiqueter le role",
+      "answer-2": "définit le template à utiliser pour sélectionner le role",
+      "answer-3": "définit le template à utiliser pour sélectionner les jobs",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quelle est la fonctionnalité des roles de types node (node role) ?",
+      "answer-1": "limiter les autorisations des users sur les divers agents",
+      "answer-2": "limiter les autorisations des users sur l'hote jenkins",
+      "answer-3": "limiter les autorisations des jobs sur les divers agents",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Où se trouve le menu de création des utilisateur dans Jenkins ?",
+      "answer-1": "Dasboard > Users",
+      "answer-2": "Dashboard > Manage Jenkins > Manage Users",
+      "answer-3": "Dashboard > Manage Users",
+      "answer-4": "Dashboard > Manage Users > Users",
+      "duration": "20",
+      "good-answer": "2"
+    }
+  ]
+}

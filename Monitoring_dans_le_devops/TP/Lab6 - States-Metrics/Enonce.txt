@@ -1,0 +1,7 @@
+1 - Déployez kube-state-metrics à l’aide de la documentation officielle en déployement l’ensemble des manifests présent
+2 - Modifiez le configmap prometheus afin d’y intégrer le endpoint de kube-state-metrics précédement déployé (n’hésitez pas à regarder la Doc)
+3 - Vous devez supprimer et recréer le configmap ainsi que le deployment de Prometheus pour appliquer les modifications
+4 - Vérifiez sur l’interface de Prometheus que la target kube state est bien présente et up
+5 - Toujours sur l’interface de Prometheus vous pouvez vous assurez que la métrique kube_deployment_status_replicas renvoie un resultat
+6 - Pour terminer, importer le dashboard permettant de visualiser les métriques de kube-state
+7 - Vérifiez que le dashboard nouvellement importé affiche des données

@@ -1,0 +1,34 @@
+Il est question pour ce TP de découvrir le cloud AWS
+
+  1 - Déployer une EC2 : 
+    - Aller dans le service EC2 et cliquer sur Lancer une instance
+    - Ami : Amazon Linux 2, free tier
+    - type : t2.micro
+    - Security Group (SG) : créer un nouveau qui respecte la nomenclature définie
+      - Configuer le SG pour accepter le flux entrant sur le port 80
+    - Tags : 
+      - Name : <premiere_lettre_nom>_<prenom>_<type-ressource>_<OS>
+      - formation: <promotion>
+    - keypair : créer une nouvelle paire de clé, à nommer suivant notre nomenclature
+      - type  : RSA
+
+  2 - Installer le package httpd
+    - Selectionner l'instance et cliquer sur "se connecter"
+      - un menu d'aide apparaît vous iniquant le procédé de connexion, suivre ces étapes
+    - Une fois connecté, installer apache (httpd) et configurez le avec ces commandes : 
+      - sudo yum install -y httpd
+      - sudo systemctl start httpd
+      - curl 127.0.0.1
+    - Editer le fichier /var/www/html/index.html 
+      - Mettre à l'intérieur ceci :  Hello from <votre_prenom>'s server
+      - Enregistrer et quitter le fichier
+
+  3 - Accès au site depuis l'extérieur
+    - Récupérer l'url publique de votre EC2 et tenter de joindre votre site via le navigateur
+    - La connexion echoue, car le SG n'autorise probablement pas le traffic entrant sur le port 80
+        => Alors il faut configurer le SG pour accepter le traffic entrant sur le port 80
+      - Selectionner votre instance
+      - Aller dans securite et selectionner le Secuity Group
+      - Modifier les règles entrantes pour accepter le traffic http et valider
+      - Tester de nouveau le site web
+

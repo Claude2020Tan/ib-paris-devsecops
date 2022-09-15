@@ -1,0 +1,16 @@
+### Connexcion à openshift
+    oc login https://192.168.99.11:8443
+### Lister les projets	
+    oc get project
+### Récupérer son token
+    oc whoami -t
+Intérroger l'api openshift
+    curl -k  https://192.168.99.11:8443/oapi/v1/projects -H "Autorization: Bearer P-sWfe1ey48Ts0r8kMz8oopj7XPCnz-LtqTrwzPRBBw"
+### Connexcion à openshift comme admin
+    => Il faut etre en root sur la vm minishift pour le faire
+    oc login -u system:admin https://192.168.99.11:8443
+### Déconnexion
+    oc logout	
+
+
+

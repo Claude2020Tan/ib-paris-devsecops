@@ -1,0 +1,14 @@
+######################################################## Install de Helm ########################################################
+cd
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
+helm init
+kubectl --namespace kube-system create serviceaccount tiller
+kubectl create clusterrolebinding tiller-cluster-rule  --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+kubectl --namespace kube-system patch deploy tiller-deploy  -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}' 
+
+######################################################## Install du charts wordpress ########################################################
+helm install stable/wordpress --name wordpress -f values.yml
+kubectl get po -o wide
+kubectl get svc -o wide

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Un cluster K8s est constitué de serveurs",
+      "answer-1": "physiques uniquement",
+      "answer-2": "physiques ou virtuel, peut importe",
+      "answer-3": "virtuels uniquement",
+      "answer-4": "virtuels et conteneurs ",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans un cluster K8S, on distingue :",
+      "answer-1": "des masters et des lieutenants ",
+      "answer-2": "soit des masters, soit des workers",
+      "answer-3": "des masters, des workers et des lieutenants",
+      "answer-4": "des masters et des workers",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans un cluster K8S, le plan de control est contitué de serveurs",
+      "answer-1": "nodes",
+      "answer-2": "slaves",
+      "answer-3": "master",
+      "answer-4": "workers",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Un cluster K8S est contitué de :",
+      "answer-1": "nodes masters et workers, et des objets K8S",
+      "answer-2": "nodes masters et des objets k8S",
+      "answer-3": "serveurs workers et des okjets K8S",
+      "answer-4": "la base etcd et de l'api-server",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Les composants suivants font parti des nodes masters",
+      "answer-1": "api-server, scheduler, controller, etcd, core-dns",
+      "answer-2": "api-server, launcher, controller, etcd, core-dns",
+      "answer-3": "api-server, launcher, controller, etcd, initd",
+      "answer-4": "api-server, launcher, systemd, etcd, initd",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Les composants suivants font parti des nodes workers",
+      "answer-1": "kubelet et kube-proxy",
+      "answer-2": "kubelet, kube-proxy et scheduler-agent",
+      "answer-3": "kubelet et scheduler-agent",
+      "answer-4": "scheduler-agent et kube-proxy",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Que représente l'api-server  ? ",
+      "answer-1": "C'est le controller du cluster",
+      "answer-2": "c'est la base de donnée interne du cluster",
+      "answer-3": "C'est le planificateur des tasks du cluster",
+      "answer-4": "C'est le point d'entrée des utilisateurs K8S",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que représente le scheduleur ? ",
+      "answer-1": "C'est le point d'entrée des utilisateurs K8S",
+      "answer-2": "C'est le planificateur des tasks du cluster",
+      "answer-3": "C'est le controler des tasks du cluster",
+      "answer-4": "c'est la base de donnée interne du cluster",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Que représente l'etcd? ",
+      "answer-1": "C'est le service dns de K8S",
+      "answer-2": "C'est l'agent K8S côté worker",
+      "answer-3": "Il gère l'ensemble des actions réseau de K8S",
+      "answer-4": "c'est la base de donnée interne du cluster",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que représente Kubelet ? ",
+      "answer-1": "Il gère l'ensemble des actions réseau de K8S",
+      "answer-2": "C'est le binaire dont Kuctl est l'alias",
+      "answer-3": "C'est l'agent K8S côté worker qui interprete les insructions",
+      "answer-4": "C'est le service permetant de démarrer K8S",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

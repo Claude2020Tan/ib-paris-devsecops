@@ -1,0 +1,12 @@
+Exo 1 : Déployez un site wordpress sur OVH Kubernetes 
+
+Partie I
+1 - Créez un cluster OVH Kubernetes avec trois nœuds : https://docs.ovh.com/gb/en/kubernetes/creating-a-cluster/ 
+2 - Modifiez la configuration de Kubectl pour vous connecter au cluster précédemment créé : https://docs.ovh.com/gb/en/kubernetes/configuring-kubectl/ 
+3 - Vérifier le nombre de nœuds : kubectl get nodes
+
+Partie II
+1 - Utilisez les ressources fournies à l’adresse suivant pour déployer votre site wordpress : https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/ 
+2 - Activez kubernetes dashbard sur votre cluster : https://docs.ovh.com/us/en/kubernetes/installing-kubernetes-dashboard/ 
+3 - Explorez kubernetes dashbord
+4 - Détruisez le cluster OVH Kubernetes

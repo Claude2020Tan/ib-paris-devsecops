@@ -1,0 +1,60 @@
+Partie 1 :  Rédaction du pipeline
+1 - Parcourir le fichier Jenkinsfile_template donné et comprendre ce qu'il fait
+2 - Le  Jenkinsfile_template n'est pas complet, il faudrait détecter les manquements et les compléter.
+    Si vous avez du mal, un corrigé est fourni avec l'énoncé, bien vouloir le comprendre et l'adapter.
+    
+    Annexes : 
+    * Documentation sur les pipelines :  https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
+    * Pour valider la syntaxe de votre pipeline sous VScode 
+        - Plugin "Jenkins Pipeline Linter Connector"
+        - https://marketplace.visualstudio.com/items?itemName=janjoerke.jenkins-pipeline-linter-connector
+        - https://www.jenkins.io/blog/2018/11/07/Validate-Jenkinsfile/
+        - https://dev.to/nicoavila/how-to-validate-your-jenkinsfile-locally-before-committing-334l
+
+3 - Aller dans votre repos git alpinehelloworld et rajoutez ce Jenkinsfile à la racine du projet
+  PS : Pour récupérer les secret jenkins dans une variable, regarder la documentation 
+    https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#handling-credentials
+
+
+Parti 2 : Création du job pipeline dans jenkins
+1 - Créer un job 
+    - type:  pipeline
+    - nom: deployment
+    - Paramètres : 
+        - PORT_EXPOSED = "80"
+        - ID_DOCKER_PARAMS = "Mettre votre ID dockerhub"
+    - Cocher la case projet github et donner l'url du projet git
+    - Dans les triggers, cocher la case "github hook trigger ..."
+    - Dans Pipeline, choisir from SCM
+        - donner l'url du repos git sur la branche master/main
+    - Script path : Jenkinsfile
+    - On save et on lance l'exécution du job
+
+Partie 3 : synchro jenkins/ github
+    PS : Hors scope, à lire uniquement si votre serveur jenkins n'est pas accessible depuis une ip publique  
+        1 - Vous pouvez monter un tunnel à l'aide de l'outil ngrok : https://dashboard.ngrok.com/get-started/setup
+            => Un compte gratuit devra être créé sur leur site
+            => L'installation consiste simplement à télécharger le binaire
+        2 - Une fois installé, récupérer votre token sur https://dashboard.ngrok.com/get-started/your-authtoken 
+        3 - Configurer le token sur la machine : 
+            ./ngrok config add-authtoken <VOTRE TOKEN>
+        4 - Lancer le tunnel sur le port 8080: 
+            ./ngrok http 8080
+        5 - Une URL publique vous est fournie, jenkins sera disponible à cette url        
+
+1 - Installer le plugin "github integration"
+2 - Configuration du webhook dans vore repos github 
+    Aller sur votre repository alpinehelloworld > setting > webhooks
+        - Payload URL :  ${url de votre jenkins}:8080/github-webhook/
+        - Content type : application/json
+        - On laisse le reste
+            - Secret : vide
+            - case Juste the push event coché
+            - case Active cochée
+        - cliquer sur "Add webhook" et attendre de voir que la synchro se passe bien
+
+
+Partie 4 : Plugin Blue Ocean
+1 - Installez le plugin "Blue Ocean" et rentrez dans votre Pipeline afin de visualiser la nouveauté.
+2 - Une icône devrait normalement apparaître, vous proposant une autre vue de votre Pipeline
+Documentation Blue Ocean : https://www.jenkins.io/doc/book/blueocean/

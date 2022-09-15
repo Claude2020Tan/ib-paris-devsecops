@@ -1,0 +1,42 @@
+Vérifier les plages de réseau déja utilisées
+    docker network ls  | grep -v ID | awk '{ print $2}'  | xargs  docker network inspect  | grep -i "Subnet"
+
+Créer deux réseau de type bridges frontend et backend ayant pour plage d’adresse respectives (192.168.10.0/24 et 192.168.20.0/24)
+    docker network create --driver=bridge --subnet=192.168.10.0/24 frontend
+    docker network create --driver=bridge --subnet=192.168.20.0/24 backend
+    
+Créez quatre containers (ubt1 à ubt4), deux dans chacun des réseaux à l’aide de l’image ubuntu:18.04 avec « sleep 4500 »
+    docker run -d --name ubt1 --network frontend  ubuntu:18.04 sleep 4500
+    docker run -d --name ubt2 --network frontend  ubuntu:18.04 sleep 4500
+    docker run -d --name ubt3 --network backend  ubuntu:18.04 sleep 4500
+    docker run -d --name ubt4 --network backend  ubuntu:18.04 sleep 4500
+
+Inspecter les containers crées afin de récupérer leurs adresses ip respectives
+    docker inspect  ubt1 | grep -i IPAddress
+    docker inspect  ubt2 | grep -i IPAddress
+    docker inspect  ubt3 | grep -i IPAddress
+    docker inspect  ubt4 | grep -i IPAddress
+
+Connectez vous à ces containers et installez les outils pour le ping. (apt-get update  && apt-get install iputils-ping)
+    docker exec -it ubt1 bash -c "apt-get update -y && apt-get install iputils-ping -y"
+    docker exec -it ubt2 bash -c "apt-get update -y && apt-get install iputils-ping -y"
+    docker exec -it ubt3 bash -c "apt-get update -y && apt-get install iputils-ping -y"
+    docker exec -it ubt4 bash -c "apt-get update -y && apt-get install iputils-ping -y"
+
+Tester de pinger à partir d’un container les autres container (ping au travers leur adresse ip et leurs noms)
+    docker exec -it ubt1 bash -c "ping -c 4 ubt2"
+    docker exec -it ubt1 bash -c "ping -c 4 ubt3"
+    docker exec -it ubt1 bash -c "ping -c 4 ubt4"
+
+    docker exec -it ubt4 bash -c "ping -c 4 ubt1"
+    docker exec -it ubt4 bash -c "ping -c 4 ubt2"
+    docker exec -it ubt4 bash -c "ping -c 4 ubt3"
+
+Qu’observez vous? Commentez
+
+Supprimez votre environnement
+    docker rm -f   $(docker ps -aq)
+    docker rmi -f $(docker images -aq)
+    docker network rm backend frontend
+
+

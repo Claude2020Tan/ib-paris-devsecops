@@ -1,0 +1,15 @@
+Il s’agit ici de créer une image docker afin de conteneuriser une 
+application web statique. 
+
+On pourrait considérer qu'on créé une version 2 de l'image buildée au TP 9.
+
+A l’aide de l’image de base nginx conteneuriser cette application sans 
+télécharger les fichiers au préalable en local 
+
+Les fichiers de l’application se trouvent dans le repo : 
+    repos => https://github.com/daviddias/static-webpage-example.git
+    !!! Attention, cette URL n'est pas la même qu'au TP9
+
+Une fois l'image buildée, il faudrait la pusher sur le dockerhub
+
+

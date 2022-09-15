@@ -1,0 +1,30 @@
+Lancez un container à ubuntu:18.04 avec un sleep 4500
+    docker run -d --name ubt1   ubuntu:18.04 sleep 4500
+
+Connectez vous à ce container et créez un fichier nom » (votre_prenom.txt ) dans lequel vous mettez « Bonjour Eazytraining » dans le répertoire /opt de ce container
+    docker exec -it ubt1 bash -c "echo Bonjour Ulrich > /opt/Ulrich.txt"
+
+Supprimez ce container … Que pensez vous qu’il adviendra de votre fichier?
+    docker rm -f ubt1
+    Le fichier sera supprimé avec le conteneur
+
+Créez un autre container, mais cette fois ci montez le répertoire /opt du container dans un volume que vous appelerez data
+    docker run -d --name ubt2 -v data:/opt  ubuntu:18.04 sleep 4500
+
+Répétez l’action de tout à l'heure et créez à nouveau votre fichier dans ce répertoire /opt
+    docker exec -it ubt2 bash -c "echo Bonjour Ulrich > /opt/Ulrich.txt"
+
+Supprimer à nouveau votre container … Que pensez vous qu’il adviendra de votre fichier?
+    docker rm -f ubt2
+    Le fichier sera gardé dans le volume déclaré, Etant en root, on peut y acceder en allant dans "/var/lib/docker/volumes"
+
+Créer un nouveau container ubuntu:18.04 dans le but de récupérer votre fichier.
+    docker run -d --name ubt3 -v data:/opt  ubuntu:18.04 sleep 4500
+    docker run -d --name ubt4 -v data:/opt  ubuntu:18.04 sleep 4500
+    
+Commentez et supprimez votre environnement.
+    docker rm -f   $(docker ps -aq)
+
+
+
+

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Les solutions d'orchestration permettent de mieux gérer notre infrastructure",
+      "answer-1": "virtualisée",
+      "answer-2": "baremetal",
+      "answer-3": "conteneurisée",
+      "answer-4": "IaaS",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "En informatique, un conteneur représente : ",
+      "answer-1": "Une machine virtuelle",
+      "answer-2": "Un cloisonnement de l'applicaiton et ses dépendances",
+      "answer-3": "Une AMI",
+      "answer-4": "Une Box vagrant",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Les solutions suivantes sont de solutions de conteneurisation : ",
+      "answer-1": "Podman, Containerd, docker, cri-o, rkt, Lxc",
+      "answer-2": "Podman, hyperv, docker, virtualbox, AKS, GKS",
+      "answer-3": "Lxc, docker, Containerd, Java, ECS, EKS",
+      "answer-4": "Java, tomcat, Jboss, docker, Angular, EKS",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Kubernetes c'est : ",
+      "answer-1": "Un outil payant source pour la gestion des conteneurs",
+      "answer-2": "Un hyperviseur de type 1 utilisé en entreprise",
+      "answer-3": "Un outil open source pour la gestion des conteneurs",
+      "answer-4": "Un cluster de machines ElasticSearch pour démmarer des pods",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Kubernetes est dévellopé par l'entreprise",
+      "answer-1": "Google",
+      "answer-2": "Docker Enterprise",
+      "answer-3": "Redhat Enterprise",
+      "answer-4": "Facebook",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Les solutions suivantes sont des orchestrateurs de containers",
+      "answer-1": "Docker Swarm, Docker Compose, Docker, Mesos",
+      "answer-2": "Traeffik, Haproxy, Consul, Docker",
+      "answer-3": "EKS, Openshift, VMWare Tanzu, AKS, GKE, Mesos, Kubernetes",
+      "answer-4": "Mesos, Openstack, Openshift, AKS ",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Minilube, Kubeadm, Kind, K3S: tous ces outils permettent de ",
+      "answer-1": "déployer des pods sans avoir besoi de'installer K8S",
+      "answer-2": "facilement configurer un conteneurs dans un pods",
+      "answer-3": "déployer un cluster Kubernetes selon le besoin",
+      "answer-4": "déployer un hyberviseur de type 2 dans K8S",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Dans un pipeline CICD, la place de K8S serait  ",
+      "answer-1": "sur le buid des images dockers",
+      "answer-2": "sur le monitoring de l'infra",
+      "answer-3": "sur les tests unitaires de chaque conteneur",
+      "answer-4": "sur la partie  CD",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Voici quelques cas d'usage de Kubernetes : ",
+      "answer-1": "DevOps, µservice; Enseignement, Recherche ",
+      "answer-2": "µservice, DevSecOps, Edge computing, serverless, IA, etc ...",
+      "answer-3": "Ressources Humaines, BTP, industries",
+      "answer-4": "Develeppoment web, Design Web, Marketting digital",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Kubernetes ne saurait fonctionner sans docker installé",
+      "answer-1": "Vrai, ce n'est que docker qu'il sait piloter",
+      "answer-2": "Faux, lui même est un container runtime",
+      "answer-3": "Faux, il est agnostique du runtime container",
+      "answer-4": "Faux, il n'est pas compatible avec docker",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

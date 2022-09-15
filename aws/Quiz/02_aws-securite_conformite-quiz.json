@@ -1,0 +1,221 @@
+{
+    "questions": [
+        {
+            "question": "Qu'est-ce qu'AWS a pour responsabillité de sécuriser ?",
+            "answer-1": "Matériel appartenant à AWS",
+            "answer-2": "Logiciel appartenant à AWS",
+            "answer-3": "Matériel réseau appartenant à AWS",
+            "answer-4": "toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        },
+         {
+            "question": "les contrôles hérités dans le modèle de responsabilité sont constitué de:",
+            "answer-1": "Contrôles physiques et environnementaux",
+            "answer-2": "Gestion des correctifs",
+            "answer-3": "Sécurité des zones",
+            "answer-4": "Aucune  réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "4"
+        },
+           {
+            "question": "Ou trouver les informations de sécurité pour les bonnes pratiques AWS",
+            "answer-1": "AWS Yellow Pages",
+            "answer-2": "Section d'informations sur la console AWS",
+            "answer-3": "AWS White Papers",
+            "answer-4": "Documentation des services AWS",
+            "duration": "20",
+            "good-answer": "3"
+        },
+        {
+            "question": "Quelles sont les tâches de sécurité AWS qui incombent aux utilisateurs?",
+            "answer-1": "Sécuriser les données ",
+            "answer-2": "Administrer la gestion des identités et des accès",
+            "answer-3": "Configuration des groupes de sécurité",
+            "answer-4": "toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        },
+         {
+            "question": "La gestion des correctifs relève de la seule responsabilité de l'utilisateur",
+            "answer-1": "Vrai , ils sont les seuls a les gérés",
+            "answer-2": "Faux , ils la partagent avec le cloud provider",
+            "answer-3": "Faux ,seul  le cloud provider a cette responsabilité",
+            "answer-4": "Aucune  réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "2"
+        }
+        ,
+         {
+            "question": "la responsabilité des données stockés sur des disques physiques rélève:",
+            "answer-1": "De la responsabilité d'aws",
+            "answer-2": "Des utilisateurs",
+            "answer-3": "Des organismes de réglementation gouvernementaux",
+            "answer-4": "Aucune  réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "1"
+        }
+        ,
+         {
+            "question": "Que fournis aws pour renforcer la sécurité du cloud ?",
+            "answer-1": "Centre de connaissances AWS",
+            "answer-2": "Prise en charge des entreprises AWS",
+            "answer-3": "Formations et certifications AWS",
+            "answer-4": "Toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "3"
+        }
+
+         ,
+         {
+            "question": "AWS applique quels politiques de sécurité  à ses employés dans les datacenters?",
+            "answer-1": "Restreint l'accès aux seuls citoyens américains",
+            "answer-2": "Accès limité dans le temps et spécifique à la couche",
+            "answer-3": "Mécanismes d'authentification multifacteur",
+            "answer-4": "Systèmes de détection d'entrée",
+            "duration": "20",
+            "good-answer": "2"
+        }
+         ,
+         {
+            "question": "Selon l'accord client AWS, qu'est ce qui pourrait entraîner la suspension du compte?",
+            "answer-1": "Utilisation posant un risque de sécurité pour un service",
+            "answer-2": "Utilisation qui affecte négativement les serveurs AWS",
+            "answer-3": "Utilisation contraire à la loi",
+            "answer-4": "Toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        }
+        ,
+         {
+            "question": "Comment les clients peuvent-ils créer un rôle avec le service IAM ?",
+            "answer-1": "Interface de ligne de commande AWS",
+            "answer-2": "API IAM",
+            "answer-3": "console IAM",
+            "answer-4": "Toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "4"
+        }
+         ,
+         {
+            "question": "Quand l'API IAM est mise à jour, qui gère  la mise à jour des outils IAM tiers ?",
+            "answer-1": "Le fournisseur d'outils tiers",
+            "answer-2": "AWS",
+            "answer-3": "L'utilisateur de l'outil tiers",
+            "answer-4": "Une mise à jour n'est pas nécessaire.",
+            "duration": "20",
+            "good-answer": "1"
+        }
+         ,
+         {
+            "question": "AWS Multi-Factor Authentication (MFA) s'applique à laquelle des options?",
+            "answer-1": "Identifiants de connexion AWS",
+            "answer-2": "Stratégies IAM",
+            "answer-3": "Objets de service de stockage simple",
+            "answer-4": "Toutes les réponses sont vraies",
+            "duration": "20",
+            "good-answer": "1"
+        }
+          ,
+         {
+            "question": "AWS Key Management Service (KMS) permet de gerer:",
+            "answer-1": "les frappes au sein du cloud",
+            "answer-2": "les mots de passe",
+            "answer-3": "le chiffrement des données via un processus automatisé",
+            "answer-4": "une version plus conviviale d'AWS IAM",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+         {
+            "question": "Qu'est ce que VPC ?",
+            "answer-1": "un service de sécurité aws",
+            "answer-2": "un cloud privée virtuel au sein d'aws",
+            "answer-3": "un service PAAS",
+            "answer-4": "un service de facturation aws",
+            "duration": "20",
+            "good-answer": "2"
+        }
+         ,
+         {
+            "question": "Quel service est chargé de Suivre l'activité des utilisateurs et des API ?",
+            "answer-1": "AWS CloudTrail",
+            "answer-2": "Amazon Inspector",
+            "answer-3": "Configuration AWS",
+            "answer-4": "AWS CloudHSM",
+            "duration": "20",
+            "good-answer": "1"
+        }
+         ,
+
+          {
+            "question": "Laquelle des méthodes de protection des données n'est pas fournie par AWS ?",
+            "answer-1": "Correctifs du système d'exploitation invité",
+            "answer-2": "Authentification multifacteur",
+            "answer-3": "Géoblocage",
+            "answer-4": "Jetons d'accès temporaires",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+      {
+            "question": "le RGPD s'applique uniquement aux entreprises au sein de l'UE ",
+            "answer-1": "Oui sauf ceux de l'europe de l'ouest",
+            "answer-2": "Oui , tout les pays de l'UE sont concernés",
+            "answer-3": "Non , ceux des USA sont aussi concernés",
+            "answer-4": "Non , elle régit les entreprises du monde",
+            "duration": "20",
+            "good-answer": "2"
+        }
+         ,
+         {
+            "question": "quels services peuvent a minimiser une attaque DDOS? ",
+            "answer-1": "AWS WAF",
+            "answer-2": "AmazonRoute53",
+            "answer-3": "ELB",
+            "answer-4": "Amazon CloudFront",
+            "duration": "20",
+            "good-answer": "4"
+        }
+         ,
+         {
+            "question": "Que sont les paires de clés dans AWS ? ce sont: ",
+            "answer-1": "identifiants de connexion fournis par nous",
+            "answer-2": "identifiants de connexion programmatique créés sur IAM",
+            "answer-3": "login et mot de passe pour se connecter à la console",
+            "answer-4": "paire de clés de chiffrement au sein d'aws",
+            "duration": "20",
+            "good-answer": "2"
+        }
+         ,
+         {
+            "question": "une fonctionnalités de sécurité disponibles dans VPC est  ",
+            "answer-1": "Journaux de flux réseaux",
+            "answer-2": "firewall distribué",
+            "answer-3": "microsegmentation",
+            "answer-4": "virtual firewall",
+            "duration": "20",
+            "good-answer": "1"
+        }
+         ,
+          {
+            "question": "Quelles sont les principales couches de sécurité utilisées par un VPC ? ",
+            "answer-1": "Network ACL , Network Sécurity Group",
+            "answer-2": "Virtual ACL , NACL , ",
+            "answer-3": "Network ACL , Sécurity Group",
+            "answer-4": "virtual firewall , microsegmentation ",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+         {
+            "question": "Quel service Amazon sert à la Protection contre les DDoS?",
+            "answer-1": "AWS CloudTrail",
+            "answer-2": "Amazon Inspector",
+            "answer-3": "AWS Shield",
+            "answer-4": "AWS CloudHSM",
+            "duration": "20",
+            "good-answer": "3"
+        }
+    ]
+}

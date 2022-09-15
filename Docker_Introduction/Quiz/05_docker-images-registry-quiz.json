@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Soit un Dockerfile sans ENTRYPOINT et sans CMD, quelle est la cde finale ?",
+      "answer-1": "erreur lors du build ",
+      "answer-2": "/bin/sh -c p1_entry p2_cmd",
+      "answer-3": "/bin/sh -c p2_cmd p1_entry",
+      "answer-4": "p1_entry p2_cmd",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "création d'une image appelée test-nginx à partir d'un Dockerfile du rep /data",
+      "answer-1": "docker build test-nginx -f /data/Dockerfile",
+      "answer-2": "docker build -t test-nginx -f /data",
+      "answer-3": "docker build -t test-nginx /data",
+      "answer-4": "docker build -t test-nginx /data/Dockerfile",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Comment s'appelle l'emplacement centralisé, où les images sont stockées ?",
+      "answer-1": "Dockerhub",
+      "answer-2": "Docker Engine",
+      "answer-3": "Container runtime",
+      "answer-4": "Registre",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans la commande : docker run arg1/arg2/arg3:arg4, que représente arg1",
+      "answer-1": "l'identifiant username d'un compte du registre",
+      "answer-2": "L'Url du registre docker",
+      "answer-3": "Le tag ou la version de l'image",
+      "answer-4": "le nom de l'image",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans la commande : docker run arg1/arg2/arg3:arg4, que représente arg2",
+      "answer-1": "l'identifiant username d'un compte du registre",
+      "answer-2": "L'Url du registre docker",
+      "answer-3": "Le tag ou la version de l'image",
+      "answer-4": "le nom de l'image",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Dans la commande : docker run arg1/arg2/arg3:arg4, que représente arg3",
+      "answer-1": "l'identifiant username d'un compte du registre",
+      "answer-2": "L'Url du registre docker",
+      "answer-3": "Le tag ou la version de l'image",
+      "answer-4": "le nom de l'image",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans la commande : docker run arg1/arg2/arg3:arg4, que représente arg4",
+      "answer-1": "l'identifiant username d'un compte du registre",
+      "answer-2": "L'Url du registre docker",
+      "answer-3": "Le tag ou la version de l'image",
+      "answer-4": "le nom de l'image",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Un registre contient 1 ou plusieurs ____ qui à leur tour contiennent une ou plusieurs ____ ?",
+      "answer-1": "images & applications",
+      "answer-2": "repos & images",
+      "answer-3": "images & repos",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Commande(s) utiliser pour lister les différentes couches d'une image ?",
+      "answer-1": "docker image <image_id>",
+      "answer-2": "docker inspect <image_name>",
+      "answer-3": "docker image inspect <image_name>",
+      "answer-4": "Toutes les réponses",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Commande(s) permettant de voir les changements apportés à une image dans le temps?",
+      "answer-1": "Toutes les réponses",
+      "answer-2": "docker image history <image_name>",
+      "answer-3": "docker history <image_name>",
+      "answer-4": "docker history <image_id>",
+      "duration": "20",
+      "good-answer": "1"
+    }
+  ]
+}

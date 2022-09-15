@@ -1,0 +1,31 @@
+Sur la VM Centos, on créé un répertoire de travail , on lui donnera le nom build-docker
+    mkdir -p build-docker-v2
+
+On se déplace dans ce répertoire et on télécharge l'application sur github
+    - déplacement dans le repertoire de travail : 
+        cd  build-docker-v2
+      
+
+On créé le fichier Dockerfile dans le répertoire de travail et on lui rajoute le contenu (Voir fichiers joints)
+    vi Dockerfile_V2
+
+On lance le build de l'application, on la nommera static-website-eazytraining:v2
+    docker build -f Dockerfile_V2 -t static-website-eazytraining:v2 . 
+
+On vérifie l'existance de l'image
+    docker images
+
+On lance  un conteneur de cette image
+    docker run -d --name second_container -p 8081:80 static-website-eazytraining:v2
+
+On teste en local ou dans le navigateur à l'adresse http://127.0.0.1:8081
+    (Bien se rassurer de la regles de NAT dans virtualbox dépendament du cablage de notre interface réseau)
+
+On envoie l'image sur notre compte dockerhub
+    docker login
+    docker tag static-website-eazytraining:v1 ${votre_id_dockerhub}/static-website-eazytraining:v1
+    docker tag static-website-eazytraining:v2 ${votre_id_dockerhub}/static-website-eazytraining:v2
+    docker push ${votre_id_dockerhub}/static-website-eazytraining:v1
+    docker push ${votre_id_dockerhub}/static-website-eazytraining:v2    
+
+    

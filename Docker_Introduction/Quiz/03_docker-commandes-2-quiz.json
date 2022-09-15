@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Commande pour excecuter la commande 'ls' bash dans un container juste après son lancement :",
+      "answer-1": "docker run -c 'ls' nginx ",
+      "answer-2": "docker run -cmd 'ls' nginx ",
+      "answer-3": "docker run nginx ls",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Commande(s) pour exécuter la commande 'ls' dans un container en cours d'exécution",
+      "answer-1": "1: docker run nginx ls",
+      "answer-2": "2: docker exec container_name ls",
+      "answer-3": "3: Réponse 1 & 2",
+      "answer-4": "4: Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "A quoi servent les options '-it' dans la commande docker exec ?",
+      "answer-1": "Permet d'exécuter la commande et terminer directement",
+      "answer-2": "Activer le mode interactif + nouveau pseudo terminal",
+      "answer-3": "Mode interactif ensuite terminer",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel est le tag de l'image utilisée dans cette commande : 'docker run nginx ls' ?",
+      "answer-1": "ls",
+      "answer-2": "Aucun Tag",
+      "answer-3": "latest",
+      "answer-4": "nginx",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quelle est l'option permettant de faire du port mapping lors du lancement d'un container",
+      "answer-1": "-p",
+      "answer-2": "--p",
+      "answer-3": "-port",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quelle est l'option permettant de faire du volume mapping lors du lancement d'un container ?",
+      "answer-1": "--v",
+      "answer-2": "-v",
+      "answer-3": "-volume",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quelle option utiliser au lancement d'un container pour configurer son mode de rédemarrage ?",
+      "answer-1": "-restart",
+      "answer-2": "--always-restart",
+      "answer-3": "--restart",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Commande docker permettant d'avoir les logs d'un container ?",
+      "answer-1": "docker log container_name",
+      "answer-2": "docker logs container_name",
+      "answer-3": "docker get logs container_name",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans la commande 'docker run nginx', à quoi correspond le terme 'run' ?",
+      "answer-1": "C'est une option",
+      "answer-2": "argument",
+      "answer-3": "c'est une commande docker",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Commande(s) permettant d'avoir tous les paramètres d'un container",
+      "answer-1": "docker inspect <container_name>",
+      "answer-2": "docker inspect <container_id>",
+      "answer-3": "docker container inspect <container_name>",
+      "answer-4": "Toutes les réponses",
+      "duration": "20",
+      "good-answer": "4"
+    }
+  ]
+}

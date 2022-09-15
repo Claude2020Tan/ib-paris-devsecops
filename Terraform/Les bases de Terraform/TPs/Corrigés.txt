@@ -1,0 +1,2 @@
+Les corrigés des TPs sont sur ce repos git : 
+ - https://github.com/eazytrainingfr/terraform-training

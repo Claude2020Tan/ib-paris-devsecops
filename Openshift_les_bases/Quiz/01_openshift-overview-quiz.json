@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Quels sont les types de cloud sur le marcher ?",
+        "answer-1": "Iac, PaaS et SaaS",
+        "answer-2": "On premise, IaaS, PaaS et SaaS",
+        "answer-3": "KaaS, CaaS et PaaS",
+        "answer-4": "public, privé et hybrides",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Où se positionne Openshift parmi les offres Cloud ?",
+        "answer-1": "Hybride",
+        "answer-2": "Saas",
+        "answer-3": "IaaS",
+        "answer-4": "Paas",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle est l'édition OpenSource d'Openshift ?",
+        "answer-1": "Dedicated",
+        "answer-2": "Online",
+        "answer-3": "Origin",
+        "answer-4": "Enterprise",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quelle édition d'OC est directement hébergée par RedHat ?  ",
+        "answer-1": "Online",
+        "answer-2": "Dedicated",
+        "answer-3": "Origin",
+        "answer-4": "Enterprise",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quelle entreprise maintient le projet Openshift ?",
+        "answer-1": "Ubuntu",
+        "answer-2": "Redhat",
+        "answer-3": "Google",
+        "answer-4": "La CNCF",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quelle édition Openshift est hébergée chez un Cloud Provider ?",
+        "answer-1": "Online",
+        "answer-2": "Origin",
+        "answer-3": "Enterprise",
+        "answer-4": "Dedicated",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle édition d'Openshift permet d'héberger la solution en on-premise ?",
+        "answer-1": "Enterprise",
+        "answer-2": "Dedicated",
+        "answer-3": "Online",
+        "answer-4": "Origin",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quels sont les composants d'openshift ? ",
+        "answer-1": "Docker, gitlab, OCR",
+        "answer-2": "Kubernetes, OCR, ETCD, SCM, Tools CI/CD",
+        "answer-3": "La web console, Kubernetes",
+        "answer-4": "docker Swarm, kubernetes, OCR",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quels sont les moyens d'interragir avec Openshift ? ",
+        "answer-1": "La CLI et l'API REST uniquement",
+        "answer-2": "LA CLI et la Web Console uniquement",
+        "answer-3": "La CLI uniquement, pas de web console",
+        "answer-4": "La web console, la CLI et l'API REST",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quels sont les composants de minishift ?",
+        "answer-1": "Kubernetes, docker compose, Openshift",
+        "answer-2": "docker swarm, etcd, Openshift",
+        "answer-3": "Kubernetes, etcd, Openshift",
+        "answer-4": "etcd, Openshift",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

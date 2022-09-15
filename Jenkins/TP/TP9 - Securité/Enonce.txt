@@ -1,0 +1,19 @@
+1 - Vérifiez que le plugin  Role-based Authorization Strategy est installé 
+2 - Créez un utilisateur eazytraining
+        Manage Jenkins --> Security --> Manage user --> Add 
+3 - Configurez Jenkins afin que les autorisations soient gérées par le nouveau plugin
+        Manage Jenkins --> Security --> Configure Global security --> Autorisation ---> Role based strategy
+4 - Créez un rôle avec uniquement le droit de consulter le projet « test acceptance »
+        Manage Jenkins --> Security --> Manage and assign role --> Manage role --> Item roles
+        nom : viewer
+        Pattern : test.*
+5 - Assignez ensuite ce rôle à l’utilisateur eazytraining
+    1 - Manage Jenkins --> Security --> Manage and assign role --> Assign role --> Item roles
+        Rajouter votre user dans la liste et cocher le role en question
+6 - Enfin, connectez vous à jenkins avec l’utilisateur eazytraining pour vérifier qu’il n’a 
+    que les droits qui lui ont été conféré et qu’ils ne voit que le projet test acceptance 
+    (vous pouvez créer un autre job avec un nom différent pour tester cela)
+
+PS: Si à la connexion,vous n'avez pas les droits, il faudrait rajouter les roles globaux overall en regarder
+    Manage Jenkins --> Security --> Manage and assign role --> Manage role --> Global roles
+    Rajouter votre user dans la liste et cocher le role en question

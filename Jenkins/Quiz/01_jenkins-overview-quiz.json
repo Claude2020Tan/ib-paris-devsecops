@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Jenkins est un outil ",
+      "answer-1": "de test de performance",
+      "answer-2": "d'Intégration Continue",
+      "answer-3": "de scripting",
+      "answer-4": "de developpent d'application web",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans le même ordre d'idées que Jenkins, on a l'outil",
+      "answer-1": "Travis-CI",
+      "answer-2": "Gitlab-CI",
+      "answer-3": "Bamboo",
+      "answer-4": "Tous ceux cités précédemment",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "En quel language Jenkins a t-il été developpé",
+      "answer-1": "C++",
+      "answer-2": "Python",
+      "answer-3": "JAVA",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Pourquoi jenkins est-il autant plebiscité à ce jour ?",
+      "answer-1": "Il est Open Source et facile à utiliser ",
+      "answer-2": "Forte communauté autour",
+      "answer-3": "concept de plugins",
+      "answer-4": "Tous ceux cités précédemment",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Laquelle des réponses ci-dessous est incorrecte : A quoi se résume l'Intégration Continue ?",
+      "answer-1": "Compiler, tester votre code en cas de modification",
+      "answer-2": "Compiler, tester et déployer permanemment votre code",
+      "answer-3": "Réduire les risques en fournissant des retours rapides",
+      "answer-4": "Faciliter la collaboration et réduire les temps de livraison",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Un groupe de plusieurs hotes travaillant ensemble pour fournir le meme service est appelé ?",
+      "answer-1": "un groupe logique",
+      "answer-2": "un set",
+      "answer-3": "un cluster",
+      "answer-4": "un noeud",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel est le port par défaut utilisé par jenkins ",
+      "answer-1": "5000",
+      "answer-2": "80",
+      "answer-3": "8080",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel autre nom donne t'on au serveur jenkins",
+      "answer-1": "Cluster Jenkins",
+      "answer-2": "Jenkins master / agent master",
+      "answer-3": "agent worker",
+      "answer-4": "Tous ceux cités précédemment",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "A quoi corrrespond un plugins jenkins",
+      "answer-1": "un agent à ajouter à l'infrastructure",
+      "answer-2": "Un pilote ou drivers",
+      "answer-3": "Une fonctionnalité à ajouter",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Laquelle de ces taches ne fait pas partie du processus CI",
+      "answer-1": "Build de l'application",
+      "answer-2": "Test de l'appliaction",
+      "answer-3": "Créer ou configurer le serveur de prod",
+      "answer-4": "Sauvegarder la nouvelle release",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Partie 1 : hard
+1 - Mergez vos modif précédentes sur la master et rassurez vos de n'avoir
+    que cette branche d'existante. Ensuite modifier le README et commitez
+2 - Faire une autre modification et mettre en index (git add .)
+3 - Faire un reset hard et visualiser le résultat
+        git reset --hard HEAD~
+    On peux contstater qu'on est revenu à l'etat initial de début de TP
+
+
+Partie 2 : 
+1 - Modification du README et commit
+2 - Modification du README et mise en index
+3 - Modification du README
+4 - Git reset --mixed HEAD~
+    On constate qu'il ne touche pas le working directory, il ramene juste 
+    le commit au précédent et vide l'index
+
+
+Partie 3 : soft
+1 - Modification du fichier « linux » et commit
+2 - Modification du fichier « linux » et mise en index
+3 - Modification du fichier « linux »
+4 - Git reset --soft HEAD^

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Une commande ah-hoc se fait en utilisant :",
+      "answer-1": "Le binaire ansible-ad-hoc",
+      "answer-2": "La commande ansible-pip",
+      "answer-3": "Le binaire ansible",
+      "answer-4": "La galaxy ansible",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "La syntaxe d'une commande ad-hoc est la suivante",
+      "answer-1": "ansible <CIBLE> <MODULE> <ARGUMENT>",
+      "answer-2": "ansible-doc <MODULE>",
+      "answer-3": "ansible <MODULE> <ARGUMENT>",
+      "answer-4": "ansible-playbook <playbook_file>",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "La documentation ansible est accessible :",
+      "answer-1": "Dans ma boite mail quand je créé 1 compte sur ansible.com",
+      "answer-2": "Sur le site officiel ou via la commande ansible-doc",
+      "answer-3": "En utilisant la commande  ansible-galaxy",
+      "answer-4": "En utilisant la commande  ansible --doc",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Les codes couleurs retours d'ansible signifient :",
+      "answer-1": "vert => Succès ; Jaune => Faux ; Rouge => Erreur",
+      "answer-2": "Blanc => Succès ; Jaune => Faux ; Rouge => Erreur",
+      "answer-3": "vert => Succès ; Jaune => Succès ; Rouge => Erreur",
+      "answer-4": "vert => Succès ; Jaune => Warning ; Rouge => Erreur",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quand je lance une commande ansible, les codes couleurs retours possibles sont:",
+      "answer-1": "bleu - blanc - vert",
+      "answer-2": "vert - rouge - jaune",
+      "answer-3": "vert - blanc - jaune",
+      "answer-4": "rouge - orange - vert",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "L'option -i des commandes ansible permets de:",
+      "answer-1": "spécifier le playbook utilisé",
+      "answer-2": "lister les machines où appliquer un changement",
+      "answer-3": "donner le chemin vers le fichier d'inventaire à utiliser",
+      "answer-4": "donner le mot de passe vault à utiliser",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "L'option -m d'une commande ad-hoc permets :",
+      "answer-1": "De spécifier la machine à controler",
+      "answer-2": "De dpnner le module qu'on souhaite utiliser",
+      "answer-3": "De donner le module à utiliser et ses argument",
+      "answer-4": "De donner des arguments à ansible",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "L'option -a d'une commande ansible permets de:",
+      "answer-1": "donner des attributs à la commande ansible",
+      "answer-2": "donner des arguments au module utilisé",
+      "answer-3": "lancer les actions sur toutes les machines",
+      "answer-4": "donner l'artefact utilisé par ansible",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Choisir la commande valides dans la liste",
+      "answer-1": "ansible all -m yum -a name: nginx state:  latest",
+      "answer-2": "ansible -m ping pong",
+      "answer-3": "ansible -m client2  setup -o",
+      "answer-4": "ansible all -m ping -o ",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Le module ping ansible valide que :",
+      "answer-1": "Ansible peut excuter un module sur les cibles",
+      "answer-2": "Les machines cibles acceptent les tests ping",
+      "answer-3": "Les machines cibles droppent les tests ping",
+      "answer-4": "Python est installé et est à jours sur le serveur ansible",
+      "duration": "20",
+      "good-answer": "1"
+    }
+  ]
+}

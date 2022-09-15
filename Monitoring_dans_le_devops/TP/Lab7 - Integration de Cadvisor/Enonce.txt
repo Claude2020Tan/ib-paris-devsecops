@@ -1,0 +1,5 @@
+1 - Modifiez le configmap prometheus afin d’y intégrer le endpoint de Kubernetes-cadvisor (n’hésitez pas à regarder la Doc)
+2 - Vous devez supprimer et recréer le configmap ainsi que le deployment de Prometheus pour appliquer les modifications
+3 - Vérifiez sur l’interface de Prometheus que la target Kubernetes-cadvisor est bien présente et up
+4 - Pour terminer, importer le dashboard permettant de visualizer les métriques cadvisor
+5 - Vérifiez que le dashboard nouvellement importé affiche des données

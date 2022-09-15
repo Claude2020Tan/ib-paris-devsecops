@@ -1,0 +1,17 @@
+Partie 3 :  cherry-pick
+
+1 - Créer une branche "feature1" dans laquelle vous allez modifier « index.html » 
+    modifier la valeur initiale du numero de téléphone, 
+    <input type=« text » name=« telephone » value=« 99999999 »> n’oubliez pas de 
+    commiter les modifications
+    
+2 - Sur la meme branche "feature1" modifier le fichier linux_users et mettez plutot 
+    « Enter very strong password please » et commitez les modifications
+    Vérifier les logs de git
+
+3 - Aller sur la branche master et récupérer le commit correspondant a la modif de l'index.html
+    - git cherry-pick 
+    - il faudra récupérer l'id du commit
+    - Vérifer les logs de la branche master
+
+4 - Supprimer les autres branches

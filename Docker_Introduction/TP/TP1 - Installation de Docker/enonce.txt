@@ -1,0 +1,57 @@
+################################################################################################################################
+Prérequis (TP0) : 
+- Sur vos postes de travail, vous devez installer les outils "vagrant" et "virtualbox".
+- Une fois installés, créez un répertoire de travail nommmé "docker" dans lequel vous allez déposer 
+    les fichiers "Vagrantfile" et "install_swarm.sh" fournis par le formateur
+    !!! Attention, se rassurer que le fichier Vagranfile ne possède pas d'extension (.txt par exemple)
+- Ce fichier Vagrantfile définit 2 VMs, nommés master et worker1. 
+- Ouvrez une ligne de commande powershell et déplacez vous dans le dossier de travail
+- Vous aller déployr la VM  master "sans provisionning" car nous allons installer docker 
+    manuellement dans un premier temps
+    commande à taper: vagrant up master --no-provision
+- Une fois le processus terminé et la VM up, connectez vous avec la commande "vagrant ssh master" 
+- vous êtes connectés à la VM Master ? Alors vous pouvez continuer le tutoriel
+################################################################################################################################
+
+1 - Installation de Docker sur Centos
+    On va installer docker en utilisant le script  
+    Téléchargez le script en local sur votre VM: 
+        curl -fsSL https://get.docker.com -o get-docker.sh
+    Executez ce script avec le sh
+
+2 - Tâches de post installation    
+    Ajoutez le user vagrant dans le groupe docker
+    Démarrez le démon docker et rendez le enable 
+    déconnectez vous de la VM et reconnectez vous pour appliquer les droits
+
+3 - Vérification de l’installation, Lancement de votre premier conteneur (nginx)
+    Vérifiez la version de docker
+    Lancez un conteneur hello-world:latest avec la commande docker run et commentez
+    Lancez un conteneur nginx avec les paramètres adequats et commentez
+        Le nom du container sera nginx et il ecoute sur le port 80 de la VM
+        Dans le navigateur, Testez votre conteneur nginx
+        les options --name et  -p devront être utilisées pour respectivemet le nom du conteneur et la redirection de port
+        l'option -d permettra de lancer le conteneur en mode démon
+    Tentez une connexion au conteneur nginx et explorez son FS
+        docker exec ...
+
+4 - Utilisation des variables d’environnements 
+    a) Déployez et tester un conteneur de l'image https://github.com/kodekloudhub/webapp-color avec les infos suivantes : 
+        name : webserver-red
+        port interne : 8080
+        port externe : 8000
+        var d'env:
+            APP_COLOR='red'
+    b) Déployez le même microservice avec les donnés suivantes : 
+        name : webserver-blue
+        port interne : 8080
+        port externe : 8001
+        var d'env:
+            APP_COLOR='red'
+
+5 - Nettoyage
+    a) Combien d'images sont présentes en local sur votre machines ?
+    b) Combien de conteneurs sont présents et quels sont leurs status
+    c) Stoppez tous les conteneurs et supprimez les
+    d) Supprimez toutes les images
+

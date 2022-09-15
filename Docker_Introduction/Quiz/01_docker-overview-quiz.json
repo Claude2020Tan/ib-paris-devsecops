@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Une architecture monolithique est :  ",
+      "answer-1": "constituée d'un seul bloc avec des composants indépendants",
+      "answer-2": "constituée d'un seul bloc aux composants interdépendants",
+      "answer-3": "constituée de plusieurs blocs interdépendants",
+      "answer-4": "constituée de plusieurs blocs indépendants",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Une architecture microservices est : ",
+      "answer-1": "constitué de plusieurs services fortement couplés",
+      "answer-2": "constitué de plusieurs services interdépendants",
+      "answer-3": "constitué de plusieurs services fortement découplés",
+      "answer-4": "Tous ceux cités précédemment",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Avantages des architectures monolithiques (Choisissez la réponse incorrecte)",
+      "answer-1": "Déploiement facile",
+      "answer-2": "Test Simplifiés",
+      "answer-3": "La gestion des dépendances applicatives",
+      "answer-4": "Débogage facile",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Avantages des architectures microservices (Choisissez la réponse incorrecte)",
+      "answer-1": "Evolutivité flexible",
+      "answer-2": "Fiabilité élevée",
+      "answer-3": "Flexibilité technologique",
+      "answer-4": "Développement tentaculaire",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Qu'est ce qu'un container ?",
+      "answer-1": "1: Environnement pour l'exécution de processus",
+      "answer-2": "2: Env à isolation et limitation de ressources configurables",
+      "answer-3": "3: Réponses 1 & 2",
+      "answer-4": "4: Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Pourquoi a t'on besoin des containers ?",
+      "answer-1": "remplacer les machines virtuelles",
+      "answer-2": "remplacer l'architecture monilithique",
+      "answer-3": "juste pour faire beau pas de réel besoin",
+      "answer-4": "Pour encapsuler une application et toutes ses dépendances",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "En Quoi les containers sont-ils différents des VM",
+      "answer-1": "Virtualisation niveau HARD pour container et niv OS pour VM",
+      "answer-2": "Les VM démarrent rapidement contrairement aux containers",
+      "answer-3": "Les containers nécessitent beaucoup de ressources",
+      "answer-4": "Virtualisation niveau OS pour container et niv HARD pour VM",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Parmi les outils suivants quel est dans le meme ordre que docker",
+      "answer-1": "Jenkins",
+      "answer-2": "rkt",
+      "answer-3": "Kubernetes",
+      "answer-4": "docker swarm",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Docker est un outil de ...",
+      "answer-1": "Orchestration de containers",
+      "answer-2": "Automatisation de processus dans des containers",
+      "answer-3": "Container runtime",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Laquelle de ces taches ne fait pas partie du processus Conteneurisation",
+      "answer-1": "Création du Dockerfile",
+      "answer-2": "Build du Dockerfile",
+      "answer-3": "Création du serveur de test",
+      "answer-4": "Tester l'image produite et sauvegarder si OK",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

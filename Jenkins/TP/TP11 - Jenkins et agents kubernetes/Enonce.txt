@@ -1,0 +1,23 @@
+Il est question de voir comment configuer Jenkins afin qu'il puisse utiliser des Pods
+kubernetes comme agent pour lancer les jobs du pipeline.
+La problématique à résoudre est celle de la scalabilité des agents et la flexibilié
+à offrir au développeur, afin qu'il puisse lui même définir sur quel type d'environnement
+il souhaiterait que son job s'exécute.
+Kubernets, répond parfaitement à ces problématique (scalabilité, cloisonnement, envirronement
+personnlisé à la demande)
+Commençons donc le déploiement ...
+
+1 - Déployer un cluster kubernetes. Minikube sera parfait pour celà
+    => confer stack minikube dans le repos git https://github.com/diranetafen/cursus-devops
+
+2 - Déployer Jenkins sur le cluster Kubernetes
+    => Les manifestes sont fournis avec l'énonce dans le dossier "manifestes_jenkins"
+        kubectl apply -f ./manifestes_jenkins/
+    => Jenkins sera disponible sur le nodeport 32000        
+
+3 - Dans Jenkins, installer le plugin Kubernetes, pas besoin de redémarrer le serveur jenkins
+    Une fois installer, aller configuer un nouvel agent de type kubernetes
+        Manage Jenkins –> Manage Node & Clouds
+
+4 - Lancer un job freestyle ou un pipeline pour tester
+    => quelques jenkinsfile sont proposés avec l'énonce pour le pipeline

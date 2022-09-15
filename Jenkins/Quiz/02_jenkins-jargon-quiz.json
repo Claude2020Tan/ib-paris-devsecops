@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Dans une architecture Jenkins à plusieurs noeuds quelles ressources distingue t'on",
+      "answer-1": "les hotes ou agents",
+      "answer-2": "Noeuds master ou worker",
+      "answer-3": "Les exécutors",
+      "answer-4": "Toutes les ressources citées précédemment",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Avant de lancer un job sur un agent que faut-il vérifier ?",
+      "answer-1": "Que l'agent soit bien connecté à internet",
+      "answer-2": "Que Jenkins soit installé sur l'agent",
+      "answer-3": "Que l'agent possède l'ensemble des dépendances nécessaires",
+      "answer-4": "Rien à vérifier ca marche tout seul",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Laquelle des réponses ci-dessous est incorrecte : Les types d'agent jenkins ?",
+      "answer-1": "any",
+      "answer-2": "node",
+      "answer-3": "docker",
+      "answer-4": "ssh",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quels sont les prerequis néessaires à un agent Jenkins ?",
+      "answer-1": "1: Communication SSH établie avec le Master",
+      "answer-2": "2: Avoir JAVA installé",
+      "answer-3": "3: Réponse 1",
+      "answer-4": "4: Réponse 1 & 2",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "A quoi peut-on assimiler un Job dans Jenkins ?",
+      "answer-1": "Une tache d'un pipeline",
+      "answer-2": "Un pipeline constitué d'une ou plusieurs taches",
+      "answer-3": "Un agent dans un pipeline",
+      "answer-4": "Faciliter la collaboration et réduire les temps de livraison",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "A quoi correspond un Build dans Jenkins ?",
+      "answer-1": "A la compilation du code du repo git",
+      "answer-2": "A une exécution d'un Job ou pipeline",
+      "answer-3": "Ce terme n'existe pas dans Jenkins",
+      "answer-4": "A un pipeline",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "A Quoi correspond le Workspace dans Jenkins ?",
+      "answer-1": "Repertoire de travail du pipeline ayant tous les fichiers",
+      "answer-2": "Zone tampon utilisée par Jenkins en exécutant le Job",
+      "answer-3": "Espace de travail où builder l'application",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quel autre nom donne t'on au serveur jenkins ?",
+      "answer-1": "agent Jenkins",
+      "answer-2": "Jenkins master / agent master",
+      "answer-3": "agent worker",
+      "answer-4": "Toutes les réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "A quoi corrrespond un plugins jenkins ?",
+      "answer-1": "un agent à ajouter à l'infrastructure",
+      "answer-2": "Un pilote ou drivers",
+      "answer-3": "Une fonctionnalité à ajouter",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quels sont les deux types de pipeline les plus utilisés dans Jenkins ?",
+      "answer-1": "Freestyle project & Pipeline",
+      "answer-2": "Folder & Github Organisationn",
+      "answer-3": "Multibranch Pipeline & Folder",
+      "answer-4": "FreeStyle & Multi Configuration project",
+      "duration": "20",
+      "good-answer": "1"
+    }
+  ]
+}

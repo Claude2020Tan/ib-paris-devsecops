@@ -1,0 +1,29 @@
+Récupérez le dossier deploy-users dans les fichiers fournis avec les supports de cours
+Copiez le dossier dans votre environnement de travail et rendez-vous dans ce dossier
+    curl https://raw.githubusercontent.com/diranetafen/deploy-users-hug/master/deploy-users.zip -o deploy-users.zip
+    sudo yum install unzip -y
+    unzip deploy-users.zip
+    cd deploy-users    
+
+Initialisez un repo et faites un commit après avoir créé un fichier README.md
+    git init : permets d'initialiser un repos
+        vous remarquerez l'apparition d'un repertoire caché .git
+    git add : permets de tracker de nouveau fichier
+    git commit : permets de commiter notre travail
+    git status : permets de connaitre l'état
+
+Créez un fichier bug.txt et modifier le fichier README.MD, enfin entérinez la modification en faisant un commit
+Créez un fichier gitignore afin de ne pas tracker les fichiers de log (.log) et commit(ez) le changement
+Créez ensuite un fichier website.log et verifiez bien que fichier n’est pas traqué
+Listez vos deux derniers commit
+    git log : pour avoir les logs des commits
+
+Créez la release 1.0.0 à l’aide des tags
+    - git tag : pour créer des tags
+    - les options -a et -m peuvent etres utiles
+
+Afficher les détails du tag nouvellement créé
+    - git show 
+    
+Créez  deux alias pour que “git st = git status” et “git br = git branch -a”
+    git config --global alias.<your_alias> <commande git> => pour configurer des alias

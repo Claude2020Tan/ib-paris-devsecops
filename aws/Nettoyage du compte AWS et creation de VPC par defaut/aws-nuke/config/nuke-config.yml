@@ -1,0 +1,43 @@
+regions:
+- eu-west-3 # Paris
+- us-east-1 # Virginie_du_Nord
+- us-east-2 #Ohio
+- ap-southeast-2 #Sydney
+- eu-central-1 #Francfort
+- us-west-1 # Californie_du_Nord
+- us-west-2 # Oregon
+- af-south-1 # Le_cap
+- global
+
+account-blocklist:
+- "999999999999" # production
+
+accounts:
+  "909394135851": # eazytraining-ulrich
+#    filters:
+#      IAMUser:
+#      - "terraform"
+#      IAMUserPolicyAttachment:
+#      - "terraform -> AdministratorAccess"
+#      IAMUserAccessKey:
+#      - "terraform -> AKIA5HPA5JMV7WM73T7Y"
+
+resource-types:
+  # don't nuke IAM users
+  excludes:
+  - IAMUser
+  - IAMGroupPolicyAttachment
+  - IAMUserGroupAttachment
+  - IAMGroup
+  - IAMUserAccessKey
+  - IAMRole
+  - EC2KeyPair
+  - IAMUserPolicyAttachment
+  - IAMLoginProfile
+  - IAMRolePolicyAttachment
+  - IAM*
+
+
+# Telecharger le binaire le plus récent sur https://github.com/rebuy-de/aws-nuke/releases
+# déploser le binaire telechargé au meme niveau que le dossier config
+# taper la commande Commande :  ./aws-nuke-v2.15.0-windows-amd64.exe -c config/nuke-config.yml  --access-key-id  AKIA5HPA5JMVQ2VG5UJS  --secret-access-key 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 --no-dry-run

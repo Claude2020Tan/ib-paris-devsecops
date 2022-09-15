@@ -1,0 +1,21 @@
+1 - Ecrivez un manifest mysql-volume.yml déployant un pod (nommé mysql-volume) mysql, 
+    avec les paramètres d’environnement suivants : 
+        - nom bdd: eazytraining,
+        - login: eazy, 
+        - mot de passe: eazy, 
+        - mot de passe compte root: password
+    Faites en sorte que le dossier contenant la base de données soit persistant en le 
+    montant sur votre nœud dans /data-volume en utilisant le principe de volumes
+2 - Lancez la création de votre pod, vérifiez que votre pod a bien démarré et que ce 
+    dernier consomme effectivement le dossier local /data-volume
+
+3 - Ecrivez pv.yml (volume persistent de taille 1 Go utilisant le dossier local /data-pv 
+    pour stocker les donneés) et pvc.yml (persistent volume claim de taille 100 Mo 
+    utilisant le PV créé précedement pour stocker les données) 
+4 - Lancez la creation de vos pv et pvc et verifier qu’ils sont bien crées et prêt à être consommés
+5 - Ecrivez un manifest mysql-pv.yml déployant mysql (nommé mysql-pv) comme précédemment 
+    à la seule différence qu’il utilisera comme volume de stockage le PVC créé précédemment
+6 - Vérifiez que votre pod consomme bien le stockage
+7 - Créez un repertoire tp-4 dans Kubernetes-training (après l’avoir recupéré sur votre github) 
+    et copiez vos manifests à l’interieur
+8 - Enfin, poussez ce dossier sur github afin de conservez tous vos fichiers

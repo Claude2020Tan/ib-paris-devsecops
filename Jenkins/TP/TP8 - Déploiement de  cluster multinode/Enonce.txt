@@ -1,0 +1,44 @@
+L'idée de ce tp est de déployer un jenkins multinodes.
+
+A l'aide du Vagrantfile suivant https://github.com/diranetafen/cursus-devops/tree/master/vagrant/Jenkins_multinodes,
+nous allons déployer un cluster multinode de 3 noeuds tel que : 
+    - Le serveur Jenkins est le maitre du cluster
+    - Le worker1 aura docker installé, et aura les labels linux, docker, worker1
+    - Le worker2 aura les labels linux et worker2
+1 - Premièrement, télécharger les ressources vagrant et lancer la creation des VMs dans virtualbox : 
+  vagrant up --provision
+
+2 - Une fois le processus vagrant terminé, connectez vous sur le master jenkins et taper la commande suivante : 
+  sudo usermod --shell /bin/bash jenkins
+    => Cette commande vous permettra d'activer le login en tant que utilisateur jenkins
+  Ensuite, il faudrait se connecter en utilisateur jenkins et tenter une premiere connexion ssh vers les workers 1 et 2
+    - sudo su -
+    - su jenkins
+    - ssh jenkins@worker1
+      => ensuite on se déconnecte de la machine worker 1
+    - ssh jenkins@worker2
+      => ensuite on se déconnecte de la machine worker 2
+
+3 - Ensuite, aller dans l'IHM Jenkins, dans le portail suivant :  Administrer jenkins > Gérer les noeuds
+  Une fois dans ce portal, rajouter une nouveau noeud au cluster suivant les infos siuvantes : 
+  - Nom du noeud : worker1 (par exemple)
+  - Type : Permanent agent
+  - Répertoire de travail distant : /var/lib/jenkins
+  - Etiquettes : docker linux ansible maven etc ...
+  - Utilisation : Utiliser ce noeud autant que possible
+  - Méthode de Lancement : Launch agent via ssh
+    - Host : IP de la machine worker
+    - Credential : Configurer un nouveau credential de type "SSH Username with private key"
+    - Host Key Verification Strategy : "Non Verifying Verification Strategy"
+
+
+
+4 - Créer  un projet de type pipeline nommé test_multinode et écrire un script qui lance echo $HOSTNAME 
+  sur les machines taggées linux
+5 - Modifier le Pipeline afin de lancer les commandes suivantes dans un agent docker qui sera lancé sur worker1 
+  (Vous avez des exemples de pipeline à tester qui vous sont fournis)
+  - commandes à lancer  (des exemples):
+    - mvn --version
+    - echo $HOSTNAME
+  - image de l'agent docker: maven:3-alpine
+

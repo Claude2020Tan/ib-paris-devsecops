@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Du point de vue données, que se passe t-il si on supprime un POD ?",
+      "answer-1": "Les fichiers du pod sont sauvegardés dans /var/k8S/Pod",
+      "answer-2": "Les fichiers du pods sont sauvegardés dans /var/Pod",
+      "answer-3": "Les fichiers du pods sont sauvegardés dans /Pod",
+      "answer-4": "Les fichiers du pods sont perdus ",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Pour persister les datas, quels mécanismes sont utilisés dans Kubernetes ? ",
+      "answer-1": "Les Bind et les configMaps",
+      "answer-2": "Les caches et les PVC",
+      "answer-3": "Les PVPVC et les montages bindés",
+      "answer-4": "Les notions de Volumes et de PV/PVC",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que représente data-volume sur la figure ?",
+      "answer-1": "Un espace de stockage sur le node situé dans /data/volume",
+      "answer-2": "Un espace de stockage sur le node situé dans /opt",
+      "answer-3": "Un espace de stockage sur le node situé dans /data",
+      "answer-4": "Un espace de stockage dans le pod situé dans /data/volume",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Que signifie PV ?",
+      "answer-1": "Physical Volume Claim",
+      "answer-2": "Physical Volume",
+      "answer-3": "Persistent Volume Claim",
+      "answer-4": "Persistent Volume",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Que signifie PVC ?",
+      "answer-1": "Physical Volume Claim",
+      "answer-2": "Persistent Volume",
+      "answer-3": "Persistent Volume Claim",
+      "answer-4": "Logical Volume Claim",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Que représente un objet de type PV ?",
+      "answer-1": "Un disque logique servant à contruire une partition LVM",
+      "answer-2": "Un disque physique servant à contruire une partition LVM",
+      "answer-3": "La demande de stockage émise par un utilisateur",
+      "answer-4": "La definition de l'espace de stockage réel",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que représente un objet de type PVC ?",
+      "answer-1": "La requêtte de stockage émise par un utilisateur",
+      "answer-2": "La definition de l'espace de stockage réel sur disque",
+      "answer-3": "Un disque physique servant à contruire une partition LVM",
+      "answer-4": "Un disque logique servant à contruire une partition LVM",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "C'est quoi une StorageClass ?",
+      "answer-1": "Un objet K8S permetant de distinguer des types de services",
+      "answer-2": "Un objet K8S permetant de distinguer des types de stockage",
+      "answer-3": "Un objet K8S permetant de distinguer des types volumes",
+      "answer-4": "Un objet K8S permetant de distinguer des types de bindmount",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Un PV et un PVC de deux StorageClass différentes peuvent - ils  s'appairer",
+      "answer-1": "OUI, s'ils ont les même tailles, c'est suffisant",
+      "answer-2": "OUI, la StorageClass n'intervient pas dans ce processus",
+      "answer-3": "NON, ils doivent être de la même StorageClass, c'est tout.",
+      "answer-4": "NON, ils doivent être de la même classe, mais pas que",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Un PV peut s'appairer à deux PVC",
+      "answer-1": "VRAI, c'est l'essence même de cette fonctionalité",
+      "answer-2": "VRAI, on peut aussi faire 1 PVC pour 2 PVs",
+      "answer-3": "FAUX, un PV pour un PVC uniquement",
+      "answer-4": "FAUX, c'est l'inverse, 1 PVC pour 2 PV",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

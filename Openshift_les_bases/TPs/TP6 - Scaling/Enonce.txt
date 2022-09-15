@@ -1,0 +1,4 @@
+1 - Passez le nombre de replica de l’application à 3
+2 - Accedez à l’application via la route et actualisez plusieurs fois la page ! 
+    Que remarquez vous ? À quoi cela est dû ?
+3 - Utilisez le manifeste fourni avec l'énonce pour désactiver le sticky session    

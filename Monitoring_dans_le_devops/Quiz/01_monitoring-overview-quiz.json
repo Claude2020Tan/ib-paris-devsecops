@@ -1,0 +1,85 @@
+{
+  "questions": [
+    {
+      "question": "Qu'est ce que qu'une application monolithique ?",
+      "answer-1": "Application à base de langage compilé",
+      "answer-2": "Application dont toutes les fonctionnalités dans un module",
+      "answer-3": "Application à base de langage interprété",
+      "answer-4": "C'est une application bare métal",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Qu'est ce que qu'une application microservices ?",
+      "answer-1": "C'est une application écrite en langage interprété",
+      "answer-2": "C'est une application disposant d'une API Rest",
+      "answer-3": "C'est un service web",
+      "answer-4": "Appli dont chaque fonctionnalité est un module indépendant",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans une démarche microservice, qui s'occupe du découpage en microservice ?",
+      "answer-1": "Le Product Owner",
+      "answer-2": "Les opérationnels",
+      "answer-3": "L'architecte applicatif",
+      "answer-4": "Les dévelloppeurs",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "C'est quoi Docker ?",
+      "answer-1": "Outil facilitant la mise en microservice des applications",
+      "answer-2": "C'est un hyperviseur de type 2",
+      "answer-3": "C'est hyperviseur de type 1",
+      "answer-4": "C'est un langage de programmation comme java",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Pourquoi a - ton besoin d'orchestrateur de container ?",
+      "answer-1": "Besoin de builder facilement des images d'applications",
+      "answer-2": "Recherche de scaling, haute disponibilité et update facilé",
+      "answer-3": "Besoin d'installer facilement les contair runtime",
+      "answer-4": "Besoin de sauvegarder les données des containers",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quels sont les composants d'un cluster Kubernetes ?",
+      "answer-1": "Api-server, etcd et scheduler",
+      "answer-2": "Pods, Déployments et workers",
+      "answer-3": "Containers, Pods et control plane",
+      "answer-4": "Master, Workers et objets du cluster",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "C'est quoi Kubernetes ?",
+      "answer-1": "C'est un orchestrateur de container",
+      "answer-2": "C'est un serveur d'intégration",
+      "answer-3": "C'est un serveur de déploiement",
+      "answer-4": "C'est un container runtime",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quel outil permets de faires des package d'application dans kubernetes ?",
+      "answer-1": "ansible",
+      "answer-2": "Helm",
+      "answer-3": "Tiller",
+      "answer-4": "docker compose",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans Helm, comment appelle-t-on un package applicatif ? ",
+      "answer-1": "Un Dockerfile",
+      "answer-2": "Un vagrantfile",
+      "answer-3": "Un manifeste",
+      "answer-4": "Un chart",
+      "duration": "20",
+      "good-answer": "4"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "question": "Comment faire pour monitorer vos OS avec Prometheus ?",
+      "answer-1": "Installer le BlackBox Exporter",
+      "answer-2": "Installer Kube state metrics",
+      "answer-3": "Installer metrics server",
+      "answer-4": "Installer le node exporter",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "En quel langage est écrit le node exporter ?",
+      "answer-1": "C",
+      "answer-2": "Python",
+      "answer-3": "Go",
+      "answer-4": "Java",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel élément de l'OS expose les métriques collectées par le node exporteur ?",
+      "answer-1": "le kernel Unix/Linux",
+      "answer-2": "Le Bios",
+      "answer-3": "Le systemd",
+      "answer-4": "Le BootLoader",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Dans un cluster Kubernetes, à quoi servirait le node exporter ?",
+      "answer-1": "Se rassurer que le cluster est toujours fonctionnel",
+      "answer-2": "Se rassurer que l'OS hôte est fonctionnel",
+      "answer-3": "Se rassuer de la disponibilité des applications",
+      "answer-4": "Se rassurer de la consistence des objets Kubernetes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "A quoi font références les termes Kubernetes API health and metrics ?",
+      "answer-1": "Le test de vie de l'api-server de K8S",
+      "answer-2": "Le monitoring des Pods dans K8S",
+      "answer-3": "Le monitoring des objets du cluster",
+      "answer-4": "Le monitoring natif du control plane du cluster K8S",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "C'est quoi kube-state-metrics ?",
+      "answer-1": "Un exporter évolué pour le cluster K8S",
+      "answer-2": "Un node exporter déployé dans un POD K8S",
+      "answer-3": "Un POD système dans Kubernetes",
+      "answer-4": "Un Objet K8S chargé du monitoring des pods",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Comment savoir le endpoints http le plus lent dans K8S ?",
+      "answer-1": "Configurer kubernetes-grafviz",
+      "answer-2": "Installer kube-state-metrics",
+      "answer-3": "Installer Cadvisor",
+      "answer-4": "Déployer Dynatrace",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel outil docker utilise pour collecter les métriques des containers ?",
+      "answer-1": "Cloudwatch",
+      "answer-2": "Cadvisor",
+      "answer-3": "docker-metrics",
+      "answer-4": "metrics-beat",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans Kubernetes avec docker comme container runtime, faut-il installer Cadvisor ?",
+      "answer-1": "Oui, c'est un process bare metal sur chaque node",
+      "answer-2": "Oui, il le faut sous forme de PODS",
+      "answer-3": "Non, il est dans le kube-api-server",
+      "answer-4": "Non, il est embarqué dans kubelet",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quel exporter pourrait me permettre de collecter les métriques d'une application web",
+      "answer-1": "node exporter",
+      "answer-2": "go exporter",
+      "answer-3": "blackbox exporter",
+      "answer-4": "Cadvisor",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Les protocoles suivants sont pris en charge par blackbox exporter : ",
+      "answer-1": "http, https, dns, tcp, icmp",
+      "answer-2": "sha256, tls, vault",
+      "answer-3": "tcpdump, haproxy, dns",
+      "answer-4": "ping, arp, nat",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quel exporter permettrait d'avoir les métriques d'un serveur postgresql ?",
+      "answer-1": "prometheus exporter",
+      "answer-2": "postgres exporter",
+      "answer-3": "sql exporter",
+      "answer-4": "database exporter",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel est l'intérêt de mettre en place de l'alarming sur prometheus ?",
+      "answer-1": "L'alarme sera capturée par Grafana",
+      "answer-2": "L'alarme sera toujours opérationnelle même si Grafana KO",
+      "answer-3": "L'alarme sera envoyée sur un canal tel que le mail",
+      "answer-4": "L'alarme monitore Prometheus",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel portail permet de configurer l'alarming dans prometheus ?",
+      "answer-1": "L'IHM Grafana",
+      "answer-2": "L'IHM prometheus",
+      "answer-3": "L'alarm config",
+      "answer-4": "L'alarm manager",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans kubernetes, comment déployer rapidement toute une stack de monitoring ?",
+      "answer-1": "Déploiement d'un déploiement grafana/prometheus",
+      "answer-2": "Déploiement d'un daemonset grafana/prometheus",
+      "answer-3": "Déploiement d'un opérateur",
+      "answer-4": "Lancement d'un agent kubernetes qui installe la stack",
+      "duration": "20",
+      "good-answer": "3"
+    }    
+  ]
+}        

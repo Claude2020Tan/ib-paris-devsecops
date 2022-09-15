@@ -1,0 +1,28 @@
+Partie 1 : Installation de l'opérateur Prometheus
+Lien de la documentation :  https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+
+1 - Installation de Minikube
+2 - Installation de Helm V3
+    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+3 - Installation  des repos Helm (https://prometheus-community.github.io/helm-charts/) 
+    helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+    helm repo update
+4 - Installation du chart prometheus
+    helm install prometheus prometheus-community/kube-prometheus-stack
+5 - Vérification des Pods créé
+    kubectl get po    
+
+
+
+Partie 2 :  Utilisation de l'opérateur
+1 -  Exposition des services
+    kubectl get svc
+    ---GRAFANA----
+    kubectl port-forward --address 0.0.0.0 svc/prometheus-grafana 8000:80
+    kubectl get secret prometheus-grafana -o yaml (le user c'est admin, et décoder le admin-password (prom-operator))
+    echo "password" | base64 --decode
+    Parcourez grafana, il y aura plein de dashboard disponibles
+    --- PROMETHEUS---
+    kubectl port-forward --address 0.0.0.0 svc/prometheus-kube-prometheus-prometheus 9090
+    
+

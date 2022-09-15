@@ -1,0 +1,27 @@
+Exercice : 
+Ce TP consiste a voir comment prend en compte les modifications des configmaps ou des 
+secret à l'aide du reloader offert par l'entreprise stakater.
+Il est disponible sur des cluster K8s > v1.9
+
+1 - Installer helm sur votre cluster Kubernetes
+
+2 - Rajoutez les repos stakater : 
+    helm repo add stakater https://stakater.github.io/stakater-charts
+    helm repo update
+
+3 - Deployer le reloader 
+    helm install reloader stakater/reloader # Pour surveiller les CM/secrets dans tous les namespaces
+    helm install reloader stakater/reloader --set reloader.watchGlobally=false --namespace NAMESPACENAME # our surveiller les CM/Secrets dans un namespace
+    
+    => Normalement vous devrez voir apparaitre un déploiement nommé "reloader-reloader"    
+
+4 -  Créer à présent un déploiement qui utilise un configmap et un secret :
+    - Les manifestes vous sont donnés par le formateur si besoin...
+    - Le déploiement devra avoir des annotation du style : 
+        -> configmap.reloader.stakater.com/reload: "nom_du_configmap"
+        -> secret.reloader.stakater.com/reload: "nom_du_secret"
+
+5 - Amusez vous à modifier un configmap ou un secret et visualisez les PODS qui se recréent
+    kubectl edit cm eazytraining-configmap
+    kubectl edit secret eazytraining-secret
+    kubectl get po        

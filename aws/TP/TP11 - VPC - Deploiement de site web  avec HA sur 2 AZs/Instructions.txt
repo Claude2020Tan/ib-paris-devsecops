@@ -1,0 +1,78 @@
+PARTIE 1 : Création des serveurs WEBs sur 2 AZs
+
+A - Creatoin du VPC et ses objets : 
+  Aller dans VPC et créer un VPC avec "l'assistant de création" (Launch Wizard).
+    - Choisir un template contenant deux AZs avec un réseau public chacun. 
+          => Au total, vous aurez deux réseaux publics
+    - L'assistant va automatiquement créer un IGW (Internet gateway)
+    - Les sous réseaux auront une route par defaut qui pointe vers l'IGW
+    - Adresse du VPC : 10.0.0.0/16
+    - Name : Nomenclature définie
+    - Sous réseaux 1 : 
+        - subnet name : nomenclature définie
+        - plage d'ip du Subnet  public 1 : 10.0.0.0/24
+        - le subnet sera dans l'AZ 1 de la région
+    - Sous réseaux 2 : 
+        - subnet name : nomenclature définie
+        - plage d'ip du Subnet  2 : 10.0.1.0/24
+        - Il sera dans l'AZ 2 de la région
+        - Si besoin, modifier la table de routage du subnet 2 afin qu'il aie la même route par défaut que le subnet 1
+
+B - Activation du DHCP au niveau des réseaux
+  Il faut activer le DHCP dans ces subnets nouvellemen créé, ne surtout pas oublier !!!
+    - Depuis le tableau de bord des VPC, aller dans les sous réseaux (subnet)
+    - Pour chacun de vos subnets, faire
+      - Sélectionner le subnet 
+      - Cliquer sur actions > Modify auto-assign IP settings > on clic sur activer > On sauvegarde
+
+C - Déploiement des Instances EC2 sur des les deux AZ
+  Déployer deux serveurs web identiques dans ce VPC (1 dans chaque subnet, soit 1 par AZ)
+    - C'est à l'étape 3 du lancement des instances que le choix du VPC se passe
+    - On vous demandera de choisir le subnet,  vous devrez choisir le subnet  public créé lors de la creation du VPC
+      
+    - Security Group : on appliquera le même aux deux serveurs
+      - Le SG est un élément de votre Région/VPC, il faudra créer un nouveau SG dans le VPC si non existant
+
+    - clés ssh :
+      La clés ssh est un élément de votre Région/VPC,
+      il faudra créer une nouvelle dans la région si vous avez changé de région
+  
+
+PARTIE 2 : Configuration du Load Balancer
+A - Creation de l'ALB
+  
+  On va à présent créer un Load Balancer (equilibreur de charge)
+    - On va dans le tableau de board des EC2
+    - On va dans les equilibreurs de charge et on créé un nouveau ALB de type http/https
+      - step 1 : 
+        - Name : nommenclature connue, (Attention, il n'aime pas les '_', à éviter)
+        - Accessible sur internet
+        - Type d'adresse : ipv4
+        - Ecouteurs : http/80
+        - Zone de disponibilité : 
+          - Sélectionner votre VPC
+          - Sélectionner vos deux zones de disponibilités dans lesquelles se trouvent vos subnets
+      - step 3 : Security Group du load balancer
+        - créer un SG dont le nom respecte notre nomenclature et se termine par "_alb"
+      - step 4 : Target Group, Il faudra créer un nouveau ou utiliser un déja créer 
+        - name : nomenclature connue, , mais remplacer les "_" par des "-" .
+        - type : instance
+        - On laisse le paramétrage par défaut (http/80, etc ...)
+      - step 5 : cible
+        - rajouter vos 2 serveurs disponibles sur chacun de leurs AZ
+      - step 6 vérification et validation de la création
+
+B - Configuration des Sécurity Group (ALB et EC2)
+  Flux entre Sécurity group : 
+    - Ne pas oublier d'autoriser le flux sur le SG des serveurs web, en provenance du SG du load balancer
+
+  Une fois tout est prêt, on peut récupérer l'url du load balancer et tester
+  - Partie description , champs "Nom du DNS"
+
+PARTIE 3 (Bonus) : Synchronisation des data du site web 
+- Mettre en place un partage EFS qui expose des cibles de montage dans les AZ1 et AZ2 des serveurs
+- Monter le share EFS sur les serveurs WEBs
+- Deplacer le code source du serveurs sur le partage NFS
+- Configuer le serveur web afin que le site pointe sur le partage NFS
+    Un lien de de "/var/www/html" vers  "le partage nfs" peut être envisageable,à vous de voir ...
+- Voir dans quelle mesure mettre en place un ASG sur les machines si possible

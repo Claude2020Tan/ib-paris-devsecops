@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Dans le fichier du pipeline, quel bloc permet d'identifier une tache",
+      "answer-1": "Stage",
+      "answer-2": "Pipelines",
+      "answer-3": "pipeline",
+      "answer-4": "stage",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans le fichier du pipeline, quel bloc permet d'identifier toutes les taches",
+      "answer-1": "Stage",
+      "answer-2": "Pipelines",
+      "answer-3": "pipeline",
+      "answer-4": "stages",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans le fichier du pipeline, à quoi sert le bloc 'when' ?",
+      "answer-1": "Décider quand le pipeline va se lancer",
+      "answer-2": "Définir une condition de lancement d'un job",
+      "answer-3": "Définir une condition d'arret d'une tache",
+      "answer-4": "Définir une condition d'exécution d'une tache",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quel est la fonction Jenkins qui permet d'utiliser un credential de type secret text",
+      "answer-1": "secret(id)",
+      "answer-2": "credentials(id_credential)",
+      "answer-3": "credential(id_credential)",
+      "answer-4": "Aucune des réponses précedentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "La fonction Jenkins permettant d'utiliser un credential d'un type différent de secret text",
+      "answer-1": "secret(param1,2,3...paramN)",
+      "answer-2": "credentials(param1,2,3...paramN)",
+      "answer-3": "withCredentials(param1,2,3...paramN)",
+      "answer-4": "Aucune des réponses précedentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quelle est la syntaxe pour avoir une condition (si, sinon si et sinon) dans un bloc 'script' ",
+      "answer-1": "script{ si(cond1){t1} sinon si(cond2){t2} sinon(cond3){t3} }",
+      "answer-2": "script{ if(cond1){t1} else if(cond2){t2} else(cond3){t3} }",
+      "answer-3": "script{ if(cond1){t1} else if(cond2){t2} else{t3} }",
+      "answer-4": "script{ if(cond1){t1} elif(cond2){t2} else{t3} }",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Soient les variables BUILD='FSA', BUILD_ENV=prod, utilisez les pour avoir NAME_ENV=FSA_ENV",
+      "answer-1": "NAME_ENV = '$(BUILD_ENV)'",
+      "answer-2": "NAME_ENV = '${BUILD}_ENV'",
+      "answer-3": "NAME_ENV = '$BUILD_ENV'",
+      "answer-4": "NAME_ENV = ${BUILD_ENV}",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel est le nom du plugin à installer si l'on veut utiliser l'agent docker",
+      "answer-1": "plugin 'agent docker' ",
+      "answer-2": "plugin 'docker build step' ",
+      "answer-3": "plugin 'docker pipeline",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Depuis le container Jenkins, quelle est l'adresse de l'hote hébergeant ce container",
+      "answer-1": "localhost",
+      "answer-2": "127.0.0.1",
+      "answer-3": "172.17.0.1",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Les prérequis nécessaires à un agent jenkins afin de déployer une app sur un cluster kubernetes",
+      "answer-1": "kubectl; un fichier de config correct et interco Ok",
+      "answer-2": "interco OK et Toutes les dépendances liées à kubernetes",
+      "answer-3": "interco Ok et Kubectl d'installé ",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

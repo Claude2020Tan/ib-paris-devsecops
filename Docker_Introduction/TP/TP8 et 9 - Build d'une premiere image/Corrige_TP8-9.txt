@@ -1,0 +1,26 @@
+Sur la VM Centos, on créé un répertoire de travail , on lui donnera le nom build-docker
+    mkdir -p build-docker
+
+On se déplace dans ce répertoire et on télécharge l'application sur github
+    - déplacement dans le repertoire de travail : 
+        cd  build-docker   
+    - Installation de l'applcation git afin de pourvoir cloner
+        sudo yum install git -y
+        
+    - Téléchargement de l'application dans notre répertoire de travail          
+         git clone https://github.com/diranetafen/static-website-example.git
+
+On créé le fichier Dockerfile dans le répertoire de travail et on lui rajoute le contenu (Voir fichiers joints)
+    vi Dockerfile
+
+On lance le build de l'application, on la nommera static-website-eazytraining:v1
+    docker build -t static-website-eazytraining:v1 . 
+
+On vérifie l'existance de l'image
+    docker images
+
+On lance  un conteneur de cette image
+    docker run -d --name first_container -p 8080:80 static-website-eazytraining:v1
+
+On teste en local ou dans le navigateur à l'adresse http://127.0.0.1:8080
+    

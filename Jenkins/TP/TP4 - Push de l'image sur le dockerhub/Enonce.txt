@@ -1,0 +1,27 @@
+Projet Artefact
+1 - Créer un compte sur le dockerhub
+2 - Installer le plugin "docker-build-step"
+3 - Configurer le plugin docker-build-step pour qu'il puisse communiquer avec Docker
+	- Manage jenkins > Configure system > Docker Builder > renseigner la socket unix (unix:///var/run/docker.sock)
+	- Tester la connectivité
+4 - Définir un crédential dans Jenkins qui va représenter nos identifiants docker
+	Manage jenkins > Security > Manage credentials > global > add credentials > username/password	
+5 - Créer un job freestyle ou utiliser celui déja existant
+	Ce job devra faire tout ce que faisait le job précédent, mais avec une étape supplémentaire
+	qui est l'envoie de l'image dans le registre dockerhub
+	- PS : Pour envoyer une image dans dockerhub, elle doit etre préfixée de votre login dockerhub 
+		Pour celà, modifier le script shell au niveau de la commande de build en préfixant l'image 
+		de mon login dockerhub, et aussi au niveau de la commande docker run. On aura ceci:
+			#!/bin/bash
+			docker build -t ${votre_id_dockerhub}/${IMAGE_NAME}:${IMAGE_TAG} .
+			docker run -d -p 80:5000 -e PORT=5000 --name ${IMAGE_NAME} ${votre_id_dockerhub}/${IMAGE_NAME}:${IMAGE_TAG} 
+			sleep 5
+	- En plus des paramètres précédents, le job aura un paramètre string supplémentaire nommé "votre_id_dockerhub": 
+		votre_id_dockerhub= ...
+	- Dans votre Job, rajouter une étape de build qui utilise le plugin Docker installé
+		command : push image
+		name: ${votre_id_dockerhub}/${IMAGE_NAME}
+		Tag : ${IMAGE_TAG}
+		Docker registry URL : https://index.docker.io/v2/
+		registry credentials :  secret nouvelle créé
+	- Lancer le Build et une fois terminée, vérifier que l'image est disponible sur dockerhub

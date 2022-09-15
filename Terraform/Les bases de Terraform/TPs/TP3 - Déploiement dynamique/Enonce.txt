@@ -1,0 +1,16 @@
+Créez un dossier tp-3 comme vous l’avez fait au tp-2 pour conserver votre code
+L’objectif est de déployer une instance ec2 avec une ip publique et un security group
+1 - Ecrivez le code permettant de créer l'EC2
+    - IP publique: 
+        vous allez créer une ip publique pour votre EC2
+    - Security Group: 
+        créez une security group pour ouvrir le port 80 et 443, attachez cette security group à votre IP  publique
+    - EC2 :
+        Votre ec2 doit avoir une taille variabilisée, la valeur par defaut devrait être t2.nano et la valeur à surcharger sera t2.micro
+    - AMI : 
+        L’image AMI à utiliser sera l’image la plus à jour de AMAZON LINUX
+    - keypair :
+        Spécifiez la keypair à utiliser (devops-<votre prénom>)
+2 - Attachez l’ip publique à votre instance
+3 - Variabilisez le Tag afin qu’il contienne au moins le tag: « Name: ec2-<votre prenom> » le N est bien en majuscule
+4 - Supprimez vos ressources avec terraform destroy

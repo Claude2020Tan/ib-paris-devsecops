@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Un role ansible peut etre assimilé à :",
+        "answer-1": "un role dans ldap pour gérer la sécurité",
+        "answer-2": "un playbook",
+        "answer-3": "une fonction appelée dans un playbook",
+        "answer-4": "un plugin servant à piloter un serveur ldap",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Les roles remplacent les playbooks",
+        "answer-1": "VRAI, à terme les playbook n'existeront plus",
+        "answer-2": "VRAI, on y retrouve toutes les sections d'un playbook",
+        "answer-3": "FAUX, les playbooks appelent simplement les roles",
+        "answer-4": "FAUX, les roles s'utilisent avec la commande ansible",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Par défaut, où est ce que nsible télécharge les nouveaux roles ?",
+        "answer-1": "Dans le répertoire roles du projet",
+        "answer-2": "Dans un répertoire cachés de la home du user",
+        "answer-3": "Dans le /tmp",
+        "answer-4": "Dans le répertoire /etc/ansible/roles",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Les roles sont stockées sur :",
+        "answer-1": "Un serveur git",
+        "answer-2": "La galaxy ansible",
+        "answer-3": "Un registre docker",
+        "answer-4": "le cloud vagrant",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "La galaxy ansible me permets ",
+        "answer-1": "t'explorer les roles proposés par docker",
+        "answer-2": "télécharger des images dockers",
+        "answer-3": "télécharger des chart ansible",
+        "answer-4": "d'explorer les roles proposés par la communauté",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Pour initialiser un role de zero, j'utilise la commande",
+        "answer-1": "ansible --init <nom_du-role>",
+        "answer-2": "ansible-role --init <nom_du-role>",
+        "answer-3": "ansible-galaxy init <nom_du-role>",
+        "answer-4": "ansible all -m role -a 'name: <nom_du-role> state: present'",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Le répertoire defaults d'un role contient",
+        "answer-1": "Les tasks par défaut appliquées par le role",
+        "answer-2": "Les templates par défaut appliquées par le role",
+        "answer-3": "Les variables par défaut appliquées par le role",
+        "answer-4": "Les handlers par défaut appliquées par le role",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Le répertoire vars d'un role contient",
+        "answer-1": "Les variables qui surchagent celles dans dans defaults",
+        "answer-2": "Les variables par défaut appliquées par le role",
+        "answer-3": "Les fichiers  par défaut appliquées par le role",
+        "answer-4": "Les tasks par défaut appliquées par le role",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Pour éxécuter des tasks avant l'appel d'un role, on utilise le mots clés :",
+        "answer-1": "pre_tasks",
+        "answer-2": "before_tasks ",
+        "answer-3": "post_tasks",
+        "answer-4": "pafter_tasks ",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Pour installer un role, je peux taper la commande",
+        "answer-1": "ansible-galaxy --init <nom_du-role>",
+        "answer-2": "ansible-galaxy install -r requirements.yml",
+        "answer-3": "ansible install -r requirements.yml",
+        "answer-4": "ansible-playbook install <nom_du-role>",
+        "duration": "20",
+        "good-answer": "2"
+      }
+    ]
+  }

@@ -1,0 +1,56 @@
+# Initialisation du repos et premier commit
+git init
+ls -a
+echo "Mon Premier repos" > README.md
+cat README.md
+git status
+git add .
+git status
+git commit -m "first commit"
+git status
+echo "nouveau fichier de bug" > bug.txt
+echo "On fait du bash ici" >> README.md
+git status
+git add bug.txt
+git add .
+git commit -m "Ajout d'un nouveau fichier de bug"
+git status
+
+
+# gitignore
+echo '*.log' >> .gitignore
+git status
+git add .gitignore
+git commit -m "Ajout d'un fichier gitignore"
+
+# validation du gitignore
+echo "demarrage de apache à 14:00" >> website.log
+git status
+
+# Historique des commits
+git log
+git log -p -2 
+git log --oneline --graph --color --all --decorate
+alias gl='git log --oneline --graph --color --all --decorate'
+gl
+
+
+# Tagging
+git tag
+git tag -a 1.0.0 -m "version initiale"
+git tag
+git show 1.0.0
+
+# Alias de commandes git
+git config --global alias.st status
+git config --global alias.br "branch -a"
+git st
+git br
+
+TIPS : 
+    - Mettre ceci dans la conf des alias :
+        git config --global alias.treeall "log --oneline --graph --color --all --decorate"
+        git config --global alias.tree "log --oneline --graph --color --decorate"
+    - En suite taper les commandes 
+        - git tree
+        - git treeall  (Pour afficher toutes les branches)

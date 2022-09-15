@@ -1,0 +1,36 @@
+
+Il est question dans ce TP de mettre en oeuvre le scaling automatique des Pods, à l'aide 
+de l'objet Horizontal Pod Autoscaler (hpa). Pour celà, nous allons déployer l'infrastructure 
+présenté dans la capture présente avec l'énonce. (fichier Architecture.PNG)
+
+Nous avons besoin d'installer Metric server sur le cluster, car il est utilisé par hpa pour 
+avoir les métriques des pods du cluster afin de déclencher le scaling automatiquement.
+
+1 - Installation de Metric server : le manifeste metric_servers.yml est fournie, il faut 
+    simplement l'appliquer
+        kubectl apply -f metric_servers.yml
+    Pour valider l'installation de metric server, taper les commandes suivantes : 
+        kubectl top nodes
+        kubectl top pod
+
+2 - Creation du controller hpa : Ce dernier va controler le déployment 'apache-deployment'. 
+    A plus de 50% d'utilisation CPU, le scale up se fera automatiquement. Le manifeste 
+    hpa.yml est fournie, il faut simplement l'appliquer.
+        kubectl apply -f hpa.yml
+
+3 - Lancer le déploiement du serveur apache (l'application) ainsi que son service, avec les 
+    manifestes fournis. Les manifestes sont apache-deployment.yml et service-apache.yml
+        kubectl apply -f apache-deployment.yml
+        kubectl apply -f service-apache.yml
+    Pour infos, chaque container applicatif requiert 150mCPU et a une limite max de 200mCPU        
+
+4 - Lancer à présent le bench (Injecteur de flux) et observer la CPU des pods applicatifs.
+    Le scaling automatique devrait se déclecher une fois les seuils atteints. Le manfeste 
+    fourni est le fichier bench-deploy.yml    
+        kubectl applyf -f bench-deploy.yml
+
+5 - Pour scaler les pods de l'injecteur, faire ceci :
+        kubectl scale --replicas=10 deploy  bench-deployment 
+    Une grande valeur devrait pouvoir stresser notre application       
+
+        

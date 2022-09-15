@@ -1,0 +1,46 @@
+Télécharger le repos suivant : https://github.com/diranetafen/diveintoansible-lab
+
+Déplacez dans le répos git
+Créer un répertoire nommé 	nginx_conf dans lequel vous allez déposez le fichier default.conf
+Ce répertoire devra appartenir au  user root (chown -R root:root nginx_conf)
+PS :  le fichier default.conf est donné avec l'enoncé...
+
+Remplacez le fichier docker-compose.yaml par celui donné avec l'énoncé
+Dans ce nouveau docker-compose.yaml , faire ceci :   
+	-> rajouter la variable d'env suivante au service portal : 
+		- LOCALHOST_OVERRIDE=<VOTRE IP MACHINE>
+
+Dans le fichier .env, Adapter la valeur des variables CONFIG et ANSIBLE_HOME afin
+qu'elles pointent sur votre répertoire de travail
+
+Lancer le docker-compose.
+
+Maintenant, allez sur votre navigateur sur le port 7681 et connectez vous sur la machine ubuntu-c
+PS : Les crédentials sont toujours ansible/password
+
+Sur cette machine, il faudra taper les commandes suivantes (Vous pourrez en faire un script et l'exécuter) :
+
+		sudo apt update
+		sudo apt install -y sshpass
+
+		ssh-keygen -t rsa
+
+		echo password > password.txt
+
+		for user in ansible root
+		do
+		  for os in ubuntu centos
+		  do 
+			for instance in 1 2 3
+			do
+			  sshpass -f password.txt ssh-copy-id -o StrictHostKeyChecking=no ${user}@${os}${instance}
+			done
+		  done
+		done
+
+Ensuie, on peut donc tester une connexion ssh sur les machines distantes:
+	ssh centos1
+	ssh centos2
+	ssh ubuntu1
+	
+	

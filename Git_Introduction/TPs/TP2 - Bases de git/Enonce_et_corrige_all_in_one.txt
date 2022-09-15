@@ -1,0 +1,101 @@
+1 - Récupérez le dossier deploy-users dans les fichiers fournis avec les supports de cours
+2 - Copiez le dossier dans votre environnement de travail et rendez-vous dans ce dossier
+    #### Début des commandes ####
+        curl https://raw.githubusercontent.com/diranetafen/deploy-users-hug/master/deploy-users.zip -o deploy-users.zip
+        sudo yum install unzip -y
+        unzip deploy-users.zip
+        cd deploy-users    
+    #### Fin des commandes ####
+
+
+3 - Initialisez un repo et faites un commit après avoir créé un fichier README.md
+    git init : permets d'initialiser un repos
+    vous remarquerez l'apparition d'un repertoire caché .git
+    git add : permets de tracker de nouveau fichier
+    git commit : permets de commiter notre travail
+    git status : permets de connaitre l'état
+
+    #### Début des commandes ####
+        git init
+        ls -a
+        echo "Mon Premier repos" > README.md
+        cat README.md
+        git status
+        git add .
+        git status
+        git commit -m "first commit"
+        git status
+        echo "nouveau fichier de bug" > bug.txt
+        echo "On fait du bash ici" >> README.md
+        git status
+    #### Fin des commandes ####
+
+
+4 - Créez un fichier bug.txt et modifier le fichier README.MD, enfin entérinez la modification en faisant un commit
+    #### Début des commandes ####    
+        echo "On a un nouveau bug en production" > bug.txt
+        git add bug.txt
+        git commit -m "Ajout d'un nouveau fichier de bug"
+        git status
+    #### Fin des commandes ####
+
+5 - Créez un fichier gitignore afin de ne pas tracker les fichiers de log (.log) et commit(ez) le changement
+    #### Début des commandes ####    
+        echo '*.log' >> .gitignore
+        git status
+        git add .gitignore
+        git commit -m "Ajout d'un fichier gitignore"
+    #### Fin des commandes ####
+
+
+6 - Créez ensuite un fichier website.log et verifiez bien que le fichier n’est pas traqué
+    #### Début des commandes ####    
+        echo "demarrage de apache à 14:00" >> website.log
+        git status
+    #### Fin des commandes ####
+
+
+7 - Listez vos deux derniers commit
+    git log : pour avoir les logs des commits
+    #### Début des commandes ####    
+        git log -p -2 
+        git log --oneline --graph --color --all --decorate
+        alias gl='git log --oneline --graph --color --all --decorate'
+        gl
+    #### Fin des commandes ####
+
+8 - Créez la release 1.0.0 à l’aide des tags
+    - git tag : pour créer des tags
+    - les options -a et -m peuvent etres utiles
+    - git tag -a v1.0.0 <Commit ID> -m "Message here"
+
+    #### Début des commandes ####    
+        git tag
+        git tag -a 1.0.0 -m "version initiale"
+        git tag
+    #### Fin des commandes ####
+
+
+9 - Afficher les détails du tag nouvellement créé
+    #### Début des commandes ####    
+        - git show 1.0.0
+    #### Fin des commandes ####
+
+    
+10 - Créez  deux alias pour que “git st = git status” et “git br = git branch -a”
+    git config --global alias.<your_alias> <commande git> => pour configurer des alias
+    #### Début des commandes ####    
+        git config --global alias.st status
+        git config --global alias.br "branch -a"
+        git st
+        git br
+        git config --global alias.treeall "log --oneline --graph --color --all --decorate"
+        git config --global alias.tree "log --oneline --graph --color --decorate"
+        git tree
+        git treeall
+    #### Fin des commandes ####
+
+
+
+Annexes : 
+https://stackoverflow.com/questions/424071/how-do-i-list-all-the-files-in-a-commit 

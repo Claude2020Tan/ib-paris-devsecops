@@ -1,0 +1,6 @@
+Rassurez vous que Docker et docker-copose sont installés sur votre machine
+Git clonez le projet suivant: https://github.com/sameersbn/docker-gitlab.git
+Rendez-vous dans le dossier docker-gitlab et lancez la commande docker-compose up –d
+Connectez-vous en http sur votre gitlab sur le port 10080
+Reinitialisez le mot de passe du compte root
+Découvrez l’interface de gitlab

@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "A quel type de versioning appartient l'outil Subversion",
+        "answer-1": "Versionning distribué",
+        "answer-2": "Versionning central",
+        "answer-3": "Versionning anarchique",
+        "answer-4": "Versionning remote",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quelle limite retourve - t - on sur un système de versionning centralisé ?",
+        "answer-1": "La latence réseau",
+        "answer-2": "La base de versionning est distribuée",
+        "answer-3": "La sécurité des donnée",
+        "answer-4": "Un SPOF",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Dans un système de versionning local, ou se situe la base de versionning ? ",
+        "answer-1": "Sur le serveur distant",
+        "answer-2": "Dans le Cloud",
+        "answer-3": "Sur la Machine locale du collaborateur",
+        "answer-4": "Elle est distribuée sur le serveur distant",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quelle problématique vient résoudre les outils de versionning ?",
+        "answer-1": "Le maintient de l'historique du travail",
+        "answer-2": "La résolution des bugs en production",
+        "answer-3": "Le lancement des actions automatisées ",
+        "answer-4": "La montée de version des applications en production",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Un outil de versionning décentralisé requiert toujours d'être connecté au serveur distant",
+        "answer-1": "VRAI, ca la base locale est juste un backup non utilisable",
+        "answer-2": "FAUX, la base locale permet d'être autonome",
+        "answer-3": "VRAI, c'est le cas pour git par exemple",
+        "answer-4": "FAUX, seul git à besoin d'être toujours connecté",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Les outils suivants sont des gestionnaires de version décentralisé",
+        "answer-1": "Bazaar, Perforce",
+        "answer-2": "Subversion, Mercurial, Bazaar",
+        "answer-3": "Git, CVS, Subversion",
+        "answer-4": "Git, Mercurial, Bazaar",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Git est uniquement disponible sur un système Unix et dérivé",
+        "answer-1": "Faux, il en existe pour la plupart des OS",
+        "answer-2": "Faux, il est disponible sur Unix uniquement",
+        "answer-3": "Faux, il est diponible sur Windows uniquement",
+        "answer-4": "VRAI, une version windows est en cours de dev actuellement",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Soit l'utilisateur vagrant. Que représente le fichier ~/home/vagrant/.gitconfig ?",
+        "answer-1": "Le fichier permettant de démarrer le service git",
+        "answer-2": "Le fichier de configuration de git",
+        "answer-3": "Le fichier d''installation de git",
+        "answer-4": "La clés privée ssh de l'utilisateur vagrant",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que représente la suite des instructions suivantes ?",
+        "answer-1": "La création du dépot local de John Doe",
+        "answer-2": "La configuration de l'éditeur de texte par défaut vi",
+        "answer-3": "Les commandes d'envoie de code dans le repo de John Doe",
+        "answer-4": "Les configurations initiales à faire dès installation de git",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que représente la suite des instructions suivantes ?",
+        "answer-1": "Les instructions d'installation de yum via git",
+        "answer-2": "Les instructions d'installation de apt via git-all",
+        "answer-3": "Les instructions d'installation de git via yum ou apt",
+        "answer-4": "Les instructions d'installation de yum via sudo",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

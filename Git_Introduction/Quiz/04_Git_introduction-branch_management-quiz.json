@@ -1,0 +1,103 @@
+{
+    "questions": [
+      {
+        "question": "Comment créer la branche 'custom_branch' avec git ?",
+        "answer-1": "git checkout custom_branch",
+        "answer-2": "git branch custom_branch",
+        "answer-3": "git branch -d custom_branch",
+        "answer-4": "git init branch custom_branch",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Comment créer la branche 'custom_branch' et s'y déplacer directement avec git ",
+        "answer-1": "git checkout custom_branch",
+        "answer-2": "git branch custom_branch",
+        "answer-3": "git branch -d custom_branch",
+        "answer-4": "git checkout -b custom_branch",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Je souhaites fusionner la branche 'custom_branch' dans la branche main, alors je tape :",
+        "answer-1": "'git merge custom_branch' depuis la branche custom_branch",
+        "answer-2": "'git merge main depuis' la branche main",
+        "answer-3": "'git merge custom_branch' depuis la branche main",
+        "answer-4": "'git merge main' depuis la branche custom_branchn",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Comment supprimer la branche 'custom_branch' en forcant la suppression ? ",
+        "answer-1": "git branch -D custom_branch",
+        "answer-2": "git branch -d custom_branch",
+        "answer-3": "git branch -b custom_branch",
+        "answer-4": "git checkout branch -d custom_branch",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Comment conserver l'historique des commits avec git ?",
+        "answer-1": "Utiliser 'git merge' au lieu du 'git rebase'",
+        "answer-2": "Utiliser 'git rebase' au lieu de 'git merge'",
+        "answer-3": "Utiliser 'git merge' au lieu du 'git commit'",
+        "answer-4": "Utiliser 'git commit ' au lieu du 'git rebase'",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Je souhaites copier 1 commit en particulier et non tous les commit d'1 branch, que faire ?",
+        "answer-1": "Un squash",
+        "answer-2": "Un commit",
+        "answer-3": "Un rebase",
+        "answer-4": "Un cherry-pick",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Je souhaites mettre en pause mon travail, que faire ?",
+        "answer-1": "Un stash",
+        "answer-2": "Un squash",
+        "answer-3": "Un cherry-pick",
+        "answer-4": "Un commit",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Comment lister les WIP (Work In Progress)",
+        "answer-1": "git stash pop",
+        "answer-2": "git stash list",
+        "answer-3": "git stash apply",
+        "answer-4": "git stash dir",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Je souhaite regrouper plusieurs commits en 1 seul, que faire ?",
+        "answer-1": "Un stash",
+        "answer-2": "Un amend",
+        "answer-3": "Un cherry-pick",
+        "answer-4": "Un squash",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Je souhaite annuler des changements, que faire ?",
+        "answer-1": "Un stash",
+        "answer-2": "Un amend",
+        "answer-3": "git ammend",
+        "answer-4": "git reset",
+        "duration": "20",
+        "good-answer": "4"
+      },      
+      {
+        "question": "Que fait la commande suivante : 'git stash pop'",
+        "answer-1": "git stash save + git stash drop",
+        "answer-2": "git stash apply + git commit",
+        "answer-3": "git stash apply + git stash drop",
+        "answer-4": "git ammen  + git rebase",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

@@ -1,0 +1,34 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/balance: roundrobin
+    haproxy.router.openshift.io/disable_cookies: 'true'
+    openshift.io/host.generated: 'true'
+  creationTimestamp: '2022-09-01T12:56:00Z'
+  labels:
+    app: simple-webapp-docker
+  name: simple-webapp-docker
+  namespace: eazytraining
+  resourceVersion: '73402'
+  selfLink: >-
+    /apis/route.openshift.io/v1/namespaces/eazytraining/routes/simple-webapp-docker
+  uid: 6dcf364b-29f5-11ed-ae20-080027dad590
+spec:
+  host: simple-webapp-docker-eazytraining.192.168.99.11.nip.io
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: simple-webapp-docker
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+        - lastTransitionTime: '2022-09-01T12:56:00Z'
+          status: 'True'
+          type: Admitted
+      host: simple-webapp-docker-eazytraining.192.168.99.11.nip.io
+      routerName: router
+      wildcardPolicy: None

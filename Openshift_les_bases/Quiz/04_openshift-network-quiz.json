@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Quel est le plugin CNI est utilisé par openshift ?",
+        "answer-1": "Ingess",
+        "answer-2": "Open vSwitch",
+        "answer-3": "Flannel",
+        "answer-4": "Calico",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que signifie le terme CNI ?",
+        "answer-1": "Container Network International",
+        "answer-2": "Compose Network Interface",
+        "answer-3": "Container Network Internet",
+        "answer-4": "Container Network Interface",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle es l'utilité de la CNI ?",
+        "answer-1": "Exposer les pods via les services",
+        "answer-2": "Créer le plan d'adressage des nodes",
+        "answer-3": "Créer un réseau Overlay transverse aux nodes",
+        "answer-4": "Lancer les containers dans les POds",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Quels sont les types de services disponibles dans openshift ?",
+        "answer-1": "Route et ClusterIP",
+        "answer-2": "Nodeport et IpCluster",
+        "answer-3": "Route et Nodeport",
+        "answer-4": "Route, Nodeport et Egress",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quelle est l'utilité des services dans Openshift ?",
+        "answer-1": "Exposer un pods via plusieurs points d'entrée",
+        "answer-2": "Exposer plusieurs pods via un point d'entrée unique",
+        "answer-3": "Exposer plusieurs pods via une socket unix",
+        "answer-4": "Faire de la re-écriture d'url pour les pods",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel service expose l'application à l'intérieur du cluster Openshift ?",
+        "answer-1": "LoadBalancer",
+        "answer-2": "Route",
+        "answer-3": "Nodeport",
+        "answer-4": "ClusterIP",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel service expose l'application à l'extérieur du cluster Openshift ?",
+        "answer-1": "LoadBalancer",
+        "answer-2": "Route",
+        "answer-3": "ClusterPort",
+        "answer-4": "ClusterIP",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel paramètre permet aux services de fédérer les Pods applicatif ?",
+        "answer-1": "Le label",
+        "answer-2": "Le sélecteur",
+        "answer-3": "Le endPoint",
+        "answer-4": "Le session affinity",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel service est capable de splitter le traffic réseau en fonction des services ?",
+        "answer-1": "Le Loadbalancer",
+        "answer-2": "Le NodePort",
+        "answer-3": "Le ClusterIP",
+        "answer-4": "La route",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quelle commande permets de visualiser les services en CLI ?",
+        "answer-1": "oc show svc",
+        "answer-2": "oc list svc",
+        "answer-3": "oc get svc",
+        "answer-4": "oc ls svc",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

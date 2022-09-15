@@ -1,0 +1,25 @@
+Lancer le container nginx en mode détaché et en exposant le port 80 du container sur le port 8080 de l’hote
+    docker run -d --name cont_nginx_1    -p 8080:80 nginx
+
+Vérifier le bon fonctionnement de votre container
+    docker ps -a
+
+Vérifier qu’il est bien joignable à travers le port 8080 de votre hote.
+    curl http://127.0.0.1:8080
+
+Que constatez vous? Quel est le contenu de la page web afficheé?
+    La page affiche le message par defaut du serveur web nginx
+
+A l’aide de docker exec, connectez vous à ce container afin de créer un fichier « index.html » dans lequel vous feriez une briève présentation de vous
+    docker exec -it cont_nginx_1 bash
+    root@b80d4e4ec204:/ 
+        echo "Bonjour ULRICH" > index.html
+
+
+Déplacer ce fichier index.html précédemment créé vers le répertoire « /usr/share/nginx/html» de votre container
+    root@b80d4e4ec204:/ 
+        mv index.html /usr/share/nginx/html/
+
+Arrêtez votre container et redémarrez le à nouveau
+    docker stop cont_nginx_1
+Essayez à nouveau d’y accéder à travers le port 8080 de votre hote… Que constatez vous?

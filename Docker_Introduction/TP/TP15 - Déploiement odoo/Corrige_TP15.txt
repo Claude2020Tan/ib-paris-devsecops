@@ -1,0 +1,13 @@
+L'application odoo est une IHM qui a beosoin de stocker des données dans une base de donnée, d'ou beosin de 2 microservice
+    1 - Le premier microservice c'est l'IHM ODOO
+    2 - Le deuxieme microservice c'est la base de donnée Postgresql
+    
+Afin que les deux puissent être isolés, on va créer un réseau dédié à l'appli Odoo : 
+    Creation d'un réseau Bridge
+            docker network create --driver=bridge --subnet=192.168.30.0/24 odoo
+
+Lancement de la BDD Postgres : 
+    docker run -d -e POSTGRES_USER=toto -e POSTGRES_PASSWORD=toto -e POSTGRES_DB=postgres --network odoo -v pgdata:/var/lib/postgresql/data --name db postgres:10
+    
+Lancement de l'IHM ODOO :     
+    docker run -d -p 80:8069 --name odoo --network odoo  -v ${PWD}/config:/etc/odoo -v ${PWD}/addons:/mnt/extra-addons -v odoo-web-data:/var/lib/odoo  -e USER=toto -e PASSWORD=toto  odoo

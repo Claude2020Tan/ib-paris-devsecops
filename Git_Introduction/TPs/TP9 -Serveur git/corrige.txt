@@ -1,0 +1,17 @@
+# installation de docker et docker-compose
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker centos
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# déploimenet de gitlab
+git clone https://github.com/sameersbn/docker-gitlab.git
+cd docker-gitlab/
+# corriger la ligne 25 en mettant le tag latest sur l'image
+sed  '25s/14.4.2/latest/' docker-compose.yml
+
+docker-compose up -d
+se connecter sur notre IP port 10080 et decouvrir gitlab

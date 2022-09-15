@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-webapp-color-deployment
+  labels:
+    app: simple-webapp-color
+  annotations:
+    configmap.reloader.stakater.com/reload: "eazytraining-configmap"
+    secret.reloader.stakater.com/reload: "eazytraining-secret"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-webapp-color
+  template:
+    metadata:
+      labels:
+        app: simple-webapp-color
+    spec:
+      containers:
+      - name: simple-webapp-color
+        image: mmumshad/simple-webapp-color
+        ports:
+        - containerPort: 80
+        env:
+        - name: APP_COLOR
+          valueFrom:
+            configMapKeyRef:
+              name: eazytraining-configmap
+              key: eazytraining_env
+        - name: TEST_PASS
+          valueFrom:
+            secretKeyRef:
+              name: eazytraining-secret
+              key: pass

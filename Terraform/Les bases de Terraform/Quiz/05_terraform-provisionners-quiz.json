@@ -1,0 +1,94 @@
+{
+    "questions": [
+        {
+            "question": "A quoi servent les provisioneurs ?",
+            "answer-1": "exécuter des scripts sur une machine locale ou distante",
+            "answer-2": "configurer terraform de façon dynamique",
+            "answer-3": "modifier l'etat de l'infrastructure ",
+            "answer-4": "toutes réponses sont vraies",
+            "duration": "20",
+            "good-answer": "1"
+        },
+         {
+            "question": "laquelle des réponses est un provisioner terraform",
+            "answer-1": "local",
+            "answer-2": "remote",
+            "answer-3": "shell",
+            "answer-4": "local-exec",
+            "duration": "20",
+            "good-answer": "4"
+        },
+              {
+            "question": "que fais le provisioner local?",
+            "answer-1": "lance un exécutable local après suppression d'une ressource",
+            "answer-2": "lance un script sur une ressource distante après sa création",
+            "answer-3": "crée un fichier de configuration local pour terraform",
+            "answer-4": "lance un exécutable local après création d'une ressource",
+            "duration": "20",
+            "good-answer": "4"
+        },
+           {
+            "question": "quel est la syntaxe minimale pour déclarer un provisioner local?",
+            "answer-1": "provisioner 'local' { command = ''} ",
+            "answer-2": "provisioner 'local-exec' { }",
+            "answer-3": "provisioner 'local-exec' { command = ''}",
+            "answer-4": "provisioner 'local-exec' {}",
+            "duration": "20",
+            "good-answer": "3"
+        },
+              {
+            "question": "quel est l'option obligatoire pour un provisioner local?",
+            "answer-1": "interpreter",
+            "answer-2": "working_dir",
+            "answer-3": "command",
+            "answer-4": "provisioner",
+            "duration": "20",
+            "good-answer": "3"
+        },
+              {
+            "question": "que fais le remote provisioner ?",
+            "answer-1": "lance un exécutable local après suppression d'une ressource",
+            "answer-2": "lance un script sur une ressource distante après sa création",
+            "answer-3": "crée un fichier de configuration distant pour terraform",
+            "answer-4": "lance un exécutable local après création d'une ressource",
+            "duration": "20",
+            "good-answer": "2"
+        },
+           {
+            "question": "quel est la syntaxe minimale pour déclarer un remote provisioner?",
+            "answer-1": "  provisioner 'remote' { inline = [] } ",
+            "answer-2": "  provisioner 'remote-exec' { inline = [] }",
+            "answer-3": "  provisioner 'remote-exec' {  [] }",
+            "answer-4": "  provisioner 'remote-exec' {}",
+            "duration": "20",
+            "good-answer": "3"
+        },
+              {
+            "question": "que signifie l'option inline dans la déclaration du remote provisioner?",
+            "answer-1": "Il s'agit d'une liste de chaînes de commande",
+            "answer-2": "Il s'agit d'une suite d'expression régulière",
+            "answer-3": "il s'agit des arguments passés  ",
+            "answer-4": "aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "1"
+        },
+              {
+            "question": "existe t'il un autre type de provisionner ? si oui lequel ?",
+            "answer-1": "Non , il n'y en a plus",
+            "answer-2": "Oui il s'appele 'file' ",
+            "answer-3": "Oui il s'appele 'remote-file'",
+            "answer-4": "Oui il s'appele 'file-exec'",
+            "duration": "20",
+            "good-answer": "2"
+        },
+        {
+            "question": "Quel outil de la liste peux être associé à terraform",
+            "answer-1": "docker",
+            "answer-2": "ansible",
+            "answer-3": "jenkins",
+            "answer-4": "github",
+            "duration": "20",
+            "good-answer": "2"
+        }
+    ]
+}

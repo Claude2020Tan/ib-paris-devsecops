@@ -1,0 +1,34 @@
+https://drive.google.com/drive/folders/1wgUzf3GoG5UrO9j9kV0sa_3CHrJUI7wd?usp=sharing
+
+Exo 1 :  Déploiement 
+Déployer l'erp odoo dans des conteneurs
+image : 
+  - web : odoo:12.0
+  - db : postgres:10
+
+Exo 2 : Ami odoo
+ - Produire une AMI de odoo et utiliser les user data pour chaque lancement
+ - Bonus : Produire en template (modele de lancement) à partir de la VM et tester ce template
+   - On utilisera toujours les user data (données utilisateur)
+
+
+Exo 3 : Odoo via Fargate (/!\ On ne fait pas )
+
+Exo 4 : Faire un stockage persistant des donnée Postgrés
+EBS : 2Go
+/!\  : La deuxieme partie de restauration de Odoo dans une autre VM est un Bonus
+
+Exo 5 : Hebergement statique
+sode source du site : https://github.com/daviddias/static-webpage-example
+
+Exo 6 : Hebergement statique sur EC2 avec Docker
+
+Exo 7 : VPC, HA sur 2 AZs
+Régions : 
+  - virginie du nord
+  - ohio
+  - oregon
+
+Exo 8 : Cloudformation (Bonus !)
+Lancer l'ami de odoo précédemment buildée en utilisant un scipt Cloudformation
+vous pourrez partir du template template-cloudformation.yaml fournit et le customiser

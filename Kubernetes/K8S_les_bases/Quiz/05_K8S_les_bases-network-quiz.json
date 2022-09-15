@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "A quoi servent les services dans Kubernetes ? ",
+      "answer-1": "Piloter plusieurs Replicaset",
+      "answer-2": "Exposer plusieurs Pods sur un unique point d'entré",
+      "answer-3": "Exposer tous les nodes sur une unique IP publique",
+      "answer-4": "Remplacer les Pods, lorsqu'on fait du scaling",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Les objets suivants sont des types de services",
+      "answer-1": "TargetPort, ClusterIP, et Port",
+      "answer-2": "serviceAccount, ClusterIp",
+      "answer-3": "Nodeport, ConfigMap",
+      "answer-4": "Nodeport, ClusterIp, LoadBalancer",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Qu'est ce qui permet de lier un service à  des Pods",
+      "answer-1": "Les sélecteurs et Les NodePort",
+      "answer-2": "Les labels et les TargetPort",
+      "answer-3": "Les labels et les selecteurs",
+      "answer-4": "Les NodePort et les TargetPort",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Comment afficher les labels de tous les Pods",
+      "answer-1": "kubectl get po --show-labels",
+      "answer-2": "kubectl show labels-pod",
+      "answer-3": "kubectl get labels",
+      "answer-4": "kubectl show po --labels",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Un service de type NodePort permet d'exposer une application :",
+      "answer-1": "En Interne sur le cluster via le TargetPort",
+      "answer-2": "A l'extérieur du clusteur via le NodePort",
+      "answer-3": "A l'extérieur du clusteur via le Port",
+      "answer-4": "En interne sur le clusteur via le Port",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Un service de type ClusterIP permet d'exposer une application :",
+      "answer-1": "En Interne sur le cluster via le TargetPort",
+      "answer-2": "A l'extérieur du clusteur via le NodePort",
+      "answer-3": "A l'extérieur du clusteur via le Port",
+      "answer-4": "En interne sur le clusteur via le Port",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Un NodePort est compris dans quelle plage de port ? ",
+      "answer-1": "0 - 1024",
+      "answer-2": "0 - 64000",
+      "answer-3": "1024 - 64000",
+      "answer-4": "30000 - 32767",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Le namespace par défaut dans kubernetes se nomme : ",
+      "answer-1": "bridge",
+      "answer-2": "default",
+      "answer-3": "overlay",
+      "answer-4": "none",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Comment connaître tous les services existants sur un cluster Kubernetes",
+      "answer-1": "kubectl get services",
+      "answer-2": "kubectl get svc",
+      "answer-3": "kubectl get service svc -A",
+      "answer-4": "kubectl get svc -A",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Que signifie cette option Endpoints ?  ",
+      "answer-1": "le service se nomme kubernetes",
+      "answer-2": "Le service ecoute sur la socket 10.0.0.3:6443",
+      "answer-3": "Le service arrive à trouver une appli sur 10.0.0.3:6443",
+      "answer-4": "Le service arrive à trouver le label  10.0.0.3:6443",
+      "duration": "20",
+      "good-answer": "3"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Lancer le conatiner ubuntu:18.04 
+    docker run --name container_ubuntu1 ubuntu:18.04
+
+Vérifier que ce container soit bien lancé et qu’il fonctionne correctement 
+    docker ps -a
+
+Pourquoi le container s’est-il arreté
+    Aucun terminal présent pour acceuillir le shell bash par defaut lors du lancement
+
+Supprimer le container ubuntu 
+    docker rm -f container_ubuntu1
+
+Lancer à nouveau le container ubuntu:18.04 en mode attach et en passant en paramètre la commande « sleep 100 » Que constatez vous?
+    docker run -d --name container_ubuntu1 ubuntu:18.04 sleep 100
+    Le conteneur est up pendant 100 secondes puis s'éteint
+
+Lancez à nouveau le container ubuntu:18.04 en mode attach passant la commande « ls » Que constatez vous?
+    docker run -d --name container_ubuntu2 ubuntu:18.04 ls
+
+Lancez le container ubuntu:18.04 en mode détaché avec la commande « sleep 4500 » Observez et expliquez le comportement de ces différentes commandes
+    docker run -d --name container_ubuntu3 ubuntu:18.04 sleep 4500
+
+Supprimez l’ensemble des containers présents (fonctionnels ou arrêtés) sur votre machine
+    docker rm -f   $(docker ps -aq)
+
+Supprimez également les images exisatantes
+    docker rmi -f $(docker images -aq)

@@ -1,0 +1,2 @@
+Etant donné le cloudformation bitbucket-stack.yml, lancer le 
+déploiement du serveur Bitbucket dans Amazone

@@ -1,0 +1,76 @@
+{
+    "questions": [
+      {
+        "question": "Quelle est la signification de PV ?",
+        "answer-1": "Persistent Volume Claim",
+        "answer-2": "Persistent Volume",
+        "answer-3": "Physical Volume",
+        "answer-4": "Physical Volume Claim",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quelle est la signification de PVC ?",
+        "answer-1": "Persistent Volume Claim",
+        "answer-2": "Persistent Volume",
+        "answer-3": "Physical Volume",
+        "answer-4": "Persistent Volume Claim",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Qu'est ce que le scaling de PODS ?",
+        "answer-1": "La modification du nombre de deployment",
+        "answer-2": "La modification du nombre de replicaset",
+        "answer-3": "La modification du nombre de replicas de pods",
+        "answer-4": "La modification du nombre de pv",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "En terme de stockage, quel objet sera rattaché aux Pods/Deployements ?",
+        "answer-1": "Le PVC",
+        "answer-2": "LE PV",
+        "answer-3": "Le disque dur",
+        "answer-4": "La clés usb",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Qu'est ce qu'une classe de stockage ?",
+        "answer-1": "C'est un pvc",
+        "answer-2": "La définition d'un type de stockage",
+        "answer-3": "C'est un pv",
+        "answer-4": "Ce n'est pas une notion openshift",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que retrouve - t- on dans le catalogue openshift ?",
+        "answer-1": "Des jobs de build d'image",
+        "answer-2": "Des Objets Openshift",
+        "answer-3": "Des objets kubernetes",
+        "answer-4": "Des applications prêtes à l'usage direct",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel type d'objet permet de rajouter une nouvelle entrée au catalogue openshift ?",
+        "answer-1": "Template",
+        "answer-2": "Catalog",
+        "answer-3": "ImageTemplate",
+        "answer-4": "ImageStream",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Scaling : comment se nomme le mécanisme qui renvoit toujours les requêttes vers le même POD ?",
+        "answer-1": "monitoring",
+        "answer-2": "sticky session",
+        "answer-3": "load balancing",
+        "answer-4": "templating",
+        "duration": "20",
+        "good-answer": "2"
+      }
+    ]
+  }

@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Un playbook représente : ",
+        "answer-1": "Un script shell qu'on éxécute par le biais de ansible",
+        "answer-2": "Un fichier INI qui représente une suite de play à exécuter",
+        "answer-3": "Un fichier YAML qui représente une suite de play à exécuter",
+        "answer-4": "Un script permettant d'installer ansible sur des serveurs",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Dans les sections principales d'un playbook, on retrouve la section",
+        "answer-1": "become",
+        "answer-2": "handlers",
+        "answer-3": "tags",
+        "answer-4": "skip-playbook",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Un play est constitué de :",
+        "answer-1": "Plusieurs sections parmis lesquelles les tasks",
+        "answer-2": "Plusieurs tasks uniquement, renseignées dans un fichier yaml",
+        "answer-3": "Plusieurs handlers, renseignées dans un fichier csv",
+        "answer-4": "La section template, représentant les templates à appliquer",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Pour exécuter un playbook, on utilise la commande :",
+        "answer-1": "ansible_playbook étant dans le répertoire playbook",
+        "answer-2": "ansible -i playbook avec le playbook en parametre",
+        "answer-3": "ansible avec l'option --playbook",
+        "answer-4": "ansible-playbook  avec le chemin du playbook à lancer",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "En utilisant des playbooks, on n'a pas besoin de fichier d'inventaire principal",
+        "answer-1": "VRAI, car la section hosts permets le remplacer",
+        "answer-2": "FAUX, on a toujours besoin d'un inventaire principal",
+        "answer-3": "VRAI si on a des host_vars et group_vars",
+        "answer-4": "FAUX, on a toujours besion de host_vars et group_vars",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Dans un playbook, le mot clés become indique que",
+        "answer-1": "Ansible va effectuer les tasks avec les privilèges sudo",
+        "answer-2": "Ansible va exécuter les task en user root",
+        "answer-3": "Vous souhaiter saisir votre user au clavier",
+        "answer-4": "Le play a été créé par le user root",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Le mot clés gather_fact  dans un playbook : ",
+        "answer-1": "Indique que vous collectez des variables depuis la galaxy",
+        "answer-2": "Permets de lancer le module debug au début d'un playbook",
+        "answer-3": "Permets de lancer le module setup au début d'un playbook",
+        "answer-4": "Indique que vous souhaitez importer des tasks",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Les handlers représentent des tasks ",
+        "answer-1": "appelées dans un role ansible uniquement",
+        "answer-2": "qui se déclenchent après capture d'un notify",
+        "answer-3": "appelées dans une section import-handlers",
+        "answer-4": "qui se lancent toujours",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Dans un playbook, je peux faire appel à un autre playbook avec l'instruction",
+        "answer-1": "include_playbook",
+        "answer-2": "import_playbook",
+        "answer-3": "import_tasks",
+        "answer-4": "import_role_playbook",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Dans les playbooks, les codes couleurs sont différents comparés aux commandes ad hoc",
+        "answer-1": "FAUX, les codes ne changent pas",
+        "answer-2": "FAUX, les codes ne changent pas , ils sont vert/blanc/rouge",
+        "answer-3": "VRAI, les codes changent et deviennent vert/rouge/jaune",
+        "answer-4": "VRAI, les codes changent fonction du type de playbook",
+        "duration": "20",
+        "good-answer": "1"
+      }
+    ]
+  }

@@ -1,0 +1,7 @@
+1 - Déployez Grafana à l’aide du chart Grafana   en version 3.12.1 disponible sur le helm Communautaire Surchargez les variables du chart en utilisant le fichier values.yaml fournies dans les sources 
+    Github :  https://github.com/grafana/helm-charts/tree/main/charts/grafana
+2 - A l’aide du fichier deduisez comment accéder au dashboard et recupérer le mot de passe comme précisé après le déploiement du chart
+3 - Configurez la datasource pour qu’elle pointe sur la target de Prometheus
+4 - Importez le dashboard Prometheus d’id 3662
+5 - Que constatez-vous ?
+6 - Si vous avez des métriques qui s’affichent, alors felicitation, votre installation de Prometheus et Grafana est terminée !

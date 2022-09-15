@@ -1,0 +1,21 @@
+Il est question de déployer un site web statique.
+
+1 - Déployer les sites suivants : 
+    - https://github.com/diranetafen/static-website-example.git
+    - https://github.com/daviddias/static-webpage-example
+    Vous pouvez utiliser les applications Apache ou nginx du catalogue.
+
+2 - Que constatez vous ? l'application est elle fonctionnelle ?  Les Pods sont - ils up Running ?
+    S'ils ne le sont pas, comment l'expliquer ?     
+
+3 - Activer le root user dans les containers
+
+    Par défaut, openshift n'autorise aux containers de s'exécuter en root. Vous aurez 
+    donc besoin de donner les privilèges root à vos containers.
+    Pour activer celà, depuis le terminal minishift, connectez vous en user system:admin
+    et faites ceci :  
+        - sudo su - 
+        - oc login -u system:admin https://192.168.99.11:8443
+        - oc project eazytraining-toto
+        - oc adm policy add-scc-to-user anyuid -z default
+    Une fois activé, vos containers pourront tourner sans problème    

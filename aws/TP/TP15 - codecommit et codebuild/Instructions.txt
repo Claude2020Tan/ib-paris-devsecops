@@ -1,0 +1,171 @@
+Partie 1 : Build et Test de l'image en local
+Dans un dossier webapp, cloner le repos  https://github.com/diranetafen/webapp.git sur une ec2
+   sudo yum install git -y
+   git clone https://github.com/diranetafen/webapp.git
+
+Le dockerfile va permettre de build l’app du client
+    docker build -t webapp:latest .
+
+Deployer l’app pour verifier que ca fonctionne : webapp:latest
+    docker run -itd --name webapp -p 8000:80 webapp:latest
+    curl -I  127.0.0.1:8000
+
+Une fois déployer on met l'image sur docker hub
+    docker tag webapp:latest choco1992/webapp:latest
+    docker push choco1992/webapp:latest
+
+
+
+Partie 2 : SCM 
+On va sur codecommit et on crée un repository 
+Configuration des credentials d'un user : 
+    Dans le service IAM, selectionner votre user
+    Ensuite, security credentials > https git credentials for aws codecommit > Générer les infos d'identification
+        login : m_ulrich-at-909394135851
+        pass : MXNssO3XjJCkNG+fodvSQlr5O1zgWlWh6Y8Tc6DhgE0=
+On push le code sur code commit (meme maniere que sur git)
+	git init (si le répertoire n'est pas déja un repos git)
+	git add .
+	git commit -m "first commit "
+    git remote add code  https://git-codecommit.us-east-1.amazonaws.com/v1/repos/m_ulrich_webapp
+    git push code master (ou main ...)  
+
+
+
+Partie 3 : Mettre en place la partie intégration continue avec Code Build
+    Doc AWS sur CodeBuild: https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+
+A la racine de notre projet, produire un fichier buildspec.yml qui aura : 
+    - Dans la section prebuild :  le login
+    - Dans la partie build : le build 
+    - Dans la partie post build  : le push 
+
+Repusher le code sur codecommit
+  git add .
+  git commit -m "add buildspec.yml"
+  git push code master
+
+Dans le service Secret Manager de AWS,  créer un nouveau secret nommé dockerhub qui contiendra nos credentials sur le dockerhub 
+    - Types :  autre
+        - login : < votre_id_dockerhub >
+        - password : < votre_password_dockerhub>
+    Dans le service codebuild, les secrets seront indexés par : < nomdusecret >:< variable > 
+
+    
+Aller dans le service codebuild > build project > create project build
+    - Activer le badge de génération
+    - Source :
+        - Source provider : aws code commit
+        - référentiel :  projet dans code commit
+        - type de référence : branche
+        - branche : master
+    - Envirronnement  (Le Runner) :  
+        - Os : AMZ Linux 2
+        - Runtime : Standard
+        - Image :  prendre la dernière
+        - Env type : Linux
+        - Privilège : cocher la case activer 
+        - role : Créer un nouveau role, on devra attacher la politique secret manager a ce role
+                Ceux qui ne peuvent pas créer de role pourront utiiser ce role
+        - VPC : No VPC (On ne choisit aucun VPC comme ca AWS fait la CICD dans son propre environnement)                
+        - Variables  d'env : 
+            - DOCKERHUB_LOGIN : nomdusecret:login ->  Secret manager
+            - DOCKERHUB_PASSWORD : nomdusecret:password -> Secret manager
+            - IMAGE_REPO_NAME : webapp : texte brut
+            - IMAGE_TAG : cicd : texte brut
+    - Build spec : utiliser un fichier      
+Une fois la configuration de codebuild finalisée, sauvegarder et lancer le build
+
+          
+Partie 4 :  Configuration de code deploy
+    Doc d'installation de l'agent codedeploy : 
+        - RH et AMZ Linux : https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-linux.html
+        - Ubuntu : https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html
+        - Windows server : https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-windows.html
+
+Créer une EC2 Ubuntu sur laquelle le déploiement se fera
+    - Cette VM aura besoin de l'agent codedeploy installé
+    - Les user data seront le contenu du fichier install_agent_codedeploy.txt donné avec l'enoncé
+Créer un role pour ec2 qui aura les droits AmazonS3fullaccess
+    - on va l'appeler ec2-to-s3-codedeploy
+    - Attacher ce role à la machine Ubuntu nouvellement créé
+    - se connecter en ssh a la vm et redémarrer l'agent  code-deploy.agent (systemctl)
+
+Dans notre repos codecommit : 
+    - A la racine du repos, créer un répertoire scripts qui va contenir : 
+       -  install_docker.sh : Le script d'installation de docker
+       -  validate_application.sh : Le script permettant de valider le fonctionnel de l'application
+       -  webapp.sh : le script de lancement du container
+       Ces scripts seront fourni par le formateur si besoin
+    - A la racine du repos, créer le fichier appspec.yml permettant d'orchestrer le déploiement sur la VM Ubuntu
+        Ce fichier vous sera aussi fourni par le formateur
+        Doc AWS : https://docs.aws.amazon.com/fr_fr/fr_fr/codedeploy/latest/userguide/reference-appspec-file-structure.html
+On build et on push dans notre repos        
+
+Maintenant que le repos codecommit est prêt, on va à présent configurer codedeploy
+    - On va dans le service codedeploy > Application > Créer une appplication
+        - Name : webapp
+        - Compute Platform : ec2
+        - Create application
+            - Create deployment group
+                - Name : "webapp-production" (confer ligne 3 du script webapp.sh)
+                - Service role : créer un role pour codedeploy dans IAM et selectionner ce role
+                    IAM > role > codedeploy > valider et rajouter les policy apres si beosin.
+                - Deployment type : In place car on a une seule VM 
+                - Env configuration : EC2 Instance 
+                    - Tag : Mettre le meme tag qu'on avait mis sur notre vm ubuntu                 
+                - Load balancer : On decoche la case car on n'a pas d'ALB
+                On valide la configuration
+    - Dans l'application webapp nouvellement créé, partir dans l'onglet deployment > créer un déploiement
+        - Deployment group : webapp-production
+        - SOurce : on se rend compte que codecommit ne fait pas partir de la liste des sources, 2 solutions : 
+            - SOit on archive notre code et on le dépose dans un S3
+            - Soit on utilise codepipeline qui sait démarrer un deployment depuis codecommit, on par sur cette solution
+
+Partie 5 :  Code Pipeline
+
+Aller dans codepipeline : 
+ - Créer un Pipeline    
+    - Step1 : Pipeline settings
+        * Name :  webapp
+        * Service role :  new service role (Il sera créé automatiquement)
+        cocher la case > Next
+    - Step2 : Source 
+        * source provider:  codecommit
+        * repo name :  webapp
+        * branch : master
+        * next
+    - Step 3 : Build  
+        * Build Provider : codebuild
+        * Region, Virginie Nord
+        * Projet :  Mon webapp
+        * Var d'env : On ne les mets plus car deja dans codebuild
+        * Build type : single build
+        * next
+    - Step 4 ; Deploy stage
+        * deploy provider : codedeploy
+        * region : Virginie Nord
+        * application : webapp
+        * deployment group :  "webapp-production" 
+        * next
+    - Step 5  : résumé
+        * on Relis et on valide la creation du pipeline 
+
+On va éditer la dernière étape de notre pipeline (la step deploy)
+    - Modifier la partie Input artefact 
+        * remplacer BuildArtefact par SourceArtefact
+        * On valide
+A Partie  de ce moment, tout nouveau commit va déclencer le pipeline       
+    
+Sur l'ec2, les fichiers pour troobleshoot : 
+	- /opt/codedeploy-agent/deployment-root/0acdf1c9-5a49-46f0-a961-bc05bf6cbcd6/d-7I0GO08CF/deployment-archive/scripts/
+	- tail -f  /var/log/aws/codedeploy-agent/codedeploy-agent.log
+    - Parfois il ya des problemens de deploiement liés aux caractètes ascii entre windows et Linux
+        Pour les gérer, les commandes suivantes peuvent etres nécessaires, à lancer dans le répertoire script
+            - sed -i 's/\r//g' install_docker.sh validate_application.sh webapp.sh
+            - sed -i 's/^M//g' install_docker.sh validate_application.sh webapp.sh
+
+
+
+
+

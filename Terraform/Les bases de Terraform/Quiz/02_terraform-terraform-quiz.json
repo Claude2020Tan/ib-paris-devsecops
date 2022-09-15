@@ -1,0 +1,97 @@
+{
+    "questions": [
+          {
+            "question": "Qu'est ce que terraform ?",
+            "answer-1": "outil de versionning de code source",
+            "answer-2": "outil permettant de créer et versionner une infrastructure ",
+            "answer-3": "est un langage de programmation",
+            "answer-4": "est une philosophie  devops",
+            "duration": "20",
+            "good-answer": "2"
+        },
+        {
+            "question": "Quelle entreprise est à la base de terraform?",
+            "answer-1": "CNCF",
+            "answer-2": "GOOGLE",
+            "answer-3": "HASHICORP",
+            "answer-4": "MICROSOFT",
+            "duration": "20",
+            "good-answer": "3"
+        },
+            {
+            "question": "Quel OS n'est pas compatible avec terraform?",
+            "answer-1": "windows",
+            "answer-2": "Solaris ",
+            "answer-3": "FreeBSD",
+            "answer-4": "aucune réponse vraie",
+            "duration": "20",
+            "good-answer": "4"
+        },
+        {
+            "question": "Sur quel cloud provider terraform ne déploie t'il pas?",
+            "answer-1": "aws",
+            "answer-2": "Azure ",
+            "answer-3": "aucune réponse n'est vraie",
+            "answer-4": "openstack",
+            "duration": "20",
+            "good-answer": "3"
+        },        
+        {
+            "question": "Qu'est ce que qui n'est pas un outil d'IAC?",
+            "answer-1": "git",
+            "answer-2": "ansible",
+            "answer-3": "vagrant",
+            "answer-4": "heat",
+            "duration": "20",
+            "good-answer": "1"
+        },       
+
+         {
+            "question": "Choisir un des avantages de terraform",
+            "answer-1": "code déclaratif , syntaxe simple , multiplate forme",
+            "answer-2": "permet le versionning du code",
+            "answer-3": "est un outil de configuration management puissant",
+            "answer-4": "aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "1"
+        },
+
+          {
+            "question": "Quel est le langage d'écriture du code terraform?",
+            "answer-1": "PYTHON",
+            "answer-2": "JSON",
+            "answer-3": "YAML",
+            "answer-4": "HCL",
+            "duration": "20",
+            "good-answer": "4"
+        },
+          {
+            "question": "Ou décrit'on les composants à provisionner par terraform?",
+            "answer-1": "dans des fichier .yaml",
+            "answer-2": "dans des fichier .tf",
+            "answer-3": "dans des fichier .xml",
+            "answer-4": "dans des fichier .json",
+            "duration": "20",
+            "good-answer": "2"
+        },
+           {
+            "question": "Terraform est-il cloud-agostic (indépendant du provider)?",
+            "answer-1": "Oui sauf pour des clouds privés",
+            "answer-2": "Non , ils ne fonctionne qu'avec pas avec docker par exemple",
+            "answer-3": "Oui , il ne dépend absolument pas du cloud provider",
+            "answer-4": "aucune réponse vraie",
+            "duration": "20",
+            "good-answer": "3"
+        },
+          
+               {
+            "question": "Qu'est ce qui n'est pas un type d'outil d'IAC ?",
+            "answer-1": "configuration management",
+            "answer-2": "server templating",
+            "answer-3": "Provisionning tools",
+            "answer-4": "code management",
+            "duration": "20",
+            "good-answer": "4"
+        }
+    ]
+}

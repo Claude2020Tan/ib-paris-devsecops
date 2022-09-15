@@ -1,0 +1,94 @@
+{
+    "questions": [
+      {
+        "question": "Que représente ce workflow ?",
+        "answer-1": "Lancement d'un pod",
+        "answer-2": "Build d'une nouvelle image",
+        "answer-3": "Lancement d'un deployment",
+        "answer-4": "Lancement d'un Pipeline avec ArgoCD",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Que fait la stratégie de build Source To Image (S2I) ?",
+        "answer-1": "On fait un docker commit ",
+        "answer-2": "On part d'une image custom via un dockercompose",
+        "answer-3": "On build l'image from scratch",
+        "answer-4": "On copie l'appli dans une image de base déja fournie",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Que fait la stratégie de build docker ?",
+        "answer-1": "On build l'image from docker:dind",
+        "answer-2": "On copie l'appli dans une image de base déja fournie",
+        "answer-3": "On part d'une image custom via un Dockerfile",
+        "answer-4": "On build l'image from scratch",
+        "duration": "20",
+        "good-answer": "3"
+      },
+      {
+        "question": "Où sont déposées les images après le build éffectué dans openshift ?",
+        "answer-1": "OCR :  Openshift Container Registry",
+        "answer-2": "OCR :  Openstack Container Registry",
+        "answer-3": "DCR :  Dockerhub Container Registry",
+        "answer-4": "Dans le private registry",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Quel type d'objet openshift matérialise la config de build ?",
+        "answer-1": "ConfigBuild",
+        "answer-2": "BuildConfig",
+        "answer-3": "Config",
+        "answer-4": "Build",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Où se trouve le code permettant de builder une nouvelle image dans Openshift ?",
+        "answer-1": "Pas besoin de code source pour un build",
+        "answer-2": "Sur un google drive",
+        "answer-3": "En local sur le serveur openshift",
+        "answer-4": "Sur un serveur git",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Quel événement correspond au téléchargement du code source par openshift ?",
+        "answer-1": "Un pull",
+        "answer-2": "Un hook",
+        "answer-3": "Un webhook",
+        "answer-4": "Un push",
+        "duration": "20",
+        "good-answer": "1"
+      },
+      {
+        "question": "Dans la liste suivante, lequel des éléments permet de déclencher automatiquement un build ?",
+        "answer-1": "Un pull",
+        "answer-2": "Un webhook",
+        "answer-3": "Un push",
+        "answer-4": "Un merge",
+        "duration": "20",
+        "good-answer": "2"
+      },
+      {
+        "question": "Quel défaut rencontre -t-on avec la stratégie de déploiement Recreate ?",
+        "answer-1": "Impossible de mettre un service frontal durant l'upgrade",
+        "answer-2": "Problème de latence",
+        "answer-3": "Deux versions d'une même application tournent",
+        "answer-4": "Indisponnibilité de service",
+        "duration": "20",
+        "good-answer": "4"
+      },
+      {
+        "question": "Laquelle des méthodes suivantes est une méthode de déploiement ?",
+        "answer-1": "Source to Image",
+        "answer-2": "deployment",
+        "answer-3": "A/B",
+        "answer-4": "manifeste",
+        "duration": "20",
+        "good-answer": "3"
+      }
+    ]
+  }

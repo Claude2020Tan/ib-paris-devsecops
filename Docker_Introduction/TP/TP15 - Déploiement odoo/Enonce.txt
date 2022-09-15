@@ -1,0 +1,8 @@
+Allez sur le dockerhub et rechercher l’image officielle de Odoo
+Prendre la peine de lire attentivement le Readme montrant comment déployer Odoo à l’aide des container 
+et les différentes variables d’environnement à utiliser
+Déployer Odoo en créant autant de containers que nécessaire. L’application Odoo devra être consommée au 
+travers du port 80 de votre hôte.
+
+NB: rendre les données persistantes pour la base de données.
+

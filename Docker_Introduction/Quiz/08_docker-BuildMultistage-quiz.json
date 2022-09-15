@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "C'est quoi le Build multistage",
+      "answer-1": "Dockerfile",
+      "answer-2": "Fonctionnalité Docker pour Dockerfile à plusieurs étapes",
+      "answer-3": "Fonctionnalité pour créer des états docker",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel est le mot clé utilisé pour nommer un stage dans un Dockerfile",
+      "answer-1": "FROM",
+      "answer-2": "WHERE",
+      "answer-3": "AS",
+      "answer-4": "Aucune des résponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Les cas différents d'utilisation du Build multistage",
+      "answer-1": "1: Réduction taille image",
+      "answer-2": "2: Partage image",
+      "answer-3": "3: Créer plusieurs images à partir d'un Dockerfile",
+      "answer-4": "4: Réponse 1 & 3",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans ub build multisatge, l'image généré sans target corresponq à quel stage?",
+      "answer-1": "Au premier Stage ",
+      "answer-2": "Au Dernier stage",
+      "answer-3": "A tous les Stages",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel est la commande pour builder un Dockerfile à plusieur stage ?",
+      "answer-1": "docker build stage -t iamge_name:tag",
+      "answer-2": "docker stage build -t iamge_name:tag",
+      "answer-3": "docker build -t iamge_name:tag",
+      "answer-4": "docker build -t iamge_name:tag .",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quelle(s) différence(s) fonctionnelle existe t-il entre les différentes version de compose?",
+      "answer-1": "Création des services différente",
+      "answer-2": "Aucune réelle différence fonctionnelle, juste syntaxique",
+      "answer-3": "Une ou plusieurs nouvelles fonctionnalités à chaque version",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Instruction pour copier un fichier d'un stage main vers un stage prod ?",
+      "answer-1": "ADD FROM ",
+      "answer-2": "COPY FROM=prod",
+      "answer-3": "COPY --from=main",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Méthodes de réduction de la taille d'une image (choisissez la réponse incorrecte)",
+      "answer-1": "Build Multistage",
+      "answer-2": "Réduire le nombre d'instructions",
+      "answer-3": "Ne pas mettre à jour les fichiers systèmes",
+      "answer-4": "Utiliser les images de petite taille",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "A quoi renvoi l'instruction WORKDIR dans un Dockerfile ?",
+      "answer-1": "au repertoire par défaut",
+      "answer-2": "Au repertoire de travail d'où partiront les instructions",
+      "answer-3": "Au repertoire cache où seront copiés les fichiers",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Soit dockerfile aux stages one, two, prod, créez une image correspondant au stage two",
+      "answer-1": "docker build -t image_name --target two .",
+      "answer-2": "docker build -t image_name --target=two .",
+      "answer-3": "docker build -t image_name -target two .",
+      "answer-4": "docker build -t image_name --target two",
+      "duration": "20",
+      "good-answer": "1"
+    }
+  ]
+}

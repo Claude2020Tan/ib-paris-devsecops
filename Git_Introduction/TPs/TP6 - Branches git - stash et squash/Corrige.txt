@@ -1,0 +1,23 @@
+Partie 1 : 
+    git checkout -b f1
+    git log
+    vi index.html
+    git stash
+    git log
+    git stash list
+    git stash drop
+    git stash list
+    vi linux_users.sh
+    git add .
+    git commit -m "usernam"
+    git log
+    git stash pop
+    git stash list
+    git add .
+    git commit -m "commit WIP"
+    git log
+
+Partie 2 : 
+  git log
+  git rebase -i HEAD~2
+  git log    

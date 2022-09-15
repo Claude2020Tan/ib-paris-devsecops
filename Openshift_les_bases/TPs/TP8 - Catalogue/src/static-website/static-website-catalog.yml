@@ -1,0 +1,182 @@
+---
+kind: Template
+apiVersion: template.openshift.io/v1
+metadata:
+  name: staticwebsite
+  creationTimestamp:
+  annotations:
+    description: |-
+      Un exemple de site web statique a base de apache
+    iconClass: icon-windows
+    openshift.io/display-name: Apache (Static website)
+    openshift.io/documentation-url: ${DOC_URL}
+    openshift.io/long-description: This template provides a standalone Apache server.
+    openshift.io/provider-display-name: Red Hat, Inc.
+    openshift.io/support-url: https://access.redhat.com
+    tags: staticwebsite
+message: |-
+  The following service(s) have been created in your project: ${WEB_SERVICE_NAME}.
+
+   Connection URL: http://${WEB_SERVICE_NAME}:80/
+
+  For more information about using this template, including OpenShift considerations, see ${DOC_URL}.
+objects:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    labels:
+      app: staticwebsite
+    name: staticwebsite
+    namespace: "${NAMESPACE}"
+
+
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftWebConsole
+    labels:
+      app: staticwebsite
+    name: staticwebsite
+    namespace: "${NAMESPACE}"
+    selfLink: >-
+      /apis/build.openshift.io/v1/namespaces/${NAMESPACE}/buildconfigs/simple-webapp-docker
+  spec:
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: 'staticwebsite:latest'
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      git:
+        ref: main
+        uri: ${DOC_URL}
+      type: Git
+    strategy:
+      dockerStrategy:
+      type: Docker
+    triggers:
+      - imageChange:
+          lastTriggeredImageID: >-
+            172.30.1.1:5000/openshift/python@sha256:ac50754646f0d37616515fb30467d8743fb12954260ec36c9ecb5a94499447e0
+        type: ImageChange
+      - type: ConfigChange
+      - generic:
+          secret: 9778b874a8569b1e
+        type: Generic
+      - github:
+          secret: 886b36db7dc0bb84
+        type: GitHub
+  status:
+    lastVersion: 2
+
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      template.openshift.io/expose-uri: http://{.spec.clusterIP}:{.spec.ports[?(.name=="staticwebsite")].port}
+    name: "${WEB_SERVICE_NAME}"
+  spec:
+    ports:
+    - name: staticwebsite
+      nodePort: 0
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      name: "${WEB_SERVICE_NAME}"
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata:
+    annotations:
+      template.alpha.openshift.io/wait-for-ready: 'true'
+    name: "${WEB_SERVICE_NAME}"
+  spec:
+    replicas: 1
+    selector:
+      name: "${WEB_SERVICE_NAME}"
+    strategy:
+      type: Recreate
+    template:
+      metadata:
+        labels:
+          name: "${WEB_SERVICE_NAME}"
+      spec:
+        containers:
+        - capabilities: {}
+          env:
+          - name: PORT
+            value: "80"
+          image: " "
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            initialDelaySeconds: 30
+            tcpSocket:
+              port: 80
+            timeoutSeconds: 1
+          name: staticwebsite
+          ports:
+          - containerPort: 80
+            protocol: TCP
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+          resources:
+            limits:
+              memory: "${MEMORY_LIMIT}"
+          securityContext:
+            capabilities: {}
+            privileged: false
+          terminationMessagePath: "/dev/termination-log"
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        volumes:
+        - emptyDir:
+            medium: ''
+          name: "${WEB_SERVICE_NAME}-data"
+    triggers:
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+        - staticwebsite
+        from:
+          kind: ImageStreamTag
+          name: staticwebsite:${WEB_VERSION}
+          namespace: "${NAMESPACE}"
+        lastTriggeredImage: ''
+      type: ImageChange
+    - type: ConfigChange
+  status: {}
+parameters:
+- name: MEMORY_LIMIT
+  displayName: Memory Limit
+  description: Maximum amount of memory the container can use.
+  value: 512Mi
+  required: true
+- name: NAMESPACE
+  displayName: Namespace
+  description: The OpenShift Namespace where the ImageStream resides.
+  value: eazytraining-toto
+- name: WEB_SERVICE_NAME
+  displayName: WEB Service Name
+  description: The name of the OpenShift Service exposed for the WEB.
+  value: staticwebsite-catalog
+  required: true
+- name: DOC_URL
+  displayName: URL Project
+  description: The URL github project
+  value: https://github.com/ulrichmonji/my-static-website.git
+  required: true
+- name: WEB_VERSION
+  displayName: Version of web Image
+  description: Version of web image to be used (v1, v2, or latest).
+  value: latest
+  required: true
+labels:
+  template: staticwebsite-template

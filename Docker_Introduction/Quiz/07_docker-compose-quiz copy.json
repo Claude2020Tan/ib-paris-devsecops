@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Que signifie l'acronyme IAC ?",
+      "answer-1": "Image as Code",
+      "answer-2": "Installation as Code",
+      "answer-3": "Infrastructure as Code",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Qu'est ce que docker-compose ?",
+      "answer-1": "Outil d'automatisation des déploiements docker",
+      "answer-2": "Langage de développement pour IAC Docker",
+      "answer-3": "Outil pour la déf et l'exécution d'un'container",
+      "answer-4": "Aucune des résponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Quels sont les avantages de Docker compose ? (Choisissez la réponse incorrecte)",
+      "answer-1": "Reutilisation",
+      "answer-2": "Partage/Collaboration",
+      "answer-3": "Versionning",
+      "answer-4": "Aucune des réponses citées précédemment",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quel est le nom par défaut utilisé pour faire du docker-compose ?",
+      "answer-1": "Dockerfile",
+      "answer-2": "docker-compose.yml",
+      "answer-3": "Docker-compose.yml",
+      "answer-4": "dockerCompose.yml",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel est le format d'écriture de fichier utilisé par docker compose ?",
+      "answer-1": "JSON",
+      "answer-2": "PYTHON",
+      "answer-3": "Docker",
+      "answer-4": "YAML",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quelle(s) différence(s) fonctionnelle existe t-il entre les différentes version de compose?",
+      "answer-1": "Création des services différente",
+      "answer-2": "Aucune réelle différence fonctionnelle, juste syntaxique",
+      "answer-3": "Une ou plusieurs nouvelles fonctionnalités à chaque version",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans docker-compose; comment sont appelés les containers ?",
+      "answer-1": "Containers",
+      "answer-2": "Pods",
+      "answer-3": "Services",
+      "answer-4": "Run",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Après avoir crée notre fichier docker-compose, quelle commande(s) permet d'exécuter?",
+      "answer-1": "1:docker-compose up",
+      "answer-2": "2:docker-compose up -d",
+      "answer-3": "3: docker-compose create",
+      "answer-4": "4: Réponse 1 & 2",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Après avoir cére l'infra docker via Docker compose quelle commande permet de la détruire ?",
+      "answer-1": "docker-compose down",
+      "answer-2": "docker service destroy ",
+      "answer-3": "docker-compose destroy",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "On cree à l'aide de compose, 2 volumes et 2 réseaux, que se passe t-il en cas de suppression ?",
+      "answer-1": "Les volumes et les réseaux sont également supprimés",
+      "answer-2": "Juste les réseaux sont supprimés, les volumes conservés",
+      "answer-3": "Tout est conservé, volumes comme réseau",
+      "answer-4": "Un sur deux de chaque type est conservé",
+      "duration": "20",
+      "good-answer": "2"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+Après avoir correctement installé Docker, il est temps pour nous de lancer notre premier container
+A l’aide des commandes vues jusqu’ici, lancez votre premier container docker, l’image à utiliser devra être « nginx »
+    docker run nginx
+
+Vérifier si votre container est bien fonctionnel à l’aide de la commande « docker ps »
+    docker ps -a
+Réalisez l’ensemble des manipulations additionnelles demandées par votre formateur
+Stoppez votre container
+    docker stop ${nom_du_container}
+Supprimez votre container et se rassurer qu’il a bien été supprimé.
+    docker rm ${nom_du_container}
+
+Relancez un container nommé nginx_container_1  en mode détaché
+    docker run -d --name nginx_container_1 nginx
+
+
+
+Combien d’images docker existent-ils dans votre machine à ce stade ?
+    docker images
+Relancer à nouveau un container nomme nginx_container_2 docker à l’aide de l’image nginx
+    docker run -d --name nginx_container_2 nginx
+
+Combien de temps cela prend ? Est-ce le même temps que précédemment?
+    C'est plus rapide car on n'a plus à télécharger l'image
+
+Supprimer l’image nginx de votre machine 
+    docker rmi nginx
+    
+Avez-vous pu supprimer ladite images? Pourquoi?
+    Non, impossible de la supprimer car des containers l'utilisent encore, 
+    ca signifie que les conteneur sont fortement liés à l'image
+
+Supprimer le container nginx
+    docker rm -f nginx_container_2
+
+Supprimer à nouveau l’image nginx de votre machine
+    docker rmi nginx
+
+
+Nettoyage
+    a) Combien d'images sont présentes en local sur votre machines ?
+    b) Combien de conteneurs sont présents et quels sont leurs status
+    c) Stoppez tous les conteneurs et supprimez les
+    d) Supprimez toutes les images
+

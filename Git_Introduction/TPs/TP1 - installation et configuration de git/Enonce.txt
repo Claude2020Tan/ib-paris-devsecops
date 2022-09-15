@@ -1,0 +1,13 @@
+Sur votre poste, Téléchargez et configurez git 
+Il est question de configurer les paramètres suivant avec la commande git config --global:
+    - votre nom : user.name
+    - votre email: user.email
+    - votre editeur par defaut : core.editor
+    - Vous constaterez l'edition d'un fichier .gitconfig
+    - La documentation de git : https://git-scm.com/book/fr/v2/Personnalisation-de-Git-Configuration-de-Git
+
+Une fois configuré, vérifier ce paramétrage avec les commandes suivantes : 
+    -   git config --list
+    -   git config <nom du paramètre>
+
+Regardez l'aide sur git

@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+    mario:
+        ports:
+            - '8600:8080'
+        image: pengbai/docker-supermario
+        container_name: mario
+        networks:
+            - games
+
+    tetris:
+        container_name: tetris
+        ports:
+            - '8888:80'
+        restart: always
+        image: ociotec/tetris
+        networks:
+            - games
+networks:
+    games:
+        driver: bridge
+        ipam:
+          config:
+            - subnet: 172.177.0.0/16

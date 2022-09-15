@@ -1,0 +1,55 @@
+Partie 1 :  déploiement d Wordpress
+1 - Déployer une EC2 : (pas de création de clé ni de SG)
+  - Ami : Amazon Linux 2
+  - SG : réutiliser l'existant
+  - Tags : 
+    - Name : <premiere_lettre_nom>_<prenom>_<type-ressource>_<OS>
+    - formation: devops_ulrich
+
+2 - Installer docker en utilisant la Doc AWS
+  - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
+  - /!\ Se deco reco pour que le changement de groupe soit effectif
+
+3 - Enable docker au demarrage
+  - sudo systemctl enable docker
+
+4 - Installer docker-compose
+  - https://docs.docker.com/compose/install/
+
+5 - Créer un dossier wordpress dans votre home et créer le docker-compose.yaml file: 
+  - mkdir -p $HOME/wordpress
+  - cd $HOME/wordpress
+  - touch docker-compose.yaml
+  - Contenu du fichier :   https://docs.docker.com/samples/wordpress/
+
+6 - Lancer le déploiement : 
+  - docker-compose up -d
+
+7 - Tester que l'application fonctionne en se connectant via le navigateur, port 8000 (Attention au SG)
+
+
+Partie 2 :  Creation de l'ami de wordpress
+1 - Suppression des ressources wordpress sur la machine : 
+  - docker-compose down -v
+
+2 - On créé l'AMi : 
+  - on sélectionne notre instance > action > image and template > create image
+  - Image name : respecter la nomenclature définie ensemble
+  - Ajouter les tags : 
+    - Name :  avec le nom de l’AMI
+  A présent, pour créer une instance on ira dans myAmi lors de la création de l’instance
+  Pour la partager avec la communauté on peut aller dans les permissions de l'image
+
+3 - Terminer l’instance wordpress qui etait en cours lorsque le build de notre image est ok.
+    Puis créer une nouvelle instance en prenant l'AMI dans "my Ami"
+
+    N'oubliez pas de configuer les données utilisateurs (user data) à l'étape 3 du processus (Ancienne IHM)
+      - Rajourer le script contenu dans le fichier  user-date.sh présent dans le repertoire du TP 
+      - Si (éventuellement) vous rencontrez des erreurs, le Troobleshoting peut vous aider: 
+          - clic droit sur l'instance > Surveiller et dépanner > Obtenir le journal système 
+          - Fichier /var/log/cloud-init.log étant en ssh le serveur
+
+Partie 3 : Modèle de Lancement (Launch Template)
+Maintenant que vous disposez de votre Ami, vous allez créer un modèle de lancement.
+Pour le faire : 
+  Sélectionnez votre instance -> Action -> Image et templates -> Créer un modèle de lancement   

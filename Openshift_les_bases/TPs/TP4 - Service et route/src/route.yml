@@ -1,0 +1,30 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: 'true'
+  labels:
+    app: simple-webapp-docker
+  name: simple-webapp-docker
+  namespace: eazytraining-toto
+  resourceVersion: '448003'
+  selfLink: >-
+    /apis/route.openshift.io/v1/namespaces/eazytraining-toto/routes/simple-webapp-docker
+spec:
+  host: simple-webapp-docker-eazytraining-toto.192.168.99.11.nip.io
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: simple-webapp-docker
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+    - conditions:
+        - lastTransitionTime: '2022-09-14T10:18:17Z'
+          status: 'True'
+          type: Admitted
+      host: simple-webapp-docker-eazytraining-toto.192.168.99.11.nip.io
+      routerName: router
+      wildcardPolicy: None

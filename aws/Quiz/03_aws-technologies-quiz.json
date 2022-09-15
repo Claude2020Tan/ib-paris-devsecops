@@ -1,0 +1,211 @@
+{
+    "questions": [
+        {
+            "question": "Quel est le nom du moteur de base de données RDS SQL d'AWS ?",
+            "answer-1": "Lightsail",
+            "answer-2": "SNS",
+            "answer-3": "MySQL",
+            "answer-4": "Aurora",
+            "duration": "20",
+            "good-answer": "4"
+        },
+         {
+            "question": "quelles règles doivent être suivies concernant le nom du bucket ?",
+            "answer-1": "Les noms des buckets sont unique sur AWS.",
+            "answer-2": "Les noms des buckets ont 63 cataractères max",
+            "answer-3": "Les peuvent être formatés en adresses IP",
+            "answer-4": "les noms doivent avoir au moins un tiret '-'",
+            "duration": "20",
+            "good-answer": "1"
+        },
+         {
+            "question": "utilisateur par défaut d'une instance lancée à partir d'une AMI linux",
+            "answer-1": "ubuntu",
+            "answer-2": "ec2",
+            "answer-3": "ec2-user",
+            "answer-4": "administrator",
+            "duration": "20",
+            "good-answer": "3"
+        },
+        {
+            "question": "Lequel des services répertoriés ci-dessous est un service AWS régional ?",
+            "answer-1": "AWS IAM",
+            "answer-2": "Amazon EFS",
+            "answer-3": "Amazon Route 53",
+            "answer-4": "Amazon CloudFront",
+            "duration": "20",
+            "good-answer": "2"
+        },
+         {
+            "question": "Quelle classe de stockage S3 a le taux de disponibilité des objets le plus bas ?",
+            "answer-1": "Standard",
+            "answer-2": "Reduced Redundancy",
+            "answer-3": "Infrequent Access",
+            "answer-4": "Ils ont tous le même taux",
+            "duration": "20",
+            "good-answer": "3"
+        }
+        ,
+         {
+            "question": "Le concept d'élasticité est le plus étroitement associé à lequel des éléments suivants ?",
+            "answer-1": "Auto Scaling",
+            "answer-2": "Network Security Group",
+            "answer-3": "Elastic Load Balancing",
+            "answer-4": "VPC",
+            "duration": "20",
+            "good-answer": "1"
+        }
+        ,
+         {
+            "question": "Quel service pour gérer  la gouvernance, conformité, l'audit des risques dans AWS ?",
+            "answer-1": "CloudAudit",
+            "answer-2": "CloudTrail",
+            "answer-3": "CloudCompliance",
+            "answer-4": "CloudWatch",
+            "duration": "20",
+            "good-answer": "2"
+        }
+
+         ,
+         {
+            "question": "Nous voulons gérer des données clé-valeur au sein d'aws , quel service choisir?",
+            "answer-1": "Lambda",
+            "answer-2": "Aurora",
+            "answer-3": "RDS",
+            "answer-4": "DynamoDB",
+            "duration": "20",
+            "good-answer": "4"
+        }
+         ,
+         {
+            "question": "Quel service AWS vous permet d'avoir votre propre réseau privé dans le cloud AWS ?",
+            "answer-1": "Virtual Private Network (VPN)",
+            "answer-2": "Virtual Private Cloud (VPC)",
+            "answer-3": "Virtual Cloud Network (VCN)",
+            "answer-4": "Aucune réponse n'est vraie",
+            "duration": "20",
+            "good-answer": "2"
+        }
+        ,
+         {
+            "question": "Quelle option de moteur de base de données SQL n'est pas disponible dans RDS ?",
+            "answer-1": "MongoDB",
+            "answer-2": "PostreSQL",
+            "answer-3": "MariaDB",
+            "answer-4": "MySQL",
+            "duration": "20",
+            "good-answer": "1"
+        }
+         ,
+         {
+            "question": "Qu'est-ce que le service de calcul sans serveur d'AWS ?",
+            "answer-1": "S3",
+            "answer-2": "Lambda",
+            "answer-3": "EC2",
+            "answer-4": "ELB",
+            "duration": "20",
+            "good-answer": "2"
+        }
+         ,
+         {
+            "question": "Quel est le principal avantage de l'utilisation de AWS Lambda ?",
+            "answer-1": "Ne payez que pour le temps de calcul que vous consommez",
+            "answer-2": "Grande variété d'OS parmi lesquels choisir",
+            "answer-3": "Sélectionner et gérer le type et la capacité d'instance",
+            "answer-4": "Exécuter le code  en provisionnant le serveur",
+            "duration": "20",
+            "good-answer": "1"
+        }
+          ,
+         {
+            "question": "Quel est l'objectif du service AWS Route 53 ?",
+            "answer-1": "Mise en cache du contenu",
+            "answer-2": "Gestion de la base de données",
+            "answer-3": "Enregistrement et gestion de domaine",
+            "answer-4": "Réseau de distribution de contenu",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+         {
+            "question": "Quelle fonctionnalité AWS agit comme un régulateur de distribution du trafic",
+            "answer-1": "Zone de disponibilité",
+            "answer-2": "ELB",
+            "answer-3": "NACL",
+            "answer-4": "Mise à l'échelle automatique",
+            "duration": "20",
+            "good-answer": "2"
+        }
+         ,
+         {
+            "question": "Quel service permet de surveiller l'utilisation des processeurs sur des EC2 ?",
+            "answer-1": "CloudMonitor",
+            "answer-2": "CloudTrail",
+            "answer-3": "CloudWatch",
+            "answer-4": "CloudFront",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+
+          {
+            "question": "Quel service permet d'envoyer des notifications par SMS ou e-mail sur AWS ",
+            "answer-1": "STS",
+            "answer-2": "RDS",
+            "answer-3": "GetSMS",
+            "answer-4": "SNS",
+            "duration": "20",
+            "good-answer": "4"
+        }
+         ,
+      {
+            "question": "Que permet les zones de disponibilité AWS ? ",
+            "answer-1": "infrastructures tolérantes aux pannes , plus évolutives",
+            "answer-2": "Plan de réprise d'activité après sinistre",
+            "answer-3": "Sauvegardes automatiques dans le cloud AWS",
+            "answer-4": "Aucune réponse vraie",
+            "duration": "20",
+            "good-answer": "1"
+        }
+         ,
+         {
+            "question": "Quel service de base de données AWS est utilisé pour entreposer de grosses données?",
+            "answer-1": "RDS",
+            "answer-2": "Elasticache",
+            "answer-3": "Redshift",
+            "answer-4": "DynamoDB",
+            "duration": "20",
+            "good-answer": "3"
+        }
+         ,
+         {
+            "question": "Quel est le service de calcul d'AWS ?",
+            "answer-1": "S3",
+            "answer-2": "Lambda",
+            "answer-3": "EC2",
+            "answer-4": "KMS",
+            "duration": "20",
+            "good-answer": "3"
+        }
+        ,
+         {
+            "question": "Quel stockage s3 a utiliser quand on parle d'archivage ?  ",
+            "answer-1": "Glacier",
+            "answer-2": "Standard",
+            "answer-3": "Reduced Redundancy",
+            "answer-4": "aucun",
+            "duration": "20",
+            "good-answer": "1"
+        }
+        ,
+         {
+            "question": "Quel est service de type PAAS au sein d'AWS ?",
+            "answer-1": "EC2",
+            "answer-2": "Lamba",
+            "answer-3": "ECS",
+            "answer-4": "BEANSTALK",
+            "duration": "20",
+            "good-answer": "4"
+        }
+    ]
+}

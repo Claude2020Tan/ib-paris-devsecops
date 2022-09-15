@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Qu'est ce qu'un Dockerfile ?",
+      "answer-1": "Image Docker permettant de lancer un container",
+      "answer-2": "Fichier permettant de lancer un container",
+      "answer-3": "Fichier permettant de créer une image docker",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quelles sont les couches génériques d'une image ? (Choisissez la réponse incorrecte)",
+      "answer-1": "Image de base & fichiers de mise à jour des paquets",
+      "answer-2": "Noyau Linux (Kernel)",
+      "answer-3": "Dépendances",
+      "answer-4": "Application (fichiers applicatifs)",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quelles sont les caractéristiques d'une image ? (Choisissez la réponse incorrecte)",
+      "answer-1": "Lecture seule",
+      "answer-2": "Réutilisation",
+      "answer-3": "Architecture en couche",
+      "answer-4": "Persistence des données lors de l'exécution",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "A quoi sert le mot clé ENV dans un Dockerfile",
+      "answer-1": "créer une variable d'env dans le container lancé via l'image",
+      "answer-2": "Envoyer un argument au ENTRYPOINT",
+      "answer-3": "Créer une variable d'env sur la machine ddocker",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Dans un Dockerfile que fait cette instruction 'VOLUME /opt  /data' ",
+      "answer-1": "crée un volume docker 'opt' pour sauvegarder le rep /data ",
+      "answer-2": "crée 2 volumes docker pour sauvegarder les reps /opt & /data",
+      "answer-3": "erreur de syntaxe, instruction erronée",
+      "answer-4": "Aucune des réponses précédentes",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Que fait l'instruction 'EXPOSE 80' dans un DockerFile",
+      "answer-1": "Expose le port du container sur l'hote",
+      "answer-2": "Informe docker que le port d'écoute du container est le 80",
+      "answer-3": "Ouvre le port 80 de la machine DOcker",
+      "answer-4": "Redirige le port 80 de docker vers le 80 du container",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Les affirmations vraies concernant les instructions CMD et ENTRYPOINT dans un Dockerfile",
+      "answer-1": "Commande de lancement du service exposé par le container",
+      "answer-2": "Un Dockerfile doit avoir au moins un CMD ou un ENTRYPOINT",
+      "answer-3": "CMD est généralement utilisé pour passer des arguments",
+      "answer-4": "Toutes les réponses précédentes",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Si le ENTRYPOINT n'existe pas et CMD = p1_cmd p2_cmd (quelle est la commande finale) ?",
+      "answer-1": "/bin/sh -c p1_cmd p2_cmd ",
+      "answer-2": "/bin/bash -c p1_cmd p2_cmd",
+      "answer-3": "p1_cmd p2_cmd",
+      "answer-4": "erreur commande incorrecte",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "Si le ENTRYPOINT n'existe pas et CMD = ['p1_cmd', 'p2_cmd'] (quelle est la cde finale) ?",
+      "answer-1": "/bin/sh -c p1_cmd p2_cmd ",
+      "answer-2": "/bin/bash -c p1_cmd p2_cmd",
+      "answer-3": "p1_cmd p2_cmd",
+      "answer-4": "erreur commande incorrecte",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Si le ENTRYPOINT = p1_entry et CMD = p2_cmd (quelle est la cde finale) ?",
+      "answer-1": "erreur commande incorrecte ",
+      "answer-2": "/bin/sh -c p1_entry /bin/sh -c p2_cmd",
+      "answer-3": "/bin/sh -c p2_cmd p1_entry",
+      "answer-4": "p1_entry p2_cmd",
+      "duration": "20",
+      "good-answer": "2"
+    }
+  ]
+}

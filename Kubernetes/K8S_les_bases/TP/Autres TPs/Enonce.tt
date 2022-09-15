@@ -1,0 +1,42 @@
+Exo 1 : Stockage persistent
+
+Partie I
+1 - Créez un pod à partir du fichier https://k8s.io/examples/pods/simple-pod.yaml
+2 - Exposez l’application dans un autre terminal à l’aide la commande kubectl port-forward <nom de votre pod> 8080:80 et vérifier qu’elle est bien accessible
+3 - Exécutez un shell sur le pod à l’aide de la commande  kubectl exec -it nginx -- /bin/bash
+4 - Modifiez la fichier index.html à l’aide de la commande suivante echo 'tp pv' > /usr/share/nginx/html/index.html 
+5 - Vérifiez que le fichier a bien été modifié à l’aide de la commande curl 127.0.0.1:8080 ou en rafraichissant le navigateur
+6 - Supprimez le pod et récréez le avec toujours à partir du fichier https://k8s.io/examples/pods/simple-pod.yaml
+7 - Exposez l’application à nouveau l’application à l’aide de la commande kubectl port-forward <nom de votre pod> 8080:80
+8 - Que constatez vous ?
+
+Partie II
+1 - Créez le fichier index.html sur votre node minikube dans le repertoire /mnt/data et remplissez le à l’aide de la commande sudo sh -c "echo 'Hello from Kubernetes storage' > /mnt/data/index.html" 
+2 - Créez un volume persistent à partir du fichier https://k8s.io/examples/pods/storage/pv-volume.yaml 
+3 - Réclamez le volume en créant un PVC à l’aide du fichier suivant : https://k8s.io/examples/pods/storage/pv-claim.yaml 
+4 - Créez un pod nginx à partir du fichier suivant : https://k8s.io/examples/pods/storage/pv-pod.yaml 
+5 - Exposez l’application dans un autre terminal à l’aide la commande kubectl port-forward <nom de votre pod> 8080:80 et vérifier qu’elle est bien accessible
+6 - Exécutez un shell sur le pod à l’aide de la commande  kubectl exec -it <nom du pod> -- /bin/bash
+7 - Modifiez la fichier index.html à l’aide de la commande suivante echo 'tp pv' > /usr/share/nginx/html/index.html 
+8 - Vérifiez que le fichier a bien été modifié à l’aide de la commande curl 127.0.0.1:8080 ou en rafraichissant le navigateur
+9 - Supprimez le pod et récréez le avec toujours à partir du fichier https://k8s.io/examples/pods/storage/pv-pod.yaml 
+10 - Exposez l’application à nouveau l’application à l’aide de la commande kubectl port-forward <nom de votre pod> 8080:80
+11 - Que constatez vous ?
+12 - Supprimez toutes les ressources créées en utilisant les commandes impératives
+
+
+Exo 2 : Déployez un site wordpress sur OVH Kubernetes 
+
+Partie I
+1 - Créez un cluster OVH Kubernetes avec trois nœuds : https://docs.ovh.com/gb/en/kubernetes/creating-a-cluster/ 
+2 - Modifiez la configuration de Kubectl pour vous connecter au cluster précédemment créé : https://docs.ovh.com/gb/en/kubernetes/configuring-kubectl/ 
+3 - Vérifier le nombre de nœuds : kubectl get nodes
+
+Partie II
+1 - Utilisez les ressources fournies à l’adresse suivant pour déployer votre site wordpress : https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/ 
+2 - Activez kubernetes dashbard sur votre cluster : https://docs.ovh.com/us/en/kubernetes/installing-kubernetes-dashboard/ 
+3 - Explorez kubernetes dashbord
+4 - Détruisez le cluster OVH Kubernetes
+
+
+

@@ -1,0 +1,3 @@
+• Installation de minikubesur centos7
+• Présentation de l’environnement Kubernetes d’EAZYTraining
+• Single-node

@@ -1,0 +1,22 @@
+Installation sur Centos : 
+    sudo yum install git -y
+
+Vérification :     
+    git --version
+
+Configuration de git : 
+    git config --global user.name "ULRICH MONJI"
+    git config --global user.email "ulrich.monji@gmail.com"
+    git config --global core.editor  "vi"
+    git config --global color.status auto
+    git config --global color.ui true
+    git config --global color.status.changed blue
+    git config --global color.status.untracked magenta
+    git config --global color.status.added green
+    git config --global color.status.deleted red
+
+    git config --list                      
+    git config user.email
+    git help config
+    git help add
+    git add -h

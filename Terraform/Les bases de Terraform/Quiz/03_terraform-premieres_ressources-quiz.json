@@ -1,0 +1,97 @@
+{
+    "questions": [
+          {
+            "question": "Quel est l'extension des fichiers terraform'?",
+            "answer-1": ".yml",
+            "answer-2": ".hcl",
+            "answer-3": ".trf",
+            "answer-4": ".tf",
+            "duration": "20",
+            "good-answer": "4"
+        },
+             {
+            "question": "qu'est ce qu'une ressource terraform ?",
+            "answer-1": "aucune bonne réponse",
+            "answer-2": "objet Terraform permettant de sauvegarder un attribut",
+            "answer-3": "une commande terraform",
+            "answer-4": "est un objet Terraform à créer dans l'infrastructure",
+            "duration": "20",
+            "good-answer": "4"
+        },
+        {
+            "question": "qu'est ce qu'un provider terraform ?",
+            "answer-1": "un code source terraform pour creer une ressource",
+            "answer-2": "plug-in que Terraform utilise pour traduire les actions",
+            "answer-3": "une fonction terraform",
+            "answer-4": "aucune bonne réponse",
+            "duration": "20",
+            "good-answer": "2"
+        },
+         {
+            "question": "A quoi sert le local provider sur terraform ?",
+            "answer-1": "est utilisé pour gérer les ressources locales(fichiers)",
+            "answer-2": "configurer terraform pour agir sur l'hote local",
+            "answer-3": "aucune bonne réponse",
+            "answer-4": "est un provider qui n'existe pas sur terraform",
+            "duration": "20",
+            "good-answer": "1"
+        }
+        ,
+        {
+            "question": "quel est la syntaxe pour créer une ressource de type fichier local ?",
+            "answer-1": "resource 'local-file' 'nom' {} ",
+            "answer-2": "resource 'local_file' 'nom' {}",
+            "answer-3": "resource 'local-file' {}",
+            "answer-4": "resource 'local-file' 'nom'",
+            "duration": "20",
+            "good-answer": "1"
+        }
+        ,
+        {
+            "question": "quelle pourrait être la structure d'un projet terraform ?",
+            "answer-1": "main.tf , variables.tf ,outpout.tf , provider.tf",
+            "answer-2": "variables.tf , provider.tf , outputs.tf",
+            "answer-3": "main.tf , variables.tf ,outpout.tf",
+            "answer-4": "aucune bonne réponse",
+            "duration": "20",
+            "good-answer": "1"
+        }
+            ,
+        {
+            "question": "A quoi sert le fichier terraform.tfstate ?",
+            "answer-1": "il est un fichier facultatif de terraform , peu d'utilité",
+            "answer-2": "il est le fichier dans lequel on définit les clés d'acces",
+            "answer-3": "contient des valeurs de surcharges des variables",
+            "answer-4": "stoque l'état de l'infrastructure ",
+            "duration": "20",
+            "good-answer": "4"
+        },
+             {
+            "question": "le code suivant déclare le provider aws ?",
+            "answer-1": "provider 'aws' {access_key ='' secret_key ='' region =''}",
+            "answer-2": "aws 'provider' {access_key ='' secret_key ='' region =''}",
+            "answer-3": "provider 'aws' {region =''}",
+            "answer-4": "resource 'aws' {access_key ='' secret_key ='' region =''}",
+            "duration": "20",
+            "good-answer": "1"
+        },
+             {
+            "question": "comment appliquer une configuration sans confirmation ?",
+            "answer-1": "avec le flag -aproved",
+            "answer-2": "avec le flag -auto-approve",
+            "answer-3": "avec le flag -auto-validate",
+            "answer-4": "avec le flag -auto-confirmed ",
+            "duration": "20",
+            "good-answer": "4"
+        },
+        {
+            "question": "Quelles sont les commandes terraform?",
+            "answer-1": "init , plan , applied , destroy",
+            "answer-2": "init , plan  , apply , operate",
+            "answer-3": "init , plan , apply , destroy",
+            "answer-4": "initial , plan , apply , destroy ",
+            "duration": "20",
+            "good-answer": "3"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+Partie 1 : GITHUB - envoi de repos local + fork + Merge request
+
+1 - Créez un compte sur https://github.com/ 
+2 - Créez un nouveau repository public vide appelé 'my-first-git-projet'
+    => Attention ne cochez pas le Readme, le projet doit être vide
+3 - Prennez connaissance de la documentation que git vous propose pour rajouter du contenu dans votre projet    
+4 - Rajouter votre projet local deploy-user dans ce repo git distant
+    - Pour celà vous avez besoin de rajouter votre clés publique ssh dans votre compte git
+        - Creation de la keypair en ligne de commande
+            ssh-keygen
+        - Affichage de la clés publique en ligne de commande et la copier
+            cat ~/.ssh/id_rsa.pub
+        - Coller la clés publique en allant dans: 
+            Settings > SSH and GPG keys > New SSH Key > Coller la clés publique et sauvegarder
+    - En ligne de commande, rajouter un serveur distant 
+        git remote add myproject <url_git>
+    - vérifier que vous avez que vous avez de nouveaux serveurs
+        git remote -v        
+    - Envoyer votre projet local dans 'my-first-git-projet'
+        git push myproject master
+5 - Aller sur votre projet git distant et vérifier le contenu
+6 - Forkez le projet de votre formatteur en my-tezacher-projet
+7 - Clonez ce projet forké en local sur votre poste et rajouter une nouvelle feature
+    - creation d'une nouvelle branche feature1
+    - ajout de nouvaux fichier dans cette branche
+    - push de cette branche sur votre remote forké
+8 - Faites une pull request de votre branch feature1 sur la branche master du formatteur
+9 - Une fois que le formatteur a validé votre pull request, mettez à jour votre repos forké
+10 - Supprimez la branche feature1 en remote et en local, car elle ne sert plus à rien 
+11 - Supprimez toutes les branches de suivi distantes qui ne servent plus à rien
+    git remote prune myproject
+
+
+
+Partie 2 : GITLAB-CI
+Sur votre gitlab-ce créé précédemment, créez 3 comptes (manager, dev1 et dev2)
+Créez un groupe de projet (nommé eazytraining)
+Rajoutez manager en tant que owner du groupe de projet, dev1 et dev2 en tant que contributeur
+Créez un repo deploy-users
+Poussez votre code sur gitlab en tant que manager et testez le scénario de collaboration abordé précédement

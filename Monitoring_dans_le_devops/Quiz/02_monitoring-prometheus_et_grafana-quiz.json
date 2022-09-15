@@ -1,0 +1,121 @@
+{
+  "questions": [
+    {
+      "question": "Les outils suivants sont des outils de monitoring",
+      "answer-1": "Kubernetes, Docker, Podman",
+      "answer-2": "Mongodb, Mysql, Swarm",
+      "answer-3": "Grafana, Prometheus, Zabbix, Kibana, Nagios",
+      "answer-4": "Grafana, Promethus, Rancher, Mesos",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Par défaut, comment se nomme le fichier de configuration de prometheus ?",
+      "answer-1": "Prometheus.cfg",
+      "answer-2": "Prometheus.xml",
+      "answer-3": "Prometheus.cfg",
+      "answer-4": "Prometheus.yml",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Dans Grafana, comment faire pour créer ses propres dashboard ?",
+      "answer-1": "1 : Réponse 3 et 4",
+      "answer-2": "Ils se créé seul une fois les métriques présentes",
+      "answer-3": "On importe des dashboards communautaires vie leur IDs",
+      "answer-4": "On construit manuellement a l'aide du PromQL",
+      "duration": "20",
+      "good-answer": "1"
+    },    
+    {
+      "question": "Dans Grafana, que représente le Datasource (Source de données) ?",
+      "answer-1": "L'emplacement ou sont téléchargés les dashboard",
+      "answer-2": "L'encdroit où on scrappe les métriques vi l'exporteur",
+      "answer-3": "L'emplacement ou sont téléchargés les exporteurs",
+      "answer-4": "L'emplacement où sont stokées les métriques collectées",
+      "duration": "20",
+      "good-answer": "4"
+    },    
+    {
+      "question": "Par quel nom prométheus nomme les endpoints ou il va chercher les métriques",
+      "answer-1": "Les Prom-API",
+      "answer-2": "Les sockets",
+      "answer-3": "Les Targets",
+      "answer-4": "Les rules",
+      "duration": "20",
+      "good-answer": "3"
+    },        
+    {
+      "question": "Quel modèle de stockage de donnée est utilisé dans prometheus ?",
+      "answer-1": "Déclarative en YAML ou JSON",
+      "answer-2": "NoSQL",
+      "answer-3": "Key-Value data model",
+      "answer-4": "SQL",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Quel est le langage de requettaque dans prometheus",
+      "answer-1": "PromoSQL",
+      "answer-2": "PromQL",
+      "answer-3": "SQL",
+      "answer-4": "GrafaQL",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Dans prometheus, comment se fait la collecte des métriques ?",
+      "answer-1": "Un exporteur scrappe les données et promethus les récupère",
+      "answer-2": "Un agent envoie les métriques au serveur prometheus",
+      "answer-3": "Les données sont déposées dans un fichier écris en JSON",
+      "answer-4": "Les données poussée en format XML au serveur",
+      "duration": "20",
+      "good-answer": "1"
+    },
+    {
+      "question": "C'est quoi un exporteur dans l'architecture prometheus ?",
+      "answer-1": "C'est la base de donnée Time Série",
+      "answer-2": "C'est le composant qui déclenche les alertes",
+      "answer-3": "C'est un script dévelloppé en python",
+      "answer-4": "C'est un binaire qui collecte les métriques sur les machines",
+      "duration": "20",
+      "good-answer": "4"
+    },
+    {
+      "question": "Quel composant de Prometheus permets de faire de l'alarming ?",
+      "answer-1": "L'alerting tiers",
+      "answer-2": "L'alert Manager",
+      "answer-3": "Le push Gateway",
+      "answer-4": "Le Pull Gateway",
+      "duration": "20",
+      "good-answer": "2"
+    },
+    {
+      "question": "Quel composant de Prometheus permet de stocker les métriques des jobs de courtes durée de vie ?",
+      "answer-1": "Alert Manager",
+      "answer-2": "Job ou exporter",
+      "answer-3": "Push Gateway",
+      "answer-4": "Grafana",
+      "duration": "20",
+      "good-answer": "3"
+    },
+    {
+      "question": "Qu'est ce que Grafana ?",
+      "answer-1": "Exporteur de métrique pour prometheus",
+      "answer-2": "Base de donnée Time séries",
+      "answer-3": "Outil d'alarming",
+      "answer-4": "Outil de reporting et de visualisation de dashboard",
+      "duration": "20",
+      "good-answer": "4"
+    },   
+    {
+      "question": "Les bases de données suivantes sont supportées par Grafana :",
+      "answer-1": "Prometheus, CMDB, Graphite, Kibana",
+      "answer-2": "Prometheus, Influxdb, OpenTSDB, Elasticsearch, etc ...",
+      "answer-3": "Kibana, Oracle, Mysql, Prometheus",
+      "answer-4": "InfluxDB, Dynatrace, Cadvisor",
+      "duration": "20",
+      "good-answer": "2"
+    }
+  ]
+}    

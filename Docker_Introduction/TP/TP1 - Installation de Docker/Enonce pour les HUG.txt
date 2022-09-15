@@ -1,0 +1,31 @@
+################################################################################################################################
+Prérequis :
+Sur vos VMs, il se pourrait que Docker soit déja installé et qu'il y des ressources déja existantes
+Pour vérifeir s'il est installé, taper la commande : 
+    docker info
+
+Si la commande répond, il faut supprimer toutes les ressources potentiellement existantes avec : 
+    docker system prune --all --volumes
+
+Aussi, vos machines font probablement parti d'un cluster swarm, il faudrait les retirer du cluster :    
+    docker swarm leave -f 
+
+################################################################################################################################
+
+1 - Installation de Docker sur Centos (!!! Uniquement si docker n'est pas installé !!!)
+    On va installer docker en utilisant le script  
+    Téléchargez le script en local sur votre VM: 
+        curl -fsSL https://get.docker.com -o get-docker.sh
+    Executez ce script avec le sh
+
+2 - Tâches de post installation    
+    Ajoutez votre  user linux  dans le groupe docker
+    Démarrez le démon docker et rendez le enable 
+    déconnectez vous de la VM et reconnectez vous pour appliquer les droits
+
+3 - Vérification de l’installation, Lancement de votre premier conteneur (nginx)
+    Vérifiez la version de docker
+        docker --version
+
+    Lancez un conteneur hello-world:latest avec la commande docker run et commentez
+        docker run hello-world:latest

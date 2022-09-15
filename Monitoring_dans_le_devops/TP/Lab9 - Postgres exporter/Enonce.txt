@@ -1,0 +1,8 @@
+1 - Installez le postgresql-exporter Prometheus à l’aide du chart helm disponible sur le repo Prometheus-community
+2 - Surchargez les variables du chart avec le fichier values.yaml
+3 - Modifier la fichier config-map.yaml afin d’intégrer le postgres-exporter (un job si vous voulez)
+4 - Vous devez supprimer et recréer le configmap ainsi que le deployment de Prometheus pour appliquer les modifications
+5 - Vérifiez sur l’interface de Prometheus que la target postgres-exporter est bien présente et up
+6 - Pour terminer, importer le dashboard blackbox
+7 - Vérifiez que le dashboard nouvellement importé affiche des données
+

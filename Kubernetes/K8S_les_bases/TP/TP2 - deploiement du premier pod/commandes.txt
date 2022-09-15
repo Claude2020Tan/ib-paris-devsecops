@@ -1,0 +1,32 @@
+#####################   Lancement et verification du POD   #####################
+  En root : 
+  kubectl apply -f pod.yml
+  kubectl get po
+  kubectl describe po simple-webapp-color
+
+#####################   Exposition de PORT   #####################
+  kubectl port-forward simple-webapp-color 8080:8080 --address 0.0.0.0
+
+
+#####################   Suppression du POD   #####################
+  kubectl delete -f pod.yml
+
+#####################   Lancement et verification du deployment   #####################
+  kubectl apply -f nginx-deployment.yml
+  kubectl describe deployment nginx-deployment
+  kubectl get deploy
+  kubectl get replicaset
+  kubectl get  po
+  kubectl get replicaset -o wide
+
+#####################   Suppression du deployment   #####################
+  kubectl delete -f nginx-deployment
+
+#####################   Commandes imperatives pour deploiement   #####################
+  lancement du pod :    kubectl run --image=mmumshad/simple-webapp-color --env="APP_COLOR=red"  --restart=Never simple-webapp-color
+  Suppression du pod :  kubectl delete pod simple-webapp-color
+  Lancement du deploy:  kubectl create deployment --image=nginx:1.18.0 nginx-deployment
+  Scaling du replicas:  kubectl scale --replicas=2 deployment/nginx-deployment
+  upgrade de version :  kubectl set image deployment/nginx-deployment nginx=nginx    
+  créer un fichier manifeste à partir d'une commande imperative : 
+    kubectl create deploy ubuntu --image=ubuntu::18.04 --replicas=3 --dry-run=client  -o yaml > deploy_ubuntu.yml

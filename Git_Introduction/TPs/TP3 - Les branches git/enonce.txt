@@ -1,0 +1,36 @@
+Partie 1 
+
+1 - Rendez-vous dans votre dossier deploy-user
+    Créez un branche update_default_value dans laquelle vous allez modifiez 
+    index.html pour mettre toto comme firstname et titi comme lastname, 
+    puis commit(ez) le changement
+        - git branch
+        - git checkout -b
+
+2 - Mergez la branche "update_default_value" (supprimez la après le merge) avec 
+    votre branche "master". Il faut se positionner sur la master pour le faire
+        - git checkout 
+        - git merge
+        - git branch
+
+3 - Créez une branche "password_linux" dans laquelle vous allez modifier le message 
+    de demande de mot de passe (dans linux_users.sh), commit(ez) le changement
+        git checkout -b
+    
+4 - Déplacez-vous sur la branche master et modifier le message de demande de mot 
+    de passe (dans linux_users.sh), commit(ez) le changement
+    Tentez de merger la branche master avec password_linux, que remarquez-vous ? 
+    Il y a un conflit. Réglez le conflit et commit(ez) la modification finale
+
+    TIPS : 
+    Parfois des "^M" sortent à la fin du fichier, pour les enlever, faire ceci : 
+            - sed -i 's/\r//g' linux_users.sh 
+            
+
+5 - Supprimez toutes les branches sauf la master    
+
+
+
+
+
+

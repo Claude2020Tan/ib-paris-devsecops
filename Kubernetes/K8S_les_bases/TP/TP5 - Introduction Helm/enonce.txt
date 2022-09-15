@@ -1,0 +1,16 @@
+# Ce TP concerne helm V2
+1 - Installez helm en utilisant la documentation suivante: 
+    https://github.com/diranetafen/supinfo-kubernetes/tree/minikube/tp07#-install-helm-
+2 - Utilisez le chart wordpress (https://github.com/helm/charts/tree/master/stable/wordpress) 
+    pour déployer cette application 
+    -> Nous vous conseillons d’utilisez le service de type nodeport en http, vous avez le 
+        choix du nodeport
+    -> Nous vous conseillons aussi de surchargez les variables nécessaires en utilisant un 
+        fichier nommé values.yml où vous surchargerez les variables permettant de déployer 
+        l’application comme demandé
+    -> Le mot de passe de l’utilisateur wordpress devra être « admin » et son mot de passe « password »
+3 - Créez un repertoire tp-5 dans Kubernetes-training (après l’avoir recupéré sur votre github) 
+    et copiez vos manifests à l’interieur
+4 - Enfin, poussez ce dossier sur github afin de conservez tous vos fichiers
+
+

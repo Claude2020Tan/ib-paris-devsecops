@@ -1,0 +1,22 @@
+mkdir /data-volume
+kubectl apply -f mysql-volume.yml
+kubectl get po -o wide
+ll  /data-volume
+kubectl get po -o wide
+kubectl delete  -f mysql-volume.yml
+kubectl get po -o wide
+
+ll  /data-volume dat
+mkdir /data-pv
+kubectl apply -f pv.yml
+kubectl get pv -o wide
+kubectl get pv pv -o wide
+kubectl describe  pv pv
+ll  /data-pv
+kubectl apply -f pvc.yml
+kubectl get pvc pvc -o wide
+kubectl describe  pv pv
+kubectl apply -f mysql-pv.yml
+kubectl describe  po pv
+kubectl get po
+kubectl describe  po mysql-pv

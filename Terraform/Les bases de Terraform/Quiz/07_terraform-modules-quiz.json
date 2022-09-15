@@ -1,0 +1,76 @@
+{
+    "questions": [
+        {
+            "question": "Les modules sont des:",
+            "answer-1": "moyens de regrouper les configurations de ressources",
+            "answer-2": "ensembles de plugins terraform",
+            "answer-3": "ensembles de fichier d'etat de terraform",
+            "answer-4": "Aucune réponse n'est vraie ",
+            "duration": "20",
+            "good-answer": "1"
+        },
+         {
+            "question": " le module racine est un enssemble de :",
+            "answer-1": " fichiers .tf de terraform",
+            "answer-2": " fichiers .tf du répertoire de travail principal",
+            "answer-3": " fichier de configuration de terraform",
+            "answer-4": "Aucune réponse n'est vraie ",
+            "duration": "20",
+            "good-answer": "2"
+        },
+              {
+            "question": "les modules enfants sont un enssemble de:",
+            "answer-1": "fichiers .tf dans des dossiers appelés par le module racine",
+            "answer-2": "fichiers .tf du répertoire de travail principal",
+            "answer-3": "fichier de configuration de terraform",
+            "answer-4": "dossiers appelés par les états terraform",
+            "duration": "20",
+            "good-answer": "1"
+        },
+           {
+            "question": "les modules publiés sont des:",
+            "answer-1": "modules chargés à partir d'un registre public ou privé.",
+            "answer-2": "modules sauvegardés sur des dépots git",
+            "answer-3": "modules sauvegardés sur un bucket s3",
+            "answer-4": "toutes les réponses sont exactes",
+            "duration": "20",
+            "good-answer": "1"
+        },
+              {
+            "question": "Le registre Terraform :",
+            "answer-1": "héberge des modules Terraform accessibles au public",
+            "answer-2": "héberge l'état distant de terraform",
+            "answer-3": "héberge les modules enfants au public ",
+            "answer-4": "aucune réponses n'est exacte",
+            "duration": "20",
+            "good-answer": "1"
+        },
+              {
+            "question": "Combien de type de régistre terraform existent  ?",
+            "answer-1": "0",
+            "answer-2": "1",
+            "answer-3": "2",
+            "answer-4": "3",
+            "duration": "20",
+            "good-answer": "3"
+        },
+           {
+            "question": "Où le registre des modules Terraform est-il disponible",
+            "answer-1": " https://registries.terraform.io/ ",
+            "answer-2": " https://registre.terraform.io/",
+            "answer-3": " https://registry.terraform.io/",
+            "answer-4": " https://registry.terrafor.io/",
+            "duration": "20",
+            "good-answer": "3"
+        },
+              {
+            "question": "quelle est la structure d'un module terraform :",
+            "answer-1": "LICENSE, README.md ,main.tf , variables.tf ,outputs.tf",
+            "answer-2": "README.md ,main.tf , terraform.tfvars ,outputs.tf",
+            "answer-3": "main.tf , terraform.tfvars ,outputs.tf ",
+            "answer-4": "LICENSE, README.md , variables.tf ,outputs.tf",
+            "duration": "20",
+            "good-answer": "1"
+        }
+    ]
+}

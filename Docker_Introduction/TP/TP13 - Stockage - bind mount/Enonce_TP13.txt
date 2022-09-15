@@ -1,0 +1,22 @@
+Télécharger les fichier du site web statique à l’aide du repo git suivant :https://github.com/daviddias/static-webpage-example.git
+    git clone https://github.com/daviddias/static-webpage-example.git
+
+Parcourez les fichiers de ce repo qui se trouve sur votre machine en local afin de déterminer où sont situés les fichiers essentiels au fonctionnement du site web
+    cd static-webpage-example
+    ls -l 
+
+Lancer un container apache (httpd) en montant à l’aide du bind mount ces fichiers dans le répertoire apache qui va bien afin que à la création du container le site 
+soit consommable à travers le port 8080 de l’hote.
+    docker run -d -p 8080:80 --name first_container_httpd -v ${PWD}/src/:/usr/local/apache2/htdocs/ httpd
+
+Tester le fonctionnement de l’application
+    curl http://127.0.0.1:8080
+
+Modifier le site internet sur la VM et raffraichir la page dans le navigateur    
+
+Supprimez votre environnement. 
+    docker rm -f   $(docker ps -aq)
+
+        
+
+

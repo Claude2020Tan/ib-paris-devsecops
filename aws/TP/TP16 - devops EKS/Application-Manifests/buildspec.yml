@@ -1,0 +1,60 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Phase d'installation - Rien à faire avec la dernière image Amazon Linux Docker pour CodeBuild qui contient tous les outils AWS - https://github.com/aws/aws-codebuild-docker-images/blob/master/al2/x86_64/standard/3.0/Dockerfile"
+  pre_build:
+      commands:
+        # Balise d'image Docker avec date, heure et code Version source résolue
+        - TAG="$(date +%Y-%m-%d.%H.%M.%S).$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
+        # Mettre à jour la balise Image dans notre manifeste de déploiement Kubernetes       
+        - echo "Update Image tag in kube-manifest..."
+        - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' kube-manifests/01-DEVOPS-Nginx-Deployment.yml
+        # Vérifier la version de l'AWS CLI        
+        - echo "Verify AWS CLI Version..."
+        - aws --version
+        # Connectez-vous au registre ECR pour que docker envoie l'image au référentiel ECR
+        - echo "Login in to Amazon ECR..."
+        - $(aws ecr get-login --no-include-email)
+        # Mettre à jour le répertoire d'accueil de la configuration de Kube
+        - export KUBECONFIG=$HOME/.kube/config
+  build:
+    commands:
+      # Créer une image Docker
+      - echo "Build started on `date`"
+      - echo "Building the Docker image..."
+      - docker build --tag $REPOSITORY_URI:$TAG .
+  post_build:
+    commands:
+      # Pousser l'image Docker vers le référentiel ECR
+      - echo "Build completed on `date`"
+      - echo "Pushing the Docker image to ECR Repository"
+      - docker push $REPOSITORY_URI:$TAG
+      - echo "Docker Image Push to ECR Completed -  $REPOSITORY_URI:$TAG"    
+      # Extraction des informations d'identification AWS à l'aide de STS Assume Role pour kubectl
+      - echo "Setting Environment Variables related to AWS CLI for Kube Config Setup"          
+      - CREDENTIALS=$(aws sts assume-role --role-arn $EKS_KUBECTL_ROLE_ARN --role-session-name codebuild-kubectl --duration-seconds 900)
+      - export AWS_ACCESS_KEY_ID="$(echo ${CREDENTIALS} | jq -r '.Credentials.AccessKeyId')"
+      - export AWS_SECRET_ACCESS_KEY="$(echo ${CREDENTIALS} | jq -r '.Credentials.SecretAccessKey')"
+      - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
+      - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
+      # configurer kubectl pour le cluster eks            
+      - echo "Update Kube Config"      
+      - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
+      # application des changement avec kubectl
+      - echo "Apply changes to kube manifests"            
+      - kubectl apply -f kube-manifests/
+      - echo "Completed applying changes to Kubernetes Objects"           
+      # Create Artifacts which we can use if we want to continue our pipeline for other stages
+      - printf '[{"name":"01-DEVOPS-Nginx-Deployment.yml","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
+      # Commande additionelles pour voir les crédentials     
+      #- echo "Credentials Value is..  ${CREDENTIALS}"      
+      #- echo "AWS_ACCESS_KEY_ID...  ${AWS_ACCESS_KEY_ID}"            
+      #- echo "AWS_SECRET_ACCESS_KEY...  ${AWS_SECRET_ACCESS_KEY}"            
+      #- echo "AWS_SESSION_TOKEN...  ${AWS_SESSION_TOKEN}"            
+      #- echo "AWS_EXPIRATION...  $AWS_EXPIRATION"             
+      #- echo "EKS_CLUSTER_NAME...  $EKS_CLUSTER_NAME"             
+artifacts:
+  files: 
+    - build.json   
+    - kube-manifests/*

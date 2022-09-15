@@ -1,0 +1,5 @@
+Créer un cluster ECS et visualiser les ressources crée dans Amazon pour celà...
+Créez aussi un cluster Fargate. Constatez vous que c'est Managé par AWS directement ? 
+
+
+Lancer le container supermario dans le cluster nouvellement créé, sous forme de service

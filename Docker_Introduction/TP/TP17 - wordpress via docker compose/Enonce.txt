@@ -1,0 +1,24 @@
+Exercice 1 : 
+
+Allez sur le dockerhub et rechercher l’image officielle de wordpress
+    https://hub.docker.com/_/wordpress
+Prendre la peine de lire attentivement le Readme montrant comment déployer wordpress à l’aide des container et les différentes variables d’environnement à utiliser
+Faites de l’IAC et déployez wordpress à l’aide de docker compose
+NB) Les données de la base de données doivent être persistantes
+
+Quelques commandes utiles : 
+    1 - Installation de  docker-compsoe
+        sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
+    2 - Déploiement de l'infrastructure 
+        docker-compose up -d
+    3 - Vérification des container créé par docker-compose 
+        docker-compose ps
+    4 - Aide sur la commande docker-compsoe : 
+        docker-compose -h
+
+
+Execice 2 : Bonus !
+Proposez un docker-compose qui lance les applications suivantes : 
+    - Super mario :https://hub.docker.com/r/pengbai/docker-supermario/
+    - Tetris : https://hub.docker.com/r/ociotec/tetris

@@ -1,0 +1,61 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: simple-webapp-docker
+  name: simple-webapp-docker
+  namespace: eazytraining
+  resourceVersion: '25101'
+  selfLink: >-
+    /apis/apps.openshift.io/v1/namespaces/eazytraining/deploymentconfigs/simple-webapp-docker
+spec:
+  replicas: 1
+  selector:
+    deploymentconfig: simple-webapp-docker
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: simple-webapp
+        deploymentconfig: simple-webapp-docker
+    spec:
+      containers:
+        - image: >-
+            172.30.1.1:5000/eazytraining/simple-webapp-docker
+          imagePullPolicy: Always
+          name: simple-webapp-docker
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+    - imageChangeParams:
+        automatic: true
+        containerNames:
+          - simple-webapp-docker
+        from:
+          kind: ImageStreamTag
+          name: 'simple-webapp-docker:latest'
+          namespace: eazytraining
+        lastTriggeredImage: >-
+          172.30.1.1:5000/eazytraining/simple-webapp-docker
+      type: ImageChange
+    - type: ConfigChange

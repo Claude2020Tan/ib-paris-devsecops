@@ -1,0 +1,12 @@
+!!! Prérequis : Vagrant et Virtualbox doivent être installé sur votre poste de travail !!!
+
+Téléchargez les fichiers  situés à cette adresse : https://github.com/diranetafen/cursus-devops/tree/master/vagrant/minikube
+Mettez les dans un répertoire de travail sur votre poste de travail
+Ouvez un terminal Powershell et déplacer vous dans votre répertoire de travail puis tapez la commande suivante : 
+    vagrant up --provision
+Une fois le déploiement terminé, connecter à la VM avec "vagrant ssh"
+
+Vérifier que le cluster est fonctionnel
+    - kubectl get nodes
+    - kubectl get pod -A
+    - systemctl status kubelet.service

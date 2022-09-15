@@ -1,0 +1,3 @@
+- Tools de création  : https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-vpc
+- installation de la cli v2 : https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+- configuration de la cli avec les access et secret key : https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html

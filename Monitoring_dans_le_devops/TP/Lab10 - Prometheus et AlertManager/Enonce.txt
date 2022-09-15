@@ -1,0 +1,10 @@
+1 - Déployez l’alertmanager à l’aide des sources fournies
+2 - Accédez à l’interface de l’alertmanager via le service de type nodeport
+3 - Modifiez le configmap afin d’y insérer les règles présentées dans les slides précédents
+4 - Vous devez supprimer et recréer le configmap ainsi que le deployment de Prometheus pour appliquer les modifications
+5 - Vérifiez sur l’interface de Prometheus que l’alerte a bien été envoyé l’alertmanager 
+
+
+
+
+

@@ -1,0 +1,28 @@
+L'idée de ce TP est de comparer la NACL et le Security Group
+
+1 - Créer Un VPC contenant un réseau public
+2 - Dans ce réseau public, créé une instace ec2
+    - taille : t2.micro
+    - AMI : Amazone Linux 2
+    - Sg : Il doit autoriser les port http (80) et ssh (22)
+3 - Installer et démarrer un serveur httpd
+    * sudo yum install -y httpd
+    * sudo systemctl enable --now httpd
+    * sudo echo "Bonjour depuis le serveur apache" > /var/www/html/index.html
+4 - Tester que le serveur répond depuis Internet   
+5 - Configurer la NACL du subnet, afin d'ajouter une régle entrante telle que 
+    * Le numéro de règle est 150
+    * La règle  refuse le traffic http (80) en provenance de tout le monde
+5 - Vérifiez à présent que le site est inaccessible...
+6 - Modifiez à présent le numéro de la régle, et le mettant à 50 par exemple
+    et confirmez que site est à présent accessible
+7 - Modifiez à présent la règle sortante (100) par defaut qui accepte tout type de 
+    traffic afin de mettre deny
+8 - Vérifiez que le site devient inaccessible malgrés que la règle entrante autorise ce traffic.
+    Celà confirme que la NACL est sans état.
+9 - Reconfigurer cette règle sortante (100) en la mettant à sa valeur initiale (allow)
+    et confirmez que le site revient.
+10 - A présent, Modifiez les règles sortantes du Security group en supprimant la règle par défaut
+    qui autorise tout type de traffic.
+11 - Vérifiez que le site internet passe toujours, malgrés qu'on ne possède aucune règle sortante explicite
+    Celà valide bien que le SG est à Etat    

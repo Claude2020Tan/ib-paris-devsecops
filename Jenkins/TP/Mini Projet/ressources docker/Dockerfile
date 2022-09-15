@@ -1,0 +1,19 @@
+# L'image de base sera une image nginx:1.21.1
+FROM ...
+# Ne pas oublier de mentionner le maintainer de l'image
+LABEL ...
+# MAJ l'image, puis installer curl et git
+RUN ...
+
+# Supprimer le contenu du répertoire /usr/share/nginx/html/
+RUN ...
+
+# Téléchargement de l'application avec un git clone et déposer au bon endroit
+RUN ...
+
+# Rajouter le fichier de conf nginx.conf de nginx  dans /etc/nginx/conf.d/.
+# Ce fichier est donné avec l'énoncé
+
+COPY ...
+
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
